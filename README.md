@@ -2,8 +2,8 @@
 
 ### Project structure
 
-- `house_graph` - реализация представления здания в виде графа, создание среды.
-- `client` - визуализация для пользователя.
+- `house_graph` - implementation of a building representation as a graph, creating an environment.
+- `client` - user visualization.
 
 ### Client
 
