@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict, List
 import torch
+from dto import HouseTensorDTO
 
 
 NODE_TYPES = ("APT", "MOP", "LIFT", "RISER", "PANEL", "ITP", "TECH", "ROOF")
@@ -54,7 +55,7 @@ class House:
             raise ValueError(f"Duplicate edge id: {edge.id}")
         self.edges.append(edge)
 
-    def to_tensors(self) -> dict:
+    def to_tensors(self) -> HouseTensorDTO:
         node_index = {node.id: i for i, node in enumerate(self.nodes)}
         edge_index = {edge.id: i for i, edge in enumerate(self.edges)}
         edge_type_index = {etype: i for i, etype in enumerate(EDGE_TYPES)}
@@ -79,19 +80,14 @@ class House:
                 n_idx = node_index[node_id]
                 incidence[t_idx, e_idx, n_idx] = 1.0
 
-        return {
-            # Набор признаков для каждого узла (размер: num_nodes x num_features)
-            "x": x,
-            # One-hot кодирование типа узла (размер: num_nodes x num_node_types)
-            "node_type": node_type,
-            # Инцидентная матрица (размер: num_edge_types x num_edges x num_nodes)
-            "incidence": incidence,
-            # Списки идентификаторов узлов и рёбер для удобства (index = идентификатор)
-            "node_ids": list(node_index.keys()),
-            "edge_ids": list(edge_index.keys()),
-            # Список названий признаков для удобства
-            "feature_names": feature_names,
-        }
+        return HouseTensorDTO(
+            x=x,
+            node_type=node_type,
+            incidence=incidence,
+            node_ids=list(node_index.keys()),
+            edge_ids=list(edge_index.keys()),
+            feature_names=feature_names,
+        )
 
 
 class HouseFactory:
@@ -159,5 +155,4 @@ if __name__ == "__main__":
     # А тут можно будет добавить доп. параметры, описывающие состояние узлов и рёбер, например, температуру, давление, статус неисправности и т.д.
     # Пока из характеристик есть только этаж (а нужно ли больше?)
     tensors = house.to_tensors()
-    for name, value in tensors.items():
-        print(f"{name}: {value}")
+    print(tensors)
