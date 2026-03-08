@@ -1,8 +1,0 @@
-[project]
-name = "building-maintenance-agents"
-version = "0.1.0"
-description = "whoever has read it should make a description (but not Dimas-karas)"
-requires-python = ">=3.12"
-dependencies = [
-    "torch>=2.10.0",
-]
