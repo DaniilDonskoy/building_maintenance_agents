@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef, useMemo, CSSProperties} from "react";
+import React, {useState, useEffect, useRef, useMemo, CSSProperties} from "react";
 import * as d3 from "d3";
 
 interface D3Node extends GraphNode, d3.SimulationNodeDatum {}
@@ -335,50 +335,78 @@ export default function BuildingGraph() {
 
   return (
     <div style={{
-      display: "flex", height: "100vh", background: "#060D14", color: "#7EB8D4",
-      fontFamily: "'JetBrains Mono', 'Courier New', monospace", fontSize: "12px",
+      display: "flex",
+      height: "100vh",
+      background: "#0F1A2B",
+      color: "#BDC4D4",
+      fontFamily: "'JetBrains Mono', 'Courier New', monospace",
+      fontSize: "12px",
     }}>
       <div style={{
-        width: "240px", flexShrink: 0, background: "#080F18",
-        borderRight: "1px solid #0F2030", overflowY: "auto",
-        display: "flex", flexDirection: "column", gap: "0",
+        width: "240px",
+        flexShrink: 0,
+        background: "#1C2E4A",
+        borderRight: "1px solid #52677D",
+        overflowY: "auto",
+        display: "flex",
+        flexDirection: "column",
+        gap: "0",
       }}>
-        <div style={{ padding: "16px 14px 10px", borderBottom: "1px solid #0F2030" }}>
-          <div style={{ color: "#4A9EFF", fontSize: "11px", letterSpacing: "2px", marginBottom: 4 }}>УК ГРАФ</div>
-          <div style={{ color: "#2A5070", fontSize: "10px" }}>параметрическая модель</div>
+        <div style={{padding: "16px 14px 10px", borderBottom: "1px solid #52677D"}}>
+          <div style={{color: "#BDC4D4", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", marginBottom: 4}}>УК
+            ГРАФ
+          </div>
+          <div style={{color: "#52677D", fontSize: "10px"}}>параметрическая модель</div>
         </div>
 
-        <div style={{ padding: "12px 14px", borderBottom: "1px solid #0F2030" }}>
-          <div style={{ color: "#2A6090", fontSize: "10px", letterSpacing: "1px", marginBottom: 8 }}>ПАРАМЕТРЫ</div>
+        <div style={{padding: "12px 14px", borderBottom: "1px solid #52677D"}}>
+          <div style={{color: "#52677D", fontSize: "10px", letterSpacing: "1px", marginBottom: 8}}>ПАРАМЕТРЫ</div>
           {(
             [
-              ["floors",           "Этажей"],
-              ["sections",         "Секций"],
-              ["aptsPerFloor",     "Кв/этаж/секц"],
-              ["liftsPerSection",  "Лифтов/секц"],
+              ["floors", "Этажей"],
+              ["sections", "Секций"],
+              ["aptsPerFloor", "Кв/этаж/секц"],
+              ["liftsPerSection", "Лифтов/секц"],
               ["risersPerSection", "Стояков/секц"],
             ] as [keyof GraphConfig, string][]
           ).map(([k, label]) => (
-            <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-              <span style={{ color: "#3A7090", fontSize: "11px" }}>{label}</span>
+            <div key={k}
+                 style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6}}>
+              <span style={{color: "#BDC4D4", fontSize: "11px"}}>{label}</span>
               <input
-                type="number" value={params[k]} min={1}
+                type="number"
+                value={params[k]}
+                min={1}
                 onChange={e => setParam(k, +e.target.value)}
-                style={inputStyle}
+                style={{
+                  background: "#0F1A2B",
+                  border: "1px solid #52677D",
+                  color: "#BDC4D4",
+                  fontFamily: "monospace",
+                  fontSize: 11,
+                  width: 60,
+                  padding: "2px 4px"
+                }}
               />
             </div>
           ))}
         </div>
 
-        <div style={{ padding: "10px 14px", borderBottom: "1px solid #0F2030" }}>
-          <div style={{ color: "#2A6090", fontSize: "10px", letterSpacing: "1px", marginBottom: 8 }}>РАСКЛАДКА</div>
+        <div style={{padding: "10px 14px", borderBottom: "1px solid #52677D"}}>
+          <div style={{color: "#52677D", fontSize: "10px", letterSpacing: "1px", marginBottom: 8}}>РАСКЛАДКА</div>
           {(["layered", "force"] as LayoutMode[]).map(m => (
             <button key={m} onClick={() => setLayoutMode(m)} style={{
-              display: "block", width: "100%", marginBottom: 4, padding: "5px",
-              background: layoutMode === m ? "#0F2A40" : "transparent",
-              border: `1px solid ${layoutMode === m ? "#4A9EFF" : "#0F2030"}`,
-              color: layoutMode === m ? "#4A9EFF" : "#2A5070",
-              borderRadius: 3, cursor: "pointer", fontFamily: "monospace", fontSize: 11,
+              display: "block",
+              width: "100%",
+              marginBottom: 4,
+              padding: "5px",
+              background: layoutMode === m ? "#52677D" : "transparent",
+              border: `1px solid #52677D`,
+              color: layoutMode === m ? "#D1CFC9" : "#BDC4D4",
+              borderRadius: 3,
+              cursor: "pointer",
+              fontFamily: "monospace",
+              fontSize: 11,
               textAlign: "left",
             }}>
               {m === "layered" ? "▶ Послойный (этажи)" : "◎ Force-directed"}
@@ -386,66 +414,111 @@ export default function BuildingGraph() {
           ))}
         </div>
 
-        <div style={{ padding: "10px 14px", borderBottom: "1px solid #0F2030" }}>
-          <div style={{ color: "#2A6090", fontSize: "10px", letterSpacing: "1px", marginBottom: 8 }}>УЗЛЫ</div>
+        <div style={{padding: "10px 14px", borderBottom: "1px solid #52677D"}}>
+          <div style={{color: "#52677D", fontSize: "10px", letterSpacing: "1px", marginBottom: 8}}>УЗЛЫ</div>
           {Object.entries(NODE_TYPES).map(([k, v]) => (
-            <div key={k} onClick={() => setActiveNodeTypes(p => ({ ...p, [k]: !p[k] }))}
-                 style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5, cursor: "pointer", opacity: activeNodeTypes[k] ? 1 : 0.35 }}>
-              <div style={{ width: 10, height: 10, borderRadius: 2, background: v.color, flexShrink: 0 }} />
-              <span style={{ color: "#4A7090", fontSize: "10px" }}>{v.label}</span>
+            <div
+              key={k}
+              onClick={() => setActiveNodeTypes(p => ({...p, [k]: !p[k]}))}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+                marginBottom: 5,
+                cursor: "pointer",
+                opacity: activeNodeTypes[k] ? 1 : 0.35
+              }}>
+              <div style={{width: 10, height: 10, borderRadius: 2, background: v.color, flexShrink: 0}}/>
+              <span style={{color: "#BDC4D4", fontSize: "10px"}}>{v.label}</span>
             </div>
           ))}
         </div>
 
-        <div style={{ padding: "10px 14px" }}>
-          <div style={{ color: "#2A6090", fontSize: "10px", letterSpacing: "1px", marginBottom: 8 }}>СВЯЗИ</div>
+        <div style={{padding: "10px 14px"}}>
+          <div style={{color: "#52677D", fontSize: "10px", letterSpacing: "1px", marginBottom: 8}}>СВЯЗИ</div>
           {Object.entries(EDGE_TYPES).map(([k, v]) => (
-            <div key={k} onClick={() => setActiveEdgeTypes(p => ({ ...p, [k]: !p[k] }))}
-                 style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5, cursor: "pointer", opacity: activeEdgeTypes[k] ? 1 : 0.35 }}>
+            <div
+              key={k}
+              onClick={() => setActiveEdgeTypes(p => ({...p, [k]: !p[k]}))}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
+                marginBottom: 5,
+                cursor: "pointer",
+                opacity: activeEdgeTypes[k] ? 1 : 0.35
+              }}>
               <svg width="20" height="8">
-                <line x1="0" y1="4" x2="20" y2="4"
-                      stroke={v.color.slice(0,7)} strokeWidth={v.width} strokeDasharray={v.dash} />
+                <line
+                  x1="0"
+                  y1="4"
+                  x2="20"
+                  y2="4"
+                  stroke={v.color.slice(0, 7)}
+                  strokeWidth={v.width}
+                  strokeDasharray={v.dash}
+                />
               </svg>
-              <span style={{ color: "#4A7090", fontSize: "10px" }}>{v.label}</span>
+              <span style={{color: "#BDC4D4", fontSize: "10px"}}>{v.label}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", position: "relative" }}>
+      <div style={{flex: 1, display: "flex", flexDirection: "column", position: "relative"}}>
         <div style={{
-          height: "36px", background: "#080F18", borderBottom: "1px solid #0F2030",
-          display: "flex", alignItems: "center", padding: "0 16px", gap: 24,
+          height: "36px",
+          background: "#1C2E4A",
+          borderBottom: "1px solid #52677D",
+          display: "flex",
+          alignItems: "center",
+          padding: "0 16px",
+          gap: 24,
         }}>
-          <span style={{ color: "#0F3050", fontSize: "11px" }}>
-            Узлов: <span style={{ color: "#4A9EFF" }}>{stats.nodes}</span>
-          </span>
-          <span style={{ color: "#0F3050", fontSize: "11px" }}>
-            Рёбер: <span style={{ color: "#4A9EFF" }}>{stats.edges}</span>
-          </span>
-          <span style={{ color: "#0F3050", fontSize: "11px" }}>
-            {params.floors} эт. × {params.sections} секц. × {params.aptsPerFloor} кв.
-          </span>
-          <span style={{ color: "#0F3050", fontSize: "10px", marginLeft: "auto" }}>
-            Scroll: zoom · Drag: pan · Node drag: перемещение
-          </span>
+      <span style={{color: "#BDC4D4", fontSize: "11px"}}>
+        Узлов: <span style={{fontWeight: 600}}>{stats.nodes}</span>
+      </span>
+          <span style={{color: "#BDC4D4", fontSize: "11px"}}>
+        Рёбер: <span style={{fontWeight: 600}}>{stats.edges}</span>
+      </span>
+          <span style={{color: "#BDC4D4", fontSize: "11px"}}>
+        {params.floors} эт. × {params.sections} секц. × {params.aptsPerFloor} кв.
+      </span>
+          <span style={{color: "#52677D", fontSize: "10px", marginLeft: "auto"}}>
+        Scroll: zoom · Drag: pan · Node drag: перемещение
+      </span>
         </div>
 
-        <svg ref={svgRef} style={{ flex: 1, background: "#060D14" }} />
+        <svg ref={svgRef} style={{flex: 1, background: "#0F1A2B"}}/>
 
         {hovered && (
           <div style={{
-            position: "absolute", bottom: 16, right: 16,
-            background: "#0A1824", border: "1px solid #1E3A54",
-            padding: "10px 14px", borderRadius: 6, minWidth: 160,
+            position: "absolute",
+            bottom: 16,
+            right: 16,
+            background: "#1C2E4A",
+            border: "1px solid #52677D",
+            padding: "10px 14px",
+            borderRadius: 6,
+            minWidth: 160,
           }}>
-            <div style={{ color: hovered.type.color, fontSize: "11px", marginBottom: 4 }}>
+            <div style={{color: hovered.type.color, fontSize: "11px", marginBottom: 4}}>
               {hovered.type.label}
             </div>
-            <div style={{ color: "#2A6090", fontSize: "10px" }}>{hovered.label}</div>
-            {hovered.floor !== undefined && <div style={{ color: "#1A4060", fontSize: "10px", marginTop: 2 }}>Этаж: {hovered.floor}</div>}
-            {hovered.section !== -1 && <div style={{ color: "#1A4060", fontSize: "10px" }}>Секция: {hovered.section + 1}</div>}
-            <div style={{ color: "#0F2A40", fontSize: "10px", marginTop: 2 }}>id: {hovered.id}</div>
+            <div style={{color: "#BDC4D4", fontSize: "10px"}}>{hovered.label}</div>
+            {hovered.floor !== undefined && (
+              <div style={{color: "#BDC4D4", fontSize: "10px", marginTop: 2}}>
+                Этаж: {hovered.floor}
+              </div>
+            )}
+            {hovered.section !== -1 && (
+              <div style={{color: "#BDC4D4", fontSize: "10px"}}>
+                Секция: {hovered.section + 1}
+              </div>
+            )}
+            <div style={{color: "#52677D", fontSize: "10px", marginTop: 2}}>
+              id: {hovered.id}
+            </div>
           </div>
         )}
       </div>
