@@ -1,0 +1,6162 @@
+{
+  "id": "15",
+  "nodes": [
+    {
+      "id": "itp_1",
+      "type": "ITP",
+      "features": {
+        "x": 11.0,
+        "y": -6.0,
+        "z": 0.0,
+        "floor": 0.0,
+        "shared": 1.0
+      }
+    },
+    {
+      "id": "tech_1",
+      "type": "TECH",
+      "features": {
+        "x": 19.0,
+        "y": -6.0,
+        "z": 0.0,
+        "floor": 0.0,
+        "shared": 1.0
+      }
+    },
+    {
+      "id": "roof_1",
+      "type": "ROOF",
+      "features": {
+        "x": 15.0,
+        "y": 0.0,
+        "z": 45.0,
+        "floor": 16.0,
+        "shared": 1.0
+      }
+    },
+    {
+      "id": "mop_1_1",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_1",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_1_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_1_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_1_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_1_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_1_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_2",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_2",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_2_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_2_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_2_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_2_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_2_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_3",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_3",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_3_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_3_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_3_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_3_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_3_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_4",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_4",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_4_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_4_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_4_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_4_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_4_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_5",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_5",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_5_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_5_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_5_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_5_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_5_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_6",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_6",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_6_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_6_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_6_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_6_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_6_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_7",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_7",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_7_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_7_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_7_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_7_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_7_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_8",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_8",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_8_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_8_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_8_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_8_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_8_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_9",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_9",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_9_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_9_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_9_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_9_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_9_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_10",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_10",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_10_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_10_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_10_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_10_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_10_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_11",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_11",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_11_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_11_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_11_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_11_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_11_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_12",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_12",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_12_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_12_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_12_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_12_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_12_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_13",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_13",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_13_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_13_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_13_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_13_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_13_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_14",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_14",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_14_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_14_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_14_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_14_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_14_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_1_15",
+      "type": "MOP",
+      "features": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "panel_1_15",
+      "type": "PANEL",
+      "features": {
+        "x": -3.0,
+        "y": -2.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "apt_1_15_1",
+      "type": "APT",
+      "features": {
+        "x": -6.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_1_15_2",
+      "type": "APT",
+      "features": {
+        "x": 0.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_1_15_3",
+      "type": "APT",
+      "features": {
+        "x": 6.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_1_15_1",
+      "type": "LIFT",
+      "features": {
+        "x": -2.0,
+        "y": 1.5,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_1_15_1",
+      "type": "RISER",
+      "features": {
+        "x": 2.0,
+        "y": -1.5,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_1",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_1",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_1_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_1_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_1_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_1_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_1_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 0.0,
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_2",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_2",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_2_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_2_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_2_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_2_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_2_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 3.0,
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_3",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_3",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_3_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_3_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_3_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_3_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_3_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 6.0,
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_4",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_4",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_4_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_4_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_4_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_4_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_4_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 9.0,
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_5",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_5",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_5_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_5_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_5_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_5_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_5_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 12.0,
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_6",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_6",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_6_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_6_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_6_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_6_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_6_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 15.0,
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_7",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_7",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_7_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_7_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_7_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_7_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_7_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 18.0,
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_8",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_8",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_8_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_8_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_8_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_8_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_8_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 21.0,
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_9",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_9",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_9_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_9_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_9_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_9_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_9_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 24.0,
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_10",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_10",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_10_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_10_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_10_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_10_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_10_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 27.0,
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_11",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_11",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_11_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_11_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_11_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_11_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_11_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 30.0,
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_12",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_12",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_12_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_12_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_12_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_12_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_12_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 33.0,
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_13",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_13",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_13_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_13_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_13_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_13_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_13_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 36.0,
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_14",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_14",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_14_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_14_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_14_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_14_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_14_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 39.0,
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "mop_2_15",
+      "type": "MOP",
+      "features": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "panel_2_15",
+      "type": "PANEL",
+      "features": {
+        "x": 27.0,
+        "y": -2.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "apt_2_15_1",
+      "type": "APT",
+      "features": {
+        "x": 24.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0,
+        "rooms": 2.0
+      }
+    },
+    {
+      "id": "apt_2_15_2",
+      "type": "APT",
+      "features": {
+        "x": 30.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0,
+        "rooms": 3.0
+      }
+    },
+    {
+      "id": "apt_2_15_3",
+      "type": "APT",
+      "features": {
+        "x": 36.0,
+        "y": 6.0,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0,
+        "rooms": 1.0
+      }
+    },
+    {
+      "id": "lift_2_15_1",
+      "type": "LIFT",
+      "features": {
+        "x": 28.0,
+        "y": 1.5,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "riser_2_15_1",
+      "type": "RISER",
+      "features": {
+        "x": 32.0,
+        "y": -1.5,
+        "z": 42.0,
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "adj_1_1",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3",
+        "lift_1_1_1",
+        "riser_1_1_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_1",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3",
+        "lift_1_1_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_1",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_1_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_1_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_1_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_1_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_1_1",
+        "apt_1_1_1",
+        "apt_1_1_2",
+        "apt_1_1_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_2",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_2",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3",
+        "lift_1_2_1",
+        "riser_1_2_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_2",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_2",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3",
+        "lift_1_2_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_2",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_2",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_2_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_2_1",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_2_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_2_1",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_2_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_2_1",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_2_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_2_1",
+        "apt_1_2_1",
+        "apt_1_2_2",
+        "apt_1_2_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_3",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_3",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3",
+        "lift_1_3_1",
+        "riser_1_3_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_3",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_3",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3",
+        "lift_1_3_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_3",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_3",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_3_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_3_1",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_3_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_3_1",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_3_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_3_1",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_3_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_3_1",
+        "apt_1_3_1",
+        "apt_1_3_2",
+        "apt_1_3_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_4",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_4",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3",
+        "lift_1_4_1",
+        "riser_1_4_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_4",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_4",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3",
+        "lift_1_4_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_4",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_4",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_4_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_4_1",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_4_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_4_1",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_4_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_4_1",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_4_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_4_1",
+        "apt_1_4_1",
+        "apt_1_4_2",
+        "apt_1_4_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_5",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_5",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3",
+        "lift_1_5_1",
+        "riser_1_5_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_5",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_5",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3",
+        "lift_1_5_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_5",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_5",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_5_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_5_1",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_5_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_5_1",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_5_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_5_1",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_5_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_5_1",
+        "apt_1_5_1",
+        "apt_1_5_2",
+        "apt_1_5_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_6",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_6",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3",
+        "lift_1_6_1",
+        "riser_1_6_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_6",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_6",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3",
+        "lift_1_6_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_6",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_6",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_6_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_6_1",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_6_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_6_1",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_6_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_6_1",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_6_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_6_1",
+        "apt_1_6_1",
+        "apt_1_6_2",
+        "apt_1_6_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_7",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_7",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3",
+        "lift_1_7_1",
+        "riser_1_7_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_7",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_7",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3",
+        "lift_1_7_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_7",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_7",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_7_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_7_1",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_7_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_7_1",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_7_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_7_1",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_7_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_7_1",
+        "apt_1_7_1",
+        "apt_1_7_2",
+        "apt_1_7_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_8",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_8",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3",
+        "lift_1_8_1",
+        "riser_1_8_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_8",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_8",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3",
+        "lift_1_8_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_8",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_8",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_8_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_8_1",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_8_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_8_1",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_8_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_8_1",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_8_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_8_1",
+        "apt_1_8_1",
+        "apt_1_8_2",
+        "apt_1_8_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_9",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_9",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3",
+        "lift_1_9_1",
+        "riser_1_9_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_9",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_9",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3",
+        "lift_1_9_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_9",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_9",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_9_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_9_1",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_9_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_9_1",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_9_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_9_1",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_9_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_9_1",
+        "apt_1_9_1",
+        "apt_1_9_2",
+        "apt_1_9_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_10",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_10",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3",
+        "lift_1_10_1",
+        "riser_1_10_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_10",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_10",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3",
+        "lift_1_10_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_10",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_10",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_10_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_10_1",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_10_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_10_1",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_10_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_10_1",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_10_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_10_1",
+        "apt_1_10_1",
+        "apt_1_10_2",
+        "apt_1_10_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_11",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_11",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3",
+        "lift_1_11_1",
+        "riser_1_11_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_11",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_11",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3",
+        "lift_1_11_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_11",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_11",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_11_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_11_1",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_11_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_11_1",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_11_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_11_1",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_11_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_11_1",
+        "apt_1_11_1",
+        "apt_1_11_2",
+        "apt_1_11_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_12",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_12",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3",
+        "lift_1_12_1",
+        "riser_1_12_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_12",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_12",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3",
+        "lift_1_12_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_12",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_12",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_12_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_12_1",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_12_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_12_1",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_12_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_12_1",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_12_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_12_1",
+        "apt_1_12_1",
+        "apt_1_12_2",
+        "apt_1_12_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_13",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_13",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3",
+        "lift_1_13_1",
+        "riser_1_13_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_13",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_13",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3",
+        "lift_1_13_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_13",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_13",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_13_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_13_1",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_13_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_13_1",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_13_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_13_1",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_13_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_13_1",
+        "apt_1_13_1",
+        "apt_1_13_2",
+        "apt_1_13_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_14",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_14",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3",
+        "lift_1_14_1",
+        "riser_1_14_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_14",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_14",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3",
+        "lift_1_14_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_14",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_14",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_14_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_14_1",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_14_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_14_1",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_14_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_14_1",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_14_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_14_1",
+        "apt_1_14_1",
+        "apt_1_14_2",
+        "apt_1_14_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_1_15",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_1_15",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3",
+        "lift_1_15_1",
+        "riser_1_15_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "elec_floor_1_15",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_1_15",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3",
+        "lift_1_15_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "vent_floor_1_15",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_15",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0
+      }
+    },
+    {
+      "id": "heat_1_15_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_15_1",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_1_15_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_15_1",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_1_15_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_15_1",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_1_15_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_15_1",
+        "apt_1_15_1",
+        "apt_1_15_2",
+        "apt_1_15_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 1.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_1",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3",
+        "lift_2_1_1",
+        "riser_2_1_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_1",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3",
+        "lift_2_1_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_1",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_1_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_1_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_1_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_1_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_1_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_1_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_1_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_1_1",
+        "apt_2_1_1",
+        "apt_2_1_2",
+        "apt_2_1_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 1.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_2",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_2",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3",
+        "lift_2_2_1",
+        "riser_2_2_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_2",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_2",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3",
+        "lift_2_2_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_2",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_2",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_2_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_2_1",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_2_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_2_1",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_2_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_2_1",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_2_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_2_1",
+        "apt_2_2_1",
+        "apt_2_2_2",
+        "apt_2_2_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 2.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_3",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_3",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3",
+        "lift_2_3_1",
+        "riser_2_3_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_3",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_3",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3",
+        "lift_2_3_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_3",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_3",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_3_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_3_1",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_3_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_3_1",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_3_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_3_1",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_3_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_3_1",
+        "apt_2_3_1",
+        "apt_2_3_2",
+        "apt_2_3_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 3.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_4",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_4",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3",
+        "lift_2_4_1",
+        "riser_2_4_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_4",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_4",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3",
+        "lift_2_4_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_4",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_4",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_4_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_4_1",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_4_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_4_1",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_4_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_4_1",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_4_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_4_1",
+        "apt_2_4_1",
+        "apt_2_4_2",
+        "apt_2_4_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 4.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_5",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_5",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3",
+        "lift_2_5_1",
+        "riser_2_5_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_5",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_5",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3",
+        "lift_2_5_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_5",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_5",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_5_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_5_1",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_5_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_5_1",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_5_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_5_1",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_5_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_5_1",
+        "apt_2_5_1",
+        "apt_2_5_2",
+        "apt_2_5_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 5.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_6",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_6",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3",
+        "lift_2_6_1",
+        "riser_2_6_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_6",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_6",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3",
+        "lift_2_6_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_6",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_6",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_6_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_6_1",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_6_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_6_1",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_6_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_6_1",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_6_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_6_1",
+        "apt_2_6_1",
+        "apt_2_6_2",
+        "apt_2_6_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 6.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_7",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_7",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3",
+        "lift_2_7_1",
+        "riser_2_7_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_7",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_7",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3",
+        "lift_2_7_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_7",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_7",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_7_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_7_1",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_7_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_7_1",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_7_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_7_1",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_7_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_7_1",
+        "apt_2_7_1",
+        "apt_2_7_2",
+        "apt_2_7_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 7.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_8",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_8",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3",
+        "lift_2_8_1",
+        "riser_2_8_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_8",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_8",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3",
+        "lift_2_8_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_8",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_8",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_8_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_8_1",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_8_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_8_1",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_8_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_8_1",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_8_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_8_1",
+        "apt_2_8_1",
+        "apt_2_8_2",
+        "apt_2_8_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 8.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_9",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_9",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3",
+        "lift_2_9_1",
+        "riser_2_9_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_9",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_9",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3",
+        "lift_2_9_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_9",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_9",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_9_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_9_1",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_9_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_9_1",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_9_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_9_1",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_9_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_9_1",
+        "apt_2_9_1",
+        "apt_2_9_2",
+        "apt_2_9_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 9.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_10",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_10",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3",
+        "lift_2_10_1",
+        "riser_2_10_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_10",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_10",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3",
+        "lift_2_10_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_10",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_10",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_10_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_10_1",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_10_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_10_1",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_10_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_10_1",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_10_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_10_1",
+        "apt_2_10_1",
+        "apt_2_10_2",
+        "apt_2_10_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 10.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_11",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_11",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3",
+        "lift_2_11_1",
+        "riser_2_11_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_11",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_11",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3",
+        "lift_2_11_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_11",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_11",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_11_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_11_1",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_11_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_11_1",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_11_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_11_1",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_11_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_11_1",
+        "apt_2_11_1",
+        "apt_2_11_2",
+        "apt_2_11_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 11.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_12",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_12",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3",
+        "lift_2_12_1",
+        "riser_2_12_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_12",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_12",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3",
+        "lift_2_12_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_12",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_12",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_12_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_12_1",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_12_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_12_1",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_12_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_12_1",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_12_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_12_1",
+        "apt_2_12_1",
+        "apt_2_12_2",
+        "apt_2_12_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 12.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_13",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_13",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3",
+        "lift_2_13_1",
+        "riser_2_13_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_13",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_13",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3",
+        "lift_2_13_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_13",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_13",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_13_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_13_1",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_13_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_13_1",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_13_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_13_1",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_13_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_13_1",
+        "apt_2_13_1",
+        "apt_2_13_2",
+        "apt_2_13_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 13.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_14",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_14",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3",
+        "lift_2_14_1",
+        "riser_2_14_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_14",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_14",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3",
+        "lift_2_14_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_14",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_14",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_14_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_14_1",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_14_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_14_1",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_14_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_14_1",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_14_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_14_1",
+        "apt_2_14_1",
+        "apt_2_14_2",
+        "apt_2_14_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 14.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "adj_2_15",
+      "type": "ADJ",
+      "node_ids": [
+        "mop_2_15",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3",
+        "lift_2_15_1",
+        "riser_2_15_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "elec_floor_2_15",
+      "type": "ELEC",
+      "node_ids": [
+        "panel_2_15",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3",
+        "lift_2_15_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "vent_floor_2_15",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_15",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3",
+        "roof_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0
+      }
+    },
+    {
+      "id": "heat_2_15_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_15_1",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "cold_2_15_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_15_1",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "hot_2_15_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_15_1",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "drain_2_15_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_15_1",
+        "apt_2_15_1",
+        "apt_2_15_2",
+        "apt_2_15_3",
+        "tech_1"
+      ],
+      "features": {
+        "floor": 15.0,
+        "section": 2.0,
+        "shaft": 1.0
+      }
+    },
+    {
+      "id": "elec_shaft_1",
+      "type": "ELEC",
+      "node_ids": [
+        "tech_1",
+        "panel_1_1",
+        "panel_1_2",
+        "panel_1_3",
+        "panel_1_4",
+        "panel_1_5",
+        "panel_1_6",
+        "panel_1_7",
+        "panel_1_8",
+        "panel_1_9",
+        "panel_1_10",
+        "panel_1_11",
+        "panel_1_12",
+        "panel_1_13",
+        "panel_1_14",
+        "panel_1_15"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "heat_shaft_1",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_1_1",
+        "riser_1_2_1",
+        "riser_1_3_1",
+        "riser_1_4_1",
+        "riser_1_5_1",
+        "riser_1_6_1",
+        "riser_1_7_1",
+        "riser_1_8_1",
+        "riser_1_9_1",
+        "riser_1_10_1",
+        "riser_1_11_1",
+        "riser_1_12_1",
+        "riser_1_13_1",
+        "riser_1_14_1",
+        "riser_1_15_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "cold_shaft_1",
+      "type": "COLD",
+      "node_ids": [
+        "riser_1_1_1",
+        "riser_1_2_1",
+        "riser_1_3_1",
+        "riser_1_4_1",
+        "riser_1_5_1",
+        "riser_1_6_1",
+        "riser_1_7_1",
+        "riser_1_8_1",
+        "riser_1_9_1",
+        "riser_1_10_1",
+        "riser_1_11_1",
+        "riser_1_12_1",
+        "riser_1_13_1",
+        "riser_1_14_1",
+        "riser_1_15_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "hot_shaft_1",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_1_1_1",
+        "riser_1_2_1",
+        "riser_1_3_1",
+        "riser_1_4_1",
+        "riser_1_5_1",
+        "riser_1_6_1",
+        "riser_1_7_1",
+        "riser_1_8_1",
+        "riser_1_9_1",
+        "riser_1_10_1",
+        "riser_1_11_1",
+        "riser_1_12_1",
+        "riser_1_13_1",
+        "riser_1_14_1",
+        "riser_1_15_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "drain_shaft_1",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_1_1_1",
+        "riser_1_2_1",
+        "riser_1_3_1",
+        "riser_1_4_1",
+        "riser_1_5_1",
+        "riser_1_6_1",
+        "riser_1_7_1",
+        "riser_1_8_1",
+        "riser_1_9_1",
+        "riser_1_10_1",
+        "riser_1_11_1",
+        "riser_1_12_1",
+        "riser_1_13_1",
+        "riser_1_14_1",
+        "riser_1_15_1",
+        "tech_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "vent_shaft_1",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_1_1",
+        "mop_1_2",
+        "mop_1_3",
+        "mop_1_4",
+        "mop_1_5",
+        "mop_1_6",
+        "mop_1_7",
+        "mop_1_8",
+        "mop_1_9",
+        "mop_1_10",
+        "mop_1_11",
+        "mop_1_12",
+        "mop_1_13",
+        "mop_1_14",
+        "mop_1_15",
+        "roof_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "lift_shaft_1",
+      "type": "ADJ",
+      "node_ids": [
+        "lift_1_1_1",
+        "lift_1_2_1",
+        "lift_1_3_1",
+        "lift_1_4_1",
+        "lift_1_5_1",
+        "lift_1_6_1",
+        "lift_1_7_1",
+        "lift_1_8_1",
+        "lift_1_9_1",
+        "lift_1_10_1",
+        "lift_1_11_1",
+        "lift_1_12_1",
+        "lift_1_13_1",
+        "lift_1_14_1",
+        "lift_1_15_1"
+      ],
+      "features": {
+        "section": 1.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "elec_shaft_2",
+      "type": "ELEC",
+      "node_ids": [
+        "tech_1",
+        "panel_2_1",
+        "panel_2_2",
+        "panel_2_3",
+        "panel_2_4",
+        "panel_2_5",
+        "panel_2_6",
+        "panel_2_7",
+        "panel_2_8",
+        "panel_2_9",
+        "panel_2_10",
+        "panel_2_11",
+        "panel_2_12",
+        "panel_2_13",
+        "panel_2_14",
+        "panel_2_15"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "heat_shaft_2",
+      "type": "HEAT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_1_1",
+        "riser_2_2_1",
+        "riser_2_3_1",
+        "riser_2_4_1",
+        "riser_2_5_1",
+        "riser_2_6_1",
+        "riser_2_7_1",
+        "riser_2_8_1",
+        "riser_2_9_1",
+        "riser_2_10_1",
+        "riser_2_11_1",
+        "riser_2_12_1",
+        "riser_2_13_1",
+        "riser_2_14_1",
+        "riser_2_15_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "cold_shaft_2",
+      "type": "COLD",
+      "node_ids": [
+        "riser_2_1_1",
+        "riser_2_2_1",
+        "riser_2_3_1",
+        "riser_2_4_1",
+        "riser_2_5_1",
+        "riser_2_6_1",
+        "riser_2_7_1",
+        "riser_2_8_1",
+        "riser_2_9_1",
+        "riser_2_10_1",
+        "riser_2_11_1",
+        "riser_2_12_1",
+        "riser_2_13_1",
+        "riser_2_14_1",
+        "riser_2_15_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "hot_shaft_2",
+      "type": "HOT",
+      "node_ids": [
+        "itp_1",
+        "riser_2_1_1",
+        "riser_2_2_1",
+        "riser_2_3_1",
+        "riser_2_4_1",
+        "riser_2_5_1",
+        "riser_2_6_1",
+        "riser_2_7_1",
+        "riser_2_8_1",
+        "riser_2_9_1",
+        "riser_2_10_1",
+        "riser_2_11_1",
+        "riser_2_12_1",
+        "riser_2_13_1",
+        "riser_2_14_1",
+        "riser_2_15_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "drain_shaft_2",
+      "type": "DRAIN",
+      "node_ids": [
+        "riser_2_1_1",
+        "riser_2_2_1",
+        "riser_2_3_1",
+        "riser_2_4_1",
+        "riser_2_5_1",
+        "riser_2_6_1",
+        "riser_2_7_1",
+        "riser_2_8_1",
+        "riser_2_9_1",
+        "riser_2_10_1",
+        "riser_2_11_1",
+        "riser_2_12_1",
+        "riser_2_13_1",
+        "riser_2_14_1",
+        "riser_2_15_1",
+        "tech_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "vent_shaft_2",
+      "type": "VENT",
+      "node_ids": [
+        "tech_1",
+        "mop_2_1",
+        "mop_2_2",
+        "mop_2_3",
+        "mop_2_4",
+        "mop_2_5",
+        "mop_2_6",
+        "mop_2_7",
+        "mop_2_8",
+        "mop_2_9",
+        "mop_2_10",
+        "mop_2_11",
+        "mop_2_12",
+        "mop_2_13",
+        "mop_2_14",
+        "mop_2_15",
+        "roof_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    },
+    {
+      "id": "lift_shaft_2",
+      "type": "ADJ",
+      "node_ids": [
+        "lift_2_1_1",
+        "lift_2_2_1",
+        "lift_2_3_1",
+        "lift_2_4_1",
+        "lift_2_5_1",
+        "lift_2_6_1",
+        "lift_2_7_1",
+        "lift_2_8_1",
+        "lift_2_9_1",
+        "lift_2_10_1",
+        "lift_2_11_1",
+        "lift_2_12_1",
+        "lift_2_13_1",
+        "lift_2_14_1",
+        "lift_2_15_1"
+      ],
+      "features": {
+        "section": 2.0,
+        "vertical": 1.0
+      }
+    }
+  ]
+}
