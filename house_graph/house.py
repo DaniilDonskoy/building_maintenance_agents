@@ -4,7 +4,7 @@ from typing import List
 
 import torch
 
-from dto import HouseTensorDTO
+from .dto import HouseTensorDTO
 from .edge import EDGE_TYPES, Edge
 from .node import NODE_TYPES, Node
 
