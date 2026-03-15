@@ -6,6 +6,7 @@ from .riser_node import RiserNode
 from .elev_node import ElevNode
 from .elec_node import ElecNode
 
+
 __all__ = [
     "BaseNode",
     "FlatNode",
