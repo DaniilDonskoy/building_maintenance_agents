@@ -1,9 +1,16 @@
-from .house_hypergraph import House, Node, Edge, HouseFactory, NODE_TYPES, EDGE_TYPES
+from .house_hypergraph import House, Edge, HouseFactory, NODE_TYPES, EDGE_TYPES
+from .nodes import BaseNode, FlatNode, MopNode, TechNode, RiserNode, ElevNode, ElecNode, BaseTypeNode
 from .dto import HouseTensorDTO
 
 __all__ = [
     "House",
-    "Node", 
+    "BaseNode",
+    "FlatNode",
+    "MopNode",
+    "TechNode",
+    "RiserNode",
+    "ElevNode",
+    "ElecNode",
     "Edge",
     "HouseFactory",
     "NODE_TYPES",
