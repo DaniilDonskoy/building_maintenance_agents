@@ -8,7 +8,19 @@ from ..nodes import BaseNode
 
 @dataclass(slots=True)
 class PathEdge(BaseEdge):
-    def __init__(self, node_a: BaseNode, node_b: BaseNode, features: Dict[str, float] = {}):
+    def __init__(
+            self,
+            node_a: BaseNode,
+            node_b: BaseNode,
+            vertical: bool = False,
+            horizontal: bool = False,
+            features: Dict[str, float] = {}
+        ) -> None:
         self.node_a = node_a
         self.node_b = node_b
-        self.features = {**features, "oriented": 0.0}
+        self.features = {
+            "oriented": 0.0,
+            "vertical": float(vertical),
+            "horizontal": float(horizontal),
+            **features
+        }

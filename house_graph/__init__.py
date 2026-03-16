@@ -1,7 +1,7 @@
 from .edges import FlowEdge, PathEdge
 from .house_factory import HouseFactory
 from .house import House
-from .nodes import FlatNode, MopNode, TechNode, RiserNode, ElevNode, ElecNode
+from .nodes import BaseNode, FlatNode, MopNode, TechNode, RiserNode, ElevNode, ElecNode
 from .dto import HouseTensorDTO
 from . import samples
 
