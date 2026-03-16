@@ -6,8 +6,13 @@ from .base_node import BaseNode, SECTION_SPACING
 
 @dataclass(slots=True)
 class TechNode(BaseNode):
+    def __init__(self, sections: int):
+        self.features = {
+            "sections": float(sections),
+        }
+        self.__post_init__()
+
     def __post_init__(self) -> None:
-        super().__post_init__()
         if "sections" not in self.features:
             raise ValueError("TechNode requires 'sections' in features")
         sections = self.features['sections']

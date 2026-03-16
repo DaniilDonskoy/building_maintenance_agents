@@ -12,6 +12,3 @@ APARTMENT_SPACING = 6.0
 @dataclass(slots=True)
 class BaseNode:
     features: Dict[str, float] = field(default_factory=dict)
-
-    def __post_init__(self) -> None:
-        pass

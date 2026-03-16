@@ -6,8 +6,16 @@ from .base_node import BaseNode, FLOOR_HEIGHT, SECTION_SPACING, APARTMENT_SPACIN
 
 @dataclass(slots=True)
 class RiserNode(BaseNode):
+    def __init__(self, section: int, floor: int, apartment_index: int, apartments_per_section: int):
+        self.features = {
+            "section": float(section),
+            "floor": float(floor),
+            "apartment_index": float(apartment_index),
+            "apartments_per_section": float(apartments_per_section),
+        }
+        self.__post_init__()
+
     def __post_init__(self) -> None:
-        super().__post_init__()
         if any(key not in self.features for key in ("section", "floor", "apartment_index", "apartments_per_section")):
             raise ValueError("RiserNode requires 'section', 'floor', 'apartment_index', and 'apartments_per_section' in features")
         section = self.features['section']

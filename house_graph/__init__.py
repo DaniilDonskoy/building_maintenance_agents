@@ -1,8 +1,7 @@
-from .edge import Edge, EDGE_TYPES
+from .edges import FlowEdge, PathEdge
 from .house_factory import HouseFactory
 from .house import House
-from .node import Node, NODE_TYPES
-from .nodes import BaseNode, FlatNode, MopNode, TechNode, RiserNode, ElevNode, ElecNode, BaseTypeNode
+from .nodes import FlatNode, MopNode, TechNode, RiserNode, ElevNode, ElecNode
 from .dto import HouseTensorDTO
 from . import samples
 
@@ -16,10 +15,9 @@ __all__ = [
     "RiserNode",
     "ElevNode",
     "ElecNode",
-    "Edge",
+    "FlowEdge",
+    "PathEdge",
     "HouseFactory",
-    "NODE_TYPES",
-    "EDGE_TYPES",
     "HouseTensorDTO",
     "samples",
 ]
