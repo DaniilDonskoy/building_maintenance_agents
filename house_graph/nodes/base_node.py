@@ -6,7 +6,7 @@ from typing import Dict
 
 FLOOR_HEIGHT = 3.0
 SECTION_SPACING = 30.0
-APARTMENT_SPACING = 6.0
+FLAT_SPACING = 6.0
 
 
 @dataclass(slots=True)
