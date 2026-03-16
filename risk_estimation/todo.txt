@@ -1,2 +1,0 @@
-
-Write a simple function that, based on load and vulnerability, gives the "risk of failure" of each node
