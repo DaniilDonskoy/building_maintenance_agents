@@ -13,12 +13,12 @@ class BaseEdge:
 
     @property
     def oriented(self) -> bool:
-        return self.features.get("oriented")
+        return bool(self.features.get("oriented"))
     
     @property
     def horisontal(self) -> bool:
-        return self.features.get("horizontal", 0.0)
+        return bool(self.features.get("horizontal"))
     
     @property
     def vertical(self) -> bool:
-        return self.features.get("vertical", 0.0)
+        return bool(self.features.get("vertical"))
