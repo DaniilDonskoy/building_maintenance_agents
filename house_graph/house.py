@@ -142,4 +142,3 @@ class House:
 
         graph = HouseGraphDTO(nodes=nodes, edges=edges)
         return graph.model_dump_json(indent=indent)
-        
