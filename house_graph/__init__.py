@@ -1,12 +1,16 @@
-from .house_hypergraph import House, Node, Edge, HouseFactory, NODE_TYPES, EDGE_TYPES
+from .house_factory import HouseFactory
+from .house import House
 from .dto import HouseTensorDTO
+from . import edges
+from . import nodes
+from . import samples
+
 
 __all__ = [
     "House",
-    "Node", 
-    "Edge",
+    "nodes",
+    "edges",
     "HouseFactory",
-    "NODE_TYPES",
-    "EDGE_TYPES",
     "HouseTensorDTO",
+    "samples",
 ]
