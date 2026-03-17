@@ -48,4 +48,10 @@ class HouseFactory:
                     house.add_edge(FlowEdge(riser_node, flat_node, horizontal=True))
                     house.add_edge(FlowEdge(riser_node, last_riser_nodes[flat_idx - 1], vertical=True))
                     last_riser_nodes[flat_idx - 1] = riser_node
+
+        for edge in house.edges:
+            node_a = edge.node_a
+            node_b = edge.node_b
+            node_a.features["degree"] = node_a.features.get("degree", 0) + 1
+            node_b.features["degree"] = node_b.features.get("degree", 0) + 1
         return house

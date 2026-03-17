@@ -105,7 +105,7 @@ class House:
                 "source": id(edge.node_a),
                 "target": id(edge.node_b),
                 "type": type(edge).__name__,
-                "oriented": bool(edge.oriented),
+                "oriented": edge.oriented,
                 "features": edge.features,
             }
             for edge in self.edges
