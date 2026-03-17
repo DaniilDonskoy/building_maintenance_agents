@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import json
+
 import torch
 from dataclasses import dataclass, field
 from typing import List
 
-from .dto import HouseTensorDTO
+from .dto import HouseGraphDTO, HouseTensorDTO
 from .nodes import BaseNode
 from .edges import BaseEdge
 
@@ -107,4 +109,37 @@ class House:
             node_feature_names=node_feature_names,
             edge_feature_names=edge_feature_names,
         )
+
+    def to_json(self, indent: int = 2) -> str:
+        """Serialize the house graph into a JSON string for visualization.
+
+        Output format:
+          - nodes: [{id, type, features}, ...]
+          - edges: [{source, target, oriented, features}, ...]
+
+        Node IDs are Python object ids to keep them stable and unique.
+        """
+
+        nodes = [
+            {
+                "id": id(node),
+                "type": type(node).__name__,
+                "features": node.features,
+            }
+            for node in self.nodes
+        ]
+
+        edges = [
+            {
+                "source": id(edge.node_a),
+                "target": id(edge.node_b),
+                "type": type(edge).__name__,
+                "oriented": bool(edge.oriented),
+                "features": edge.features,
+            }
+            for edge in self.edges
+        ]
+
+        graph = HouseGraphDTO(nodes=nodes, edges=edges)
+        return graph.model_dump_json(indent=indent)
         
