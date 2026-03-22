@@ -7,4 +7,4 @@
 
 ### Client
 
-![building_graph](./docs/images/building_graph_example.png)
+![building_graph](./docs/images/building_graph_example.jpg)

@@ -1,65 +1,57 @@
 from __future__ import annotations
 
-from .edge import Edge
+from .edges import FlowEdge, PathEdge
 from .house import House
-from .node import Node
+from .nodes import ElecNode, ElevNode, FlatNode, MopNode, RiserNode, TechNode
 
 
 class HouseFactory:
-    @staticmethod
-    def build(
-        house_id: str,
-        floors: int = 10,
-        apartments_per_floor: int = 2,
-        lifts: int = 1,
-        risers: int = 1,
-    ) -> House:
-        house = House(id=house_id)
-        # Добавляем базовые узлы: ИТП, Техпомещение, Крыша
-        house.add_node(Node("itp_1", "ITP", {"floor": 0}))
-        house.add_node(Node("tech_1", "TECH", {"floor": 0}))
-        house.add_node(Node("roof_1", "ROOF", {"floor": floors + 1}))
+    floors: int = 2
+    sections: int = 1
+    flats_per_section: int = 1
+    elevs_per_section: int = 1
 
-        # На каждый этаж добавляем МОП, Элекктрощит
-        for floor in range(1, floors + 1):
-            mop_id = f"mop_{floor}"
-            panel_id = f"panel_{floor}"
-            house.add_node(Node(mop_id, "MOP", {"floor": floor}))
-            house.add_node(Node(panel_id, "PANEL", {"floor": floor}))
+    @classmethod
+    def build(cls) -> House:
+        house = House()
+        tech_node = TechNode(sections=cls.sections)
+        house.add_node(tech_node)
+        for section in range(1, cls.sections + 1):
+            last_mop_node = tech_node
+            last_elec_node = tech_node
+            last_elev_nodes = [None] * cls.elevs_per_section
+            last_riser_nodes = [tech_node] * cls.flats_per_section
+            for floor in range(1, cls.floors + 1):
+                elec_node = ElecNode(section=section, floor=floor)
+                house.add_node(elec_node)
+                house.add_edge(FlowEdge(last_elec_node, elec_node, vertical=True))
+                last_elec_node = elec_node
+                mop_node = MopNode(section=section, floor=floor)
+                house.add_node(mop_node)
+                house.add_edge(PathEdge(last_mop_node, mop_node, vertical=True))
+                last_mop_node = mop_node
+                house.add_edge(PathEdge(mop_node, elec_node, horizontal=True))
+                for elev_idx in range(1, cls.elevs_per_section + 1):
+                    elev_node = ElevNode(section=section, floor=floor, elev_index=elev_idx)
+                    house.add_node(elev_node)
+                    house.add_edge(PathEdge(elev_node, mop_node, horizontal=True))
+                    if last_elev_nodes[elev_idx - 1] is not None:
+                        house.add_edge(PathEdge(elev_node, last_elev_nodes[elev_idx - 1], vertical=True))
+                    last_elev_nodes[elev_idx - 1] = elev_node
+                for flat_idx in range(1, cls.flats_per_section + 1):
+                    flat_node = FlatNode(section=section, floor=floor, flat_index=flat_idx, flats_per_section=cls.flats_per_section)
+                    house.add_node(flat_node)
+                    house.add_edge(PathEdge(flat_node, mop_node, horizontal=True))
+                    house.add_edge(FlowEdge(elec_node, flat_node, horizontal=True))
+                    riser_node = RiserNode(section=section, floor=floor, flat_index=flat_idx, flats_per_section=cls.flats_per_section)
+                    house.add_node(riser_node)
+                    house.add_edge(FlowEdge(riser_node, flat_node, horizontal=True))
+                    house.add_edge(FlowEdge(riser_node, last_riser_nodes[flat_idx - 1], vertical=True))
+                    last_riser_nodes[flat_idx - 1] = riser_node
 
-            apt_ids = []
-            lift_ids = []
-            riser_ids = []
-
-            # На каждый этаж добавляем квартиры, лифты и стояки
-            for i in range(1, apartments_per_floor + 1):
-                apt_id = f"apt_{floor}_{i}"
-                apt_ids.append(apt_id)
-                house.add_node(Node(apt_id, "APT", {"floor": floor}))
-
-            for i in range(1, lifts + 1):
-                lift_id = f"lift_{floor}_{i}"
-                lift_ids.append(lift_id)
-                house.add_node(Node(lift_id, "LIFT", {"floor": floor}))
-
-            for i in range(1, risers + 1):
-                riser_id = f"riser_{floor}_{i}"
-                riser_ids.append(riser_id)
-                house.add_node(Node(riser_id, "RISER", {"floor": floor}))
-
-            # Добавляем рёбра между МОП, Электрощитом, Квартирами, Лифтом, Стояком, ИТП, Техпомещением и Крышей
-            house.add_edge(Edge(f"adj_{floor}", "ADJ", [mop_id, *apt_ids, *lift_ids, *riser_ids]))
-            house.add_edge(Edge(f"elec_{floor}", "ELEC", [panel_id, *apt_ids, *lift_ids]))
-            house.add_edge(Edge(f"vent_{floor}", "VENT", ["tech_1", *apt_ids, "roof_1"]))
-
-            # Рёбра для отопления, холодного и горячего водоснабжения, а также канализации
-            # Исходя из количества стояков, распределяем квартиры по ним равномерно
-            for i, riser_id in enumerate(riser_ids, start=1):
-                attached_apts = apt_ids[i - 1 :: len(riser_ids)]
-                if attached_apts:
-                    house.add_edge(Edge(f"heat_{floor}_{i}", "HEAT", ["itp_1", riser_id, *attached_apts]))
-                    house.add_edge(Edge(f"cold_{floor}_{i}", "COLD", [riser_id, *attached_apts]))
-                    house.add_edge(Edge(f"hot_{floor}_{i}", "HOT", ["itp_1", riser_id, *attached_apts]))
-                    house.add_edge(Edge(f"drain_{floor}_{i}", "DRAIN", [riser_id, *attached_apts, "tech_1"]))
-
+        for edge in house.edges:
+            node_a = edge.node_a
+            node_b = edge.node_b
+            node_a.features["degree"] = node_a.features.get("degree", 0) + 1
+            node_b.features["degree"] = node_b.features.get("degree", 0) + 1
         return house
