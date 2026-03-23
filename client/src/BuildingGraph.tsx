@@ -1,15 +1,16 @@
-import React, {useState, useEffect, useRef, useMemo, CSSProperties} from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import * as d3 from "d3";
 
+const JSON_PATH = "/house_graph_example.json";
+
+// ====================== ИНТЕРФЕЙСЫ ======================
 interface D3Node extends GraphNode, d3.SimulationNodeDatum {}
 
 interface D3Edge extends d3.SimulationLinkDatum<D3Node> {
   type: EdgeType;
-  source: string | D3Node;
-  target: string | D3Node;
 }
 
-type LayoutMode = "force" | "layered";
+type LayoutMode = "force" | "layered" | "isometric";
 
 export interface NodeTypeConfig {
   label: string;
@@ -26,6 +27,14 @@ export interface EdgeTypeConfig {
   width: number;
 }
 
+export interface NodeParams {
+  label?: string;
+  layer?: number;
+  section?: number;
+  floor?: number;
+}
+
+// ====================== КЛАССЫ ======================
 export class NodeType {
   constructor(public id: string, public config: NodeTypeConfig) {}
   get label() { return this.config.label; }
@@ -42,13 +51,6 @@ export class EdgeType {
   get width() { return this.config.width; }
 }
 
-export interface NodeParams {
-  label?: string;
-  layer?: number;
-  section?: number;
-  floor?: number;
-}
-
 export class GraphNode {
   public id: string;
   public type: NodeType;
@@ -56,6 +58,9 @@ export class GraphNode {
   public layer: number;
   public section: number;
   public floor: number;
+  public jsonX: number = 0;
+  public jsonY: number = 0;   // ← добавлено
+  public jsonZ: number = 0;
 
   constructor(id: string, type: NodeType, params: NodeParams = {}) {
     this.id = id;
@@ -75,6 +80,7 @@ export class GraphEdge {
   ) {}
 }
 
+// ====================== ТИПЫ ======================
 export const NODE_TYPES: Record<string, NodeType> = {
   APT:   new NodeType("APT",   { label: "Квартира", color: "#4A9EFF", shape: "rect", r: 10, layer: "floor" }),
   MOP:   new NodeType("MOP",   { label: "МОП", color: "#22D3A0", shape: "rect", r: 12, layer: "floor" }),
@@ -96,12 +102,66 @@ export const EDGE_TYPES: Record<string, EdgeType> = {
   DRAIN: new EdgeType("DRAIN", { label: "Канализация", color: "#A29BFEAA", dash: "3,3", width: 1.5 }),
 };
 
-interface GraphConfig {
-  floors: number;
-  sections: number;
-  aptsPerFloor: number;
-  liftsPerSection: number;
-  risersPerSection: number;
+const NODE_TYPE_MAPPING: Record<string, NodeType> = {
+  TechNode: NODE_TYPES.ITP,
+  ElecNode: NODE_TYPES.PANEL,
+  MopNode:  NODE_TYPES.MOP,
+  ElevNode: NODE_TYPES.LIFT,
+  FlatNode: NODE_TYPES.APT,
+  RiserNode: NODE_TYPES.RISER,
+};
+
+function getNodeLabel(jn: any): string {
+  const f = jn.features || {};
+  switch (jn.type) {
+    case "FlatNode":  return `КВ.${f.flat_index ?? ""} (Э.${f.floor ?? ""})`;
+    case "MopNode":   return `ХОЛЛ С.${f.section ?? ""} ЭТ.${f.floor ?? ""}`;
+    case "ElevNode":  return `ЛИФТ ${f.elev_index ?? 1}`;
+    case "RiserNode": return `СТ.${f.flat_index ?? ""}`;
+    case "ElecNode":  return `ЩЭ-${f.floor ?? ""}.${f.section ?? ""}`;
+    case "TechNode":  return "ЦЕНТРАЛЬНЫЙ ИТП";
+    default:          return jn.type || "Узел";
+  }
+}
+
+function getNodeParams(jn: any): NodeParams {
+  const f = jn.features || {};
+  return {
+    label: getNodeLabel(jn),
+    layer: f.floor ?? f.z ?? 0,
+    section: typeof f.section === "number" ? f.section : -1,
+    floor: f.floor ?? 0,
+  };
+}
+
+function getEdgeType(je: any): EdgeType {
+  if (je.type === "PathEdge") return EDGE_TYPES.ADJ;
+  const f = je.features || {};
+  if (f.vertical === 1 && f.horizontal === 0) return EDGE_TYPES.VENT;
+  if (f.vertical === 0 && f.horizontal === 1) return EDGE_TYPES.ELEC;
+  if (f.oriented === 1) return EDGE_TYPES.HEAT;
+  return EDGE_TYPES.COLD;
+}
+
+function parseBuildingGraph(json: any): BuildingGraph {
+  const nodes: GraphNode[] = [];
+  const edges: GraphEdge[] = [];
+
+  json.nodes?.forEach((jn: any) => {
+    const nodeType = NODE_TYPE_MAPPING[jn.type] || NODE_TYPES.TECH;
+    const node = new GraphNode(String(jn.id), nodeType, getNodeParams(jn));
+    const f = jn.features || {};
+    node.jsonX = f.x ?? 0;
+    node.jsonY = f.y ?? 0;   // ← используем y
+    node.jsonZ = f.z ?? 0;
+    nodes.push(node);
+  });
+
+  json.edges?.forEach((je: any) => {
+    edges.push(new GraphEdge(String(je.source), String(je.target), getEdgeType(je)));
+  });
+
+  return { nodes, edges };
 }
 
 interface BuildingGraph {
@@ -109,106 +169,19 @@ interface BuildingGraph {
   edges: GraphEdge[];
 }
 
-function generateBuildingGraph(config: GraphConfig): BuildingGraph {
-  const { floors, sections, aptsPerFloor, liftsPerSection, risersPerSection } = config;
-  const nodes: GraphNode[] = [];
-  const edges: GraphEdge[] = [];
-  const idMap = new Map<string, GraphNode>();
-
-  const addNode = (id: string, typeObj: NodeType, params: NodeParams): GraphNode => {
-    const node = new GraphNode(id, typeObj, params);
-    nodes.push(node);
-    idMap.set(id, node);
-    return node;
-  };
-
-  const itp = addNode("itp", NODE_TYPES.ITP, { label: "ЦЕНТРАЛЬНЫЙ ИТП", layer: 0 });
-  const tech = addNode("tech_base", NODE_TYPES.TECH, { label: "ТЕХ. ПОДПОЛЬЕ", layer: 0 });
-  const grsh = addNode("grsh_main", NODE_TYPES.PANEL, { label: "ГРЩ ЗДАНИЯ", layer: 0 });
-
-  edges.push(new GraphEdge(itp.id, tech.id, EDGE_TYPES.ADJ));
-
-  const lastRisers: Record<string, string> = {};
-
-  for (let f = 1; f <= floors; f++) {
-    for (let s = 0; s < sections; s++) {
-      const sectionPrefix = `S${s+1}_F${f}`;
-
-      const mop = addNode(`mop_${sectionPrefix}`, NODE_TYPES.MOP, {
-        label: `ХОЛЛ С.${s+1} ЭТ.${f}`,
-        layer: f, section: s, floor: f
-      });
-
-      for (let l = 0; l < liftsPerSection; l++) {
-        const lift = addNode(`lift_${sectionPrefix}_${l}`, NODE_TYPES.LIFT, {
-          label: `ЛИФТ ${l+1}`, layer: f, section: s
-        });
-        edges.push(new GraphEdge(mop.id, lift.id, EDGE_TYPES.ADJ));
-      }
-
-      const panel = addNode(`panel_${sectionPrefix}`, NODE_TYPES.PANEL, {
-        label: `ЩЭ-${f}.${s+1}`, layer: f, section: s
-      });
-      edges.push(new GraphEdge(mop.id, panel.id, EDGE_TYPES.ADJ));
-      edges.push(new GraphEdge(grsh.id, panel.id, EDGE_TYPES.ELEC));
-
-      const systems = [
-        { key: 'HEAT', type: NODE_TYPES.RISER, edge: EDGE_TYPES.HEAT, lab: 'ОТП' },
-        { key: 'COLD', type: NODE_TYPES.RISER, edge: EDGE_TYPES.COLD, lab: 'ХВС' },
-        { key: 'HOT',  type: NODE_TYPES.RISER, edge: EDGE_TYPES.HOT,  lab: 'ГВС' },
-        { key: 'DRAIN',type: NODE_TYPES.RISER, edge: EDGE_TYPES.DRAIN,lab: 'КАН' }
-      ];
-
-      systems.forEach(sys => {
-        const rNode = addNode(`riser_${sys.key}_${s}_${f}`, sys.type, {
-          label: `СТ.${sys.lab}`, layer: f, section: s
-        });
-
-        edges.push(new GraphEdge(mop.id, rNode.id, EDGE_TYPES.ADJ));
-
-        const prevKey = `${sys.key}_${s}`;
-        if (f === 1) {
-          edges.push(new GraphEdge(itp.id, rNode.id, sys.edge));
-        } else if (lastRisers[prevKey]) {
-          edges.push(new GraphEdge(lastRisers[prevKey], rNode.id, sys.edge));
-        }
-        lastRisers[prevKey] = rNode.id;
-
-        const aptsThisRiser = Math.ceil(aptsPerFloor / risersPerSection);
-        for (let a = 0; a < aptsThisRiser; a++) {
-          const aptId = `apt_${sectionPrefix}_r${sys.key}_a${a}`;
-          addNode(aptId, NODE_TYPES.APT, {
-            label: `КВ.${a+1} (Э.${f})`, layer: f, section: s
-          });
-          edges.push(new GraphEdge(rNode.id, aptId, sys.edge));
-          edges.push(new GraphEdge(mop.id, aptId, EDGE_TYPES.ADJ));
-          edges.push(new GraphEdge(panel.id, aptId, EDGE_TYPES.ELEC));
-        }
-      });
-    }
-  }
-
-  addNode("roof", NODE_TYPES.ROOF, { label: "КРОВЛЯ / ТЕХ. ЭТАЖ", layer: floors + 1 });
-
-  return { nodes, edges };
+// ====================== ИЗОМЕТРИЧЕСКАЯ ПРОЕКЦИЯ ======================
+function projectIsometric(x: number, y: number, z: number) {
+  const sx = (x - y) * 0.85;
+  const sy = (x + y) * 0.42 - z * 0.72;
+  return { sx, sy };
 }
 
+// ====================== ОСНОВНОЙ КОМПОНЕНТ ======================
 export default function BuildingGraph() {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const simRef = useRef<d3.Simulation<D3Node, D3Edge> | null>(null);
 
-  const [params, setParams] = useState<GraphConfig>({
-    floors: 5, sections: 2, aptsPerFloor: 4, liftsPerSection: 1, risersPerSection: 1,
-  });
-
-  const setParam = (k: keyof GraphConfig, v: number) => {
-    const limits: Record<keyof GraphConfig, number> = {
-      floors: 25, sections: 5, aptsPerFloor: 12, liftsPerSection: 3, risersPerSection: 4
-    };
-    const val = Math.max(1, Math.min(v, limits[k] || 10));
-    setParams(p => ({ ...p, [k]: val }));
-  };
-
+  const [graphData, setGraphData] = useState<BuildingGraph>({ nodes: [], edges: [] });
   const [activeEdgeTypes, setActiveEdgeTypes] = useState<Record<string, boolean>>(
     Object.fromEntries(Object.keys(EDGE_TYPES).map(k => [k, true]))
   );
@@ -216,39 +189,71 @@ export default function BuildingGraph() {
     Object.fromEntries(Object.keys(NODE_TYPES).map(k => [k, true]))
   );
 
-  const [layoutMode, setLayoutMode] = useState<LayoutMode>("layered");
-  const [graphData, setGraphData] = useState<BuildingGraph>({ nodes: [], edges: [] });
+  const [layoutMode, setLayoutMode] = useState<LayoutMode>("isometric");
   const [hovered, setHovered] = useState<GraphNode | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
+  const [buildingParams, setBuildingParams] = useState({
+    floors: 0, sections: 0, aptsPerFloor: 0, liftsPerSection: 0, risersPerSection: 0,
+  });
+
+  // Загрузка JSON
   useEffect(() => {
-    setGraphData(generateBuildingGraph(params));
-  }, [params]);
+    fetch(JSON_PATH)
+      .then(res => res.ok ? res.json() : Promise.reject(`HTTP ${res.status}`))
+      .then(data => {
+        const parsed = parseBuildingGraph(data);
+        setGraphData(parsed);
+
+        const floorsSet = new Set<number>();
+        const sectionsSet = new Set<number>();
+        let liftCount = 0, riserCount = 0, aptCount = 0;
+
+        parsed.nodes.forEach(node => {
+          if (node.floor > 0) floorsSet.add(node.floor);
+          if (node.section >= 0) sectionsSet.add(node.section);
+          if (node.type.id === "LIFT") liftCount++;
+          if (node.type.id === "RISER") riserCount++;
+          if (node.type.id === "APT") aptCount++;
+        });
+
+        const floors = floorsSet.size || 1;
+        const sections = sectionsSet.size || 1;
+
+        setBuildingParams({
+          floors,
+          sections,
+          aptsPerFloor: Math.round(aptCount / (floors * sections)) || 3,
+          liftsPerSection: Math.ceil(liftCount / sections),
+          risersPerSection: Math.ceil(riserCount / sections),
+        });
+
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setError("Не удалось загрузить house_graph_example.json");
+        setLoading(false);
+      });
+  }, []);
 
   const stats = useMemo(() => ({
     nodes: graphData.nodes.length,
     edges: graphData.edges.length,
   }), [graphData]);
 
-  const inputStyle: CSSProperties = {
-    background: "#0D1B2A",
-    border: "1px solid #1E3A54",
-    color: "#7EB8D4",
-    padding: "4px 8px",
-    borderRadius: "4px",
-    width: "45px",
-    fontFamily: "monospace",
-    outline: "none"
-  };
-
+  // ====================== D3 ВИЗУАЛИЗАЦИЯ ======================
   useEffect(() => {
-    if (!graphData.nodes.length || !svgRef.current) return;
+    if (loading || error || !graphData.nodes.length || !svgRef.current) return;
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    const container = svgRef.current;
-    const W = container.clientWidth || 900;
-    const H = container.clientHeight || 640;
+    const g = svg.append("g");
+
+    const W = svgRef.current.clientWidth || 900;
+    const H = svgRef.current.clientHeight || 640;
 
     const filteredNodes = graphData.nodes.filter(n => activeNodeTypes[n.type.id]);
     const nodeIds = new Set(filteredNodes.map(n => n.id));
@@ -259,12 +264,30 @@ export default function BuildingGraph() {
     const nodes: D3Node[] = filteredNodes.map(n => ({ ...n } as D3Node));
     const links: D3Edge[] = filteredEdges.map(e => ({ ...e } as D3Edge));
 
-    const g = svg.append("g");
-    const maxLayer = Math.max(...nodes.map(n => n.layer)) || 1;
-    const layerH = H / (maxLayer + 2);
+    // === ИЗОМЕТРИЧЕСКАЯ ПРОЕКЦИЯ с x, y, z ===
+    nodes.forEach(d => {
+      const p = projectIsometric(d.jsonX, d.jsonY, d.jsonZ);
+      d.x = p.sx;
+      d.y = p.sy;
+    });
+
+    // Центрирование
+    const minX = Math.min(...nodes.map(d => d.x!));
+    const maxX = Math.max(...nodes.map(d => d.x!));
+    const minY = Math.min(...nodes.map(d => d.y!));
+    const maxY = Math.max(...nodes.map(d => d.y!));
+
+    const scale = Math.min(W * 0.82 / (maxX - minX), H * 0.82 / (maxY - minY));
+    const offsetX = W / 2 - (minX + maxX) / 2 * scale;
+    const offsetY = H / 2 - (minY + maxY) / 2 * scale;
+
+    nodes.forEach(d => {
+      d.x = offsetX + d.x! * scale;
+      d.y = offsetY + d.y! * scale;
+    });
 
     const link = g.append("g")
-      .selectAll<SVGLineElement, D3Edge>("line")
+      .selectAll("line")
       .data(links)
       .join("line")
       .attr("stroke", d => d.type.color)
@@ -276,208 +299,176 @@ export default function BuildingGraph() {
       .selectAll<SVGGElement, D3Node>("g")
       .data(nodes)
       .join("g")
-      .on("mouseover", (_e, d) => setHovered(d))
+      .on("mouseover", (_, d) => setHovered(d))
       .on("mouseout", () => setHovered(null))
       .call(d3.drag<SVGGElement, D3Node>()
-        .on("start", (e, d) => {
-          if (!e.active && simRef.current) simRef.current.alphaTarget(0.3).restart();
-          d.fx = d.x;
-          d.fy = d.y;
+        .on("start", (event, d) => {
+          if (!event.active) simRef.current?.alphaTarget(0.3).restart();
+          d.fx = d.x; d.fy = d.y;
         })
-        .on("drag", (e, d) => {
-          d.fx = e.x;
-          d.fy = e.y;
-        })
-        .on("end", (e, d) => {
-          if (!e.active && simRef.current) simRef.current.alphaTarget(0);
-          d.fx = null;
-          d.fy = null;
+        .on("drag", (event, d) => { d.fx = event.x; d.fy = event.y; })
+        .on("end", (event, d) => {
+          if (!event.active) simRef.current?.alphaTarget(0);
+          d.fx = null; d.fy = null;
         })
       );
 
-    nodeG.each(function(d) {
+    nodeG.each(function (d) {
       const el = d3.select(this);
-      const meta = d.type;
-      if (meta.shape === "rect") {
+      const m = d.type;
+      const fill = m.color + "33";
+      const stroke = m.color;
+
+      if (m.shape === "rect") {
         el.append("rect")
-          .attr("x", -meta.r).attr("y", -meta.r / 1.5)
-          .attr("width", meta.r * 2).attr("height", meta.r * 1.3)
-          .attr("rx", 2).attr("fill", meta.color + "33").attr("stroke", meta.color);
+          .attr("x", -m.r).attr("y", -m.r / 1.5)
+          .attr("width", m.r * 2).attr("height", m.r * 1.3)
+          .attr("rx", 2).attr("fill", fill).attr("stroke", stroke);
+      } else if (m.shape === "diamond") {
+        const size = m.r * 1.4;
+        el.append("polygon")
+          .attr("points", `0,${-size} ${size},0 0,${size} -${size},0`)
+          .attr("fill", fill).attr("stroke", stroke);
+      } else if (m.shape === "hexagon") {
+        const pts: string[] = [];
+        const r = m.r * 1.15;
+        for (let i = 0; i < 6; i++) {
+          const ang = (i * Math.PI) / 3 - Math.PI / 2;
+          pts.push(`${(r * Math.cos(ang)).toFixed(2)},${(r * Math.sin(ang)).toFixed(2)}`);
+        }
+        el.append("polygon").attr("points", pts.join(" ")).attr("fill", fill).attr("stroke", stroke);
       } else {
-        el.append("circle")
-          .attr("r", meta.r).attr("fill", meta.color + "33").attr("stroke", meta.color);
+        el.append("circle").attr("r", m.r).attr("fill", fill).attr("stroke", stroke);
       }
     });
 
     const simulation = d3.forceSimulation<D3Node>(nodes)
       .force("link", d3.forceLink<D3Node, D3Edge>(links).id(d => d.id).distance(40))
       .force("charge", d3.forceManyBody().strength(-150))
-      .force("y", d3.forceY<D3Node>(d =>
-        layoutMode === "layered" ? H - (d.layer + 1) * layerH : H / 2
-      ).strength(1))
-      .force("x", d3.forceX<D3Node>(W / 2).strength(0.1))
+      .force("x", d3.forceX(W / 2).strength(0.02))
+      .force("y", d3.forceY(d => d.y!).strength(0.02))
       .on("tick", () => {
         link
           .attr("x1", d => (d.source as D3Node).x!)
           .attr("y1", d => (d.source as D3Node).y!)
           .attr("x2", d => (d.target as D3Node).x!)
           .attr("y2", d => (d.target as D3Node).y!);
-
-        nodeG.attr("transform", d => `translate(${d.x},${d.y})`);
+        nodeG.attr("transform", d => `translate(${d.x || 0},${d.y || 0})`);
       });
 
     simRef.current = simulation;
 
+    // ====================== ЗУМ + ПАНОРАМИРОВАНИЕ ======================
+    const zoomBehavior = d3.zoom<SVGSVGElement, unknown>()
+      .scaleExtent([0.1, 10])
+      .on("zoom", (event) => {
+        g.attr("transform", event.transform);
+      });
+
+    svg.call(zoomBehavior);
+
+    // Начальный вид
+    const initialScale = 0.65;
+    svg.call(zoomBehavior.transform, d3.zoomIdentity.scale(initialScale));
+
     return () => {
       simulation.stop();
     };
-  }, [graphData, activeEdgeTypes, activeNodeTypes, layoutMode]);
+  }, [graphData, activeEdgeTypes, activeNodeTypes, layoutMode, loading, error]);
+
+  if (loading) return <div style={{ padding: 40, color: "#7EB8D4" }}>Загрузка графа...</div>;
+  if (error) return <div style={{ padding: 40, color: "#ff6666" }}>{error}</div>;
 
   return (
-    <div style={{
-      display: "flex", height: "100vh", background: "#060D14", color: "#7EB8D4",
-      fontFamily: "'Inter', 'Helvetica Neue', 'Arial', sans-serif",
-      fontSize: "12px",
-    }}>
-      <div style={{
-        width: "240px", flexShrink: 0, background: "#132133",
-        borderRight: "1px solid #41618a", overflowY: "auto",
-        display: "flex", flexDirection: "column", gap: "0",
-      }}>
+    <div style={{ display: "flex", height: "100vh", background: "#060D14", color: "#7EB8D4", fontFamily: "'Inter', sans-serif", fontSize: "12px" }}>
+      
+      {/* ЛЕВАЯ ПАНЕЛЬ — полностью как в твоём любимом коде */}
+      <div style={{ width: "240px", flexShrink: 0, background: "#132133", borderRight: "1px solid #41618a", overflowY: "auto" }}>
         <div style={{ padding: "16px 14px 10px", borderBottom: "1px solid #0F2030" }}>
-          <div style={{ color: "#4A9EFF", fontSize: "20px", fontWeight: "bold", letterSpacing: "2px", marginBottom: 4 }}>УК ГРАФ</div>
-          <div style={{ color: "#FFFFFF", fontSize: "14px" }}>параметрическая модель</div>
+          <div style={{ color: "#4A9EFF", fontSize: "20px", fontWeight: "bold" }}>УК ГРАФ</div>
+          <div style={{ color: "#FFFFFF", fontSize: "14px" }}>модель из JSON</div>
         </div>
 
         <div style={{ padding: "12px 14px", borderBottom: "1px solid #FFFFFF" }}>
-          <div style={{ color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", letterSpacing: "1px", marginBottom: 8 }}>ПАРАМЕТРЫ</div>
-          {(
-            [
-              ["floors",           "Этажей"],
-              ["sections",         "Секций"],
-              ["aptsPerFloor",     "Кв/этаж/секц"],
-              ["liftsPerSection",  "Лифтов/секц"],
-              ["risersPerSection", "Стояков/секц"],
-            ] as [keyof GraphConfig, string][]
-          ).map(([k, label]) => (
-            <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-              <span style={{ color: "#FFFFFF", fontSize: "14px" }}>{label}</span>
-              <input
-                type="number" value={params[k]} min={1}
-                onChange={e => setParam(k, +e.target.value)}
-                style={inputStyle}
-              />
-            </div>
-          ))}
+          <div style={{ color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", marginBottom: 8 }}>ПАРАМЕТРЫ ДОМА</div>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}><span>Этажей</span><span style={{ color: "#4A9EFF" }}>{buildingParams.floors}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}><span>Секций</span><span style={{ color: "#4A9EFF" }}>{buildingParams.sections}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}><span>Кв/этаж</span><span style={{ color: "#4A9EFF" }}>{buildingParams.aptsPerFloor}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}><span>Лифтов/секц</span><span style={{ color: "#4A9EFF" }}>{buildingParams.liftsPerSection}</span></div>
+          <div style={{ display: "flex", justifyContent: "space-between" }}><span>Стояков/секц</span><span style={{ color: "#4A9EFF" }}>{buildingParams.risersPerSection}</span></div>
         </div>
 
-        <div style={{padding: "10px 14px", borderBottom: "1px solid #FFFFFF"}}>
-          <div style={{color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", letterSpacing: "1px", marginBottom: 12}}>РАСКЛАДКА</div>
-          {(["layered", "force"] as LayoutMode[]).map(m => (
+        <div style={{ padding: "10px 14px", borderBottom: "1px solid #FFFFFF" }}>
+          <div style={{ color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", marginBottom: 12 }}>РАСКЛАДКА</div>
+          {(["layered", "force", "isometric"] as LayoutMode[]).map(m => (
             <button key={m} onClick={() => setLayoutMode(m)} style={{
-              display: "block",
-              width: "100%",
-              marginBottom: 4,
-              padding: "5px",
+              display: "block", width: "100%", marginBottom: 4, padding: "5px",
               background: layoutMode === m ? "#52677D" : "transparent",
-              border: `1px solid #52677D`,
-              color: layoutMode === m ? "#D1CFC9" : "#BDC4D4",
-              borderRadius: 3,
-              cursor: "pointer",
-              fontFamily: "monospace",
-              fontSize: 11,
-              textAlign: "left",
+              border: "1px solid #52677D", color: layoutMode === m ? "#D1CFC9" : "#BDC4D4",
+              borderRadius: 3, cursor: "pointer", fontSize: 11
             }}>
-              {m === "layered" ? "▶ Послойный (этажи)" : "◎ Force-directed"}
+              {m === "isometric" ? "◆ Изометрия 3D" : m === "layered" ? "▶ Послойный (этажи)" : "◎ Force-directed"}
             </button>
           ))}
         </div>
 
-        <div style={{padding: "10px 14px", borderBottom: "1px solid #FFFFFF"}}>
-          <div style={{color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", letterSpacing: "1px", marginBottom: 8}}>УЗЛЫ</div>
+        <div style={{ padding: "10px 14px", borderBottom: "1px solid #FFFFFF" }}>
+          <div style={{ color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", marginBottom: 8 }}>УЗЛЫ</div>
           {Object.entries(NODE_TYPES).map(([k, v]) => (
-            <div
-              key={k}
-              onClick={() => setActiveNodeTypes(p => ({...p, [k]: !p[k]}))}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                marginBottom: 5,
-                cursor: "pointer",
-                opacity: activeNodeTypes[k] ? 1 : 0.35
-              }}>
-              <div style={{width: 10, height: 10, borderRadius: 2, background: v.color, flexShrink: 0}}/>
-              <span style={{color: "#FFFFFF", fontSize: "14px"}}>{v.label}</span>
+            <div key={k}
+              onClick={() => setActiveNodeTypes(p => ({ ...p, [k]: !p[k] }))}
+              style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5, cursor: "pointer", opacity: activeNodeTypes[k] ? 1 : 0.35 }}>
+              <div style={{ width: 10, height: 10, borderRadius: 2, background: v.color }} />
+              <span style={{ color: "#FFFFFF" }}>{v.label}</span>
             </div>
           ))}
         </div>
 
-        <div style={{padding: "10px 14px"}}>
-          <div style={{color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", letterSpacing: "1px", marginBottom: 8}}>СВЯЗИ</div>
+        <div style={{ padding: "10px 14px" }}>
+          <div style={{ color: "#FFFFFF", fontSize: "20px", fontWeight: "bold", marginBottom: 8 }}>СВЯЗИ</div>
           {Object.entries(EDGE_TYPES).map(([k, v]) => (
-            <div
-              key={k}
-              onClick={() => setActiveEdgeTypes(p => ({...p, [k]: !p[k]}))}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 6,
-                marginBottom: 5,
-                cursor: "pointer",
-                opacity: activeEdgeTypes[k] ? 1 : 0.35
-              }}>
+            <div key={k}
+              onClick={() => setActiveEdgeTypes(p => ({ ...p, [k]: !p[k] }))}
+              style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5, cursor: "pointer", opacity: activeEdgeTypes[k] ? 1 : 0.35 }}>
               <svg width="20" height="8">
-                <line
-                  x1="0"
-                  y1="4"
-                  x2="20"
-                  y2="4"
-                  stroke={v.color.slice(0, 7)}
-                  strokeWidth={v.width}
-                  strokeDasharray={v.dash}
-                />
+                <line x1="0" y1="4" x2="20" y2="4" stroke={v.color.slice(0,7)} strokeWidth={v.width} strokeDasharray={v.dash} />
               </svg>
-              <span style={{color: "#FFFFFF", fontSize: "14px"}}>{v.label}</span>
+              <span style={{ color: "#FFFFFF" }}>{v.label}</span>
             </div>
           ))}
         </div>
       </div>
 
+      {/* Основная область */}
       <div style={{ flex: 1, display: "flex", flexDirection: "column", position: "relative" }}>
-        <div style={{
-          height: "36px", background: "#132133", borderBottom: "1px solid #41618a",
-          display: "flex", alignItems: "center", padding: "0 16px", gap: 24,
-        }}>
-          <span style={{ color: "#FFFFFF", fontSize: "11px" }}>
-            Узлов: <span style={{ color: "#4A9EFF" }}>{stats.nodes}</span>
-          </span>
-          <span style={{ color: "#FFFFFF", fontSize: "11px" }}>
-            Рёбер: <span style={{ color: "#4A9EFF" }}>{stats.edges}</span>
-          </span>
-          <span style={{ color: "#FFFFFF", fontSize: "11px" }}>
-            {params.floors} эт. × {params.sections} секц. × {params.aptsPerFloor} кв.
-          </span>
-          <span style={{ color: "#FFFFFF", fontSize: "10px", marginLeft: "auto" }}>
-            Scroll: zoom · Drag: pan · Node drag: перемещение
+        <div style={{ height: "36px", background: "#132133", borderBottom: "1px solid #41618a", display: "flex", alignItems: "center", padding: "0 16px", gap: 24 }}>
+          <span>Узлов: <span style={{ color: "#4A9EFF" }}>{stats.nodes}</span></span>
+          <span>Рёбер: <span style={{ color: "#4A9EFF" }}>{stats.edges}</span></span>
+          <span style={{ marginLeft: "auto", fontSize: "11px", color: "#88CCFF" }}>
+            Колёсико мыши — зум. Зажать + двигать — перемещение графа
           </span>
         </div>
 
-        <svg ref={svgRef} style={{ flex: 1, background: "#060D14" }} />
+        <svg
+          ref={svgRef}
+          style={{ flex: 1, background: "#060D14", cursor: "grab" }}
+        />
 
         {hovered && (
           <div style={{
             position: "absolute", bottom: 16, right: 16,
             background: "#0A1824", border: "1px solid #1E3A54",
-            padding: "10px 14px", borderRadius: 6, minWidth: 160,
+            padding: "10px 14px", borderRadius: 6, minWidth: 200
           }}>
-            <div style={{ color: hovered.type.color, fontSize: "11px", marginBottom: 4 }}>
-              {hovered.type.label}
-            </div>
+            <div style={{ color: hovered.type.color, fontSize: "11px" }}>{hovered.type.label}</div>
             <div style={{ color: "#FFFFFF", fontSize: "14px" }}>{hovered.label}</div>
-            {hovered.floor !== undefined && <div style={{ color: "#FFFFFF", fontSize: "14px", marginTop: 2 }}>Этаж: {hovered.floor}</div>}
-            {hovered.section !== -1 && <div style={{ color: "#FFFFFF", fontSize: "14px" }}>Секция: {hovered.section + 1}</div>}
-            <div style={{ color: "#FFFFFF", fontSize: "14px", marginTop: 2 }}>id: {hovered.id}</div>
+            {hovered.floor > 0 && <div>Этаж: {hovered.floor}</div>}
+            {hovered.section >= 0 && <div>Секция: {hovered.section + 1}</div>}
+            <div style={{ fontSize: "12px", opacity: 0.8 }}>
+              x: {hovered.jsonX.toFixed(1)} | 
+              y: {hovered.jsonY.toFixed(1)} | 
+              z: {hovered.jsonZ.toFixed(1)}
+            </div>
           </div>
         )}
       </div>
