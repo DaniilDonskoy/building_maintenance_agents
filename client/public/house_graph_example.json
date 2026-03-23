@@ -1,0 +1,8964 @@
+{
+  "nodes": [
+    {
+      "id": 3094064936656,
+      "type": "TechNode",
+      "features": {
+        "sections": 2.0,
+        "x": 19.0,
+        "y": -6.0,
+        "z": -3.0
+      }
+    },
+    {
+      "id": 3092805948688,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092787022816,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092787176464,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092787179344,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092786259104,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811034640,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092786430304,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092785533648,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092785530528,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 1.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092810270560,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3094065291776,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092785247088,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811720464,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811715040,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092812018928,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092812019216,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092812018448,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092812014848,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 2.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092812019168,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812016624,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019120,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812016288,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019312,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019408,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019456,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019504,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019552,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 3.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092812019600,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812019648,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812020080,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812020848,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812019696,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812019792,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812019744,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812037136,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812034304,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 4.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092812023792,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023744,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023696,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023648,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023600,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023552,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812023504,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812029168,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812029264,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 5.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092812029360,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029408,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029456,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029504,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029552,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029600,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029648,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029696,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029744,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 6.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092812029792,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812029840,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812029888,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812029936,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812029984,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812030032,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812030608,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812030656,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812037472,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 7.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092812031376,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812031856,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030464,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030176,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030128,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812031760,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030512,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030416,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030368,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 8.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092812030320,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092812030272,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092812030080,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826608,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811838224,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826464,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826320,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826416,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826704,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 9.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811826752,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811826848,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811826896,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825360,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825408,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825456,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825504,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825552,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825600,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 10.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811825648,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811825696,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811826944,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811828816,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811825744,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811826368,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811825792,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811829008,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811829056,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 11.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811829104,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829152,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829200,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829296,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829248,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829440,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829488,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829536,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829584,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 12.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811829632,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829680,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829728,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829776,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829824,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829872,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829920,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811829968,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811830016,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 13.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811830064,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830112,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830160,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830208,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830256,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830304,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830352,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830400,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830448,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 14.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811830544,
+      "type": "ElecNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "x": -3.0,
+        "y": -2.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830592,
+      "type": "MopNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "x": 0.0,
+        "y": 0.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830640,
+      "type": "ElevNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "elev_index": 1.0,
+        "x": -2.0,
+        "y": 1.5,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830688,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830736,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": -6.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830784,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830832,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 0.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830880,
+      "type": "FlatNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830928,
+      "type": "RiserNode",
+      "features": {
+        "section": 1.0,
+        "floor": 15.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 6.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811830976,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831024,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831072,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831120,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831168,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831216,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831264,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831312,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831504,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 1.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 0.0
+      }
+    },
+    {
+      "id": 3092811831552,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811831600,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811831648,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811831696,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811831744,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811831792,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811832128,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811832272,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811832320,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 2.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 3.0
+      }
+    },
+    {
+      "id": 3092811832368,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832416,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832464,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832512,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832560,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832608,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832656,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832704,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832752,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 3.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 6.0
+      }
+    },
+    {
+      "id": 3092811832800,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811832848,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811832896,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811832944,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811832992,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811833040,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811833088,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811833136,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811833184,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 4.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 9.0
+      }
+    },
+    {
+      "id": 3092811833232,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833280,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833328,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833376,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833424,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833472,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833520,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833568,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833616,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 5.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": 3092811833664,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833712,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833760,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833808,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833856,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833904,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811833952,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811834000,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811834048,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 6.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": 3092811834096,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834144,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834192,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834240,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834288,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834336,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834384,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834432,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834480,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 7.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 18.0
+      }
+    },
+    {
+      "id": 3092811834528,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834576,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834624,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834672,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834720,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834768,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834816,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834864,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834912,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 8.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 21.0
+      }
+    },
+    {
+      "id": 3092811834960,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835008,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835056,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835104,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835152,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835200,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835248,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835296,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835344,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 9.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 24.0
+      }
+    },
+    {
+      "id": 3092811835392,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835440,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835488,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835536,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835584,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835632,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835728,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835776,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835824,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 10.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 27.0
+      }
+    },
+    {
+      "id": 3092811835872,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811835920,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811835968,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836016,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836064,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836112,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836160,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836208,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836256,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 11.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 30.0
+      }
+    },
+    {
+      "id": 3092811836304,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836352,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836400,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836448,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836496,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836544,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836592,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836640,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836688,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 12.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 33.0
+      }
+    },
+    {
+      "id": 3092811836736,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811836784,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811836832,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811836880,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811836928,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811836976,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811837024,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811837072,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811837120,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 13.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 36.0
+      }
+    },
+    {
+      "id": 3092811837168,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837216,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837264,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837312,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837360,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837408,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837456,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837552,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837600,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 14.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 39.0
+      }
+    },
+    {
+      "id": 3092811837648,
+      "type": "ElecNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "x": 27.0,
+        "y": -2.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811837696,
+      "type": "MopNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "x": 30.0,
+        "y": 0.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811837744,
+      "type": "ElevNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "elev_index": 1.0,
+        "x": 28.0,
+        "y": 1.5,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811837792,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811838128,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 1.0,
+        "flats_per_section": 3.0,
+        "x": 24.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811838080,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811838608,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 2.0,
+        "flats_per_section": 3.0,
+        "x": 30.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811837984,
+      "type": "FlatNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 6.0,
+        "z": 42.0
+      }
+    },
+    {
+      "id": 3092811837936,
+      "type": "RiserNode",
+      "features": {
+        "section": 2.0,
+        "floor": 15.0,
+        "flat_index": 3.0,
+        "flats_per_section": 3.0,
+        "x": 36.0,
+        "y": 3.0,
+        "z": 42.0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": 3094064936656,
+      "target": 3092805948688,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3094064936656,
+      "target": 3092787022816,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092787022816,
+      "target": 3092805948688,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092787176464,
+      "target": 3092787022816,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092787179344,
+      "target": 3092787022816,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092805948688,
+      "target": 3092787179344,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092786259104,
+      "target": 3092787179344,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092786259104,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811034640,
+      "target": 3092787022816,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092805948688,
+      "target": 3092811034640,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092786430304,
+      "target": 3092811034640,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092786430304,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092785533648,
+      "target": 3092787022816,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092805948688,
+      "target": 3092785533648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092785530528,
+      "target": 3092785533648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092785530528,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092805948688,
+      "target": 3092810270560,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092787022816,
+      "target": 3094065291776,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3094065291776,
+      "target": 3092810270560,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092785247088,
+      "target": 3094065291776,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092785247088,
+      "target": 3092787176464,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811720464,
+      "target": 3094065291776,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092810270560,
+      "target": 3092811720464,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811715040,
+      "target": 3092811720464,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811715040,
+      "target": 3092786259104,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812018928,
+      "target": 3094065291776,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092810270560,
+      "target": 3092812018928,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019216,
+      "target": 3092812018928,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019216,
+      "target": 3092786430304,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812018448,
+      "target": 3094065291776,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092810270560,
+      "target": 3092812018448,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812014848,
+      "target": 3092812018448,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812014848,
+      "target": 3092785530528,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092810270560,
+      "target": 3092812019168,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3094065291776,
+      "target": 3092812016624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812016624,
+      "target": 3092812019168,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019120,
+      "target": 3092812016624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019120,
+      "target": 3092785247088,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812016288,
+      "target": 3092812016624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019168,
+      "target": 3092812016288,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019312,
+      "target": 3092812016288,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019312,
+      "target": 3092811715040,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019408,
+      "target": 3092812016624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019168,
+      "target": 3092812019408,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019456,
+      "target": 3092812019408,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019456,
+      "target": 3092812019216,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019504,
+      "target": 3092812016624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019168,
+      "target": 3092812019504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019552,
+      "target": 3092812019504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019552,
+      "target": 3092812014848,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019168,
+      "target": 3092812019600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812016624,
+      "target": 3092812019648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019648,
+      "target": 3092812019600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812020080,
+      "target": 3092812019648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812020080,
+      "target": 3092812019120,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812020848,
+      "target": 3092812019648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019600,
+      "target": 3092812020848,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019696,
+      "target": 3092812020848,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019696,
+      "target": 3092812019312,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019792,
+      "target": 3092812019648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019600,
+      "target": 3092812019792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019744,
+      "target": 3092812019792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019744,
+      "target": 3092812019456,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812037136,
+      "target": 3092812019648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812019600,
+      "target": 3092812037136,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812034304,
+      "target": 3092812037136,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812034304,
+      "target": 3092812019552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019600,
+      "target": 3092812023792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812019648,
+      "target": 3092812023744,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812023744,
+      "target": 3092812023792,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023696,
+      "target": 3092812023744,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023696,
+      "target": 3092812020080,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812023648,
+      "target": 3092812023744,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023792,
+      "target": 3092812023648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023600,
+      "target": 3092812023648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023600,
+      "target": 3092812019696,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812023552,
+      "target": 3092812023744,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023792,
+      "target": 3092812023552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023504,
+      "target": 3092812023552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023504,
+      "target": 3092812019744,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029168,
+      "target": 3092812023744,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812023792,
+      "target": 3092812029168,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029264,
+      "target": 3092812029168,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029264,
+      "target": 3092812034304,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812023792,
+      "target": 3092812029360,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812023744,
+      "target": 3092812029408,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029408,
+      "target": 3092812029360,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029456,
+      "target": 3092812029408,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029456,
+      "target": 3092812023696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029504,
+      "target": 3092812029408,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029360,
+      "target": 3092812029504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029552,
+      "target": 3092812029504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029552,
+      "target": 3092812023600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029600,
+      "target": 3092812029408,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029360,
+      "target": 3092812029600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029648,
+      "target": 3092812029600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029648,
+      "target": 3092812023504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029696,
+      "target": 3092812029408,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029360,
+      "target": 3092812029696,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029744,
+      "target": 3092812029696,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029744,
+      "target": 3092812029264,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029360,
+      "target": 3092812029792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029408,
+      "target": 3092812029840,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029840,
+      "target": 3092812029792,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029888,
+      "target": 3092812029840,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029888,
+      "target": 3092812029456,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029936,
+      "target": 3092812029840,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029792,
+      "target": 3092812029936,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029984,
+      "target": 3092812029936,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029984,
+      "target": 3092812029552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030032,
+      "target": 3092812029840,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029792,
+      "target": 3092812030032,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030608,
+      "target": 3092812030032,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030608,
+      "target": 3092812029648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030656,
+      "target": 3092812029840,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812029792,
+      "target": 3092812030656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812037472,
+      "target": 3092812030656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812037472,
+      "target": 3092812029744,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029792,
+      "target": 3092812031376,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812029840,
+      "target": 3092812031856,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812031856,
+      "target": 3092812031376,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030464,
+      "target": 3092812031856,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030464,
+      "target": 3092812029888,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030176,
+      "target": 3092812031856,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812031376,
+      "target": 3092812030176,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030128,
+      "target": 3092812030176,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030128,
+      "target": 3092812029984,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812031760,
+      "target": 3092812031856,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812031376,
+      "target": 3092812031760,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030512,
+      "target": 3092812031760,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030512,
+      "target": 3092812030608,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030416,
+      "target": 3092812031856,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812031376,
+      "target": 3092812030416,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030368,
+      "target": 3092812030416,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030368,
+      "target": 3092812037472,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812031376,
+      "target": 3092812030320,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812031856,
+      "target": 3092812030272,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030272,
+      "target": 3092812030320,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030080,
+      "target": 3092812030272,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030080,
+      "target": 3092812030464,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826608,
+      "target": 3092812030272,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030320,
+      "target": 3092811826608,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838224,
+      "target": 3092811826608,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838224,
+      "target": 3092812030128,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826464,
+      "target": 3092812030272,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030320,
+      "target": 3092811826464,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826320,
+      "target": 3092811826464,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826320,
+      "target": 3092812030512,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826416,
+      "target": 3092812030272,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092812030320,
+      "target": 3092811826416,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826704,
+      "target": 3092811826416,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826704,
+      "target": 3092812030368,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030320,
+      "target": 3092811826752,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092812030272,
+      "target": 3092811826848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826848,
+      "target": 3092811826752,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826896,
+      "target": 3092811826848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826896,
+      "target": 3092812030080,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825360,
+      "target": 3092811826848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826752,
+      "target": 3092811825360,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825408,
+      "target": 3092811825360,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825408,
+      "target": 3092811838224,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825456,
+      "target": 3092811826848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826752,
+      "target": 3092811825456,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825504,
+      "target": 3092811825456,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825504,
+      "target": 3092811826320,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825552,
+      "target": 3092811826848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826752,
+      "target": 3092811825552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825600,
+      "target": 3092811825552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825600,
+      "target": 3092811826704,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826752,
+      "target": 3092811825648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826848,
+      "target": 3092811825696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825696,
+      "target": 3092811825648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826944,
+      "target": 3092811825696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811826944,
+      "target": 3092811826896,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811828816,
+      "target": 3092811825696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825648,
+      "target": 3092811828816,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825744,
+      "target": 3092811828816,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825744,
+      "target": 3092811825408,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811826368,
+      "target": 3092811825696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825648,
+      "target": 3092811826368,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825792,
+      "target": 3092811826368,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825792,
+      "target": 3092811825504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829008,
+      "target": 3092811825696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811825648,
+      "target": 3092811829008,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829056,
+      "target": 3092811829008,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829056,
+      "target": 3092811825600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825648,
+      "target": 3092811829104,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811825696,
+      "target": 3092811829152,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829152,
+      "target": 3092811829104,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829200,
+      "target": 3092811829152,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829200,
+      "target": 3092811826944,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829296,
+      "target": 3092811829152,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829104,
+      "target": 3092811829296,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829248,
+      "target": 3092811829296,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829248,
+      "target": 3092811825744,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829440,
+      "target": 3092811829152,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829104,
+      "target": 3092811829440,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829488,
+      "target": 3092811829440,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829488,
+      "target": 3092811825792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829536,
+      "target": 3092811829152,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829104,
+      "target": 3092811829536,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829584,
+      "target": 3092811829536,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829584,
+      "target": 3092811829056,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829104,
+      "target": 3092811829632,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829152,
+      "target": 3092811829680,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829680,
+      "target": 3092811829632,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829728,
+      "target": 3092811829680,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829728,
+      "target": 3092811829200,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829776,
+      "target": 3092811829680,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829632,
+      "target": 3092811829776,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829824,
+      "target": 3092811829776,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829824,
+      "target": 3092811829248,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829872,
+      "target": 3092811829680,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829632,
+      "target": 3092811829872,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829920,
+      "target": 3092811829872,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829920,
+      "target": 3092811829488,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829968,
+      "target": 3092811829680,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811829632,
+      "target": 3092811829968,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830016,
+      "target": 3092811829968,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830016,
+      "target": 3092811829584,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829632,
+      "target": 3092811830064,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811829680,
+      "target": 3092811830112,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830112,
+      "target": 3092811830064,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830160,
+      "target": 3092811830112,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830160,
+      "target": 3092811829728,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830208,
+      "target": 3092811830112,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830064,
+      "target": 3092811830208,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830256,
+      "target": 3092811830208,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830256,
+      "target": 3092811829824,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830304,
+      "target": 3092811830112,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830064,
+      "target": 3092811830304,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830352,
+      "target": 3092811830304,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830352,
+      "target": 3092811829920,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830400,
+      "target": 3092811830112,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830064,
+      "target": 3092811830400,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830448,
+      "target": 3092811830400,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830448,
+      "target": 3092811830016,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830064,
+      "target": 3092811830544,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830112,
+      "target": 3092811830592,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830592,
+      "target": 3092811830544,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830640,
+      "target": 3092811830592,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830640,
+      "target": 3092811830160,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830688,
+      "target": 3092811830592,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830544,
+      "target": 3092811830688,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830736,
+      "target": 3092811830688,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830736,
+      "target": 3092811830256,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830784,
+      "target": 3092811830592,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830544,
+      "target": 3092811830784,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830832,
+      "target": 3092811830784,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830832,
+      "target": 3092811830352,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830880,
+      "target": 3092811830592,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830544,
+      "target": 3092811830880,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830928,
+      "target": 3092811830880,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830928,
+      "target": 3092811830448,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3094064936656,
+      "target": 3092811830976,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3094064936656,
+      "target": 3092811831024,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831024,
+      "target": 3092811830976,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831072,
+      "target": 3092811831024,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831120,
+      "target": 3092811831024,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830976,
+      "target": 3092811831120,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831168,
+      "target": 3092811831120,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831168,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831216,
+      "target": 3092811831024,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830976,
+      "target": 3092811831216,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831264,
+      "target": 3092811831216,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831264,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831312,
+      "target": 3092811831024,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811830976,
+      "target": 3092811831312,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831504,
+      "target": 3092811831312,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831504,
+      "target": 3094064936656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811830976,
+      "target": 3092811831552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831024,
+      "target": 3092811831600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831600,
+      "target": 3092811831552,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831648,
+      "target": 3092811831600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831648,
+      "target": 3092811831072,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831696,
+      "target": 3092811831600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831552,
+      "target": 3092811831696,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831744,
+      "target": 3092811831696,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831744,
+      "target": 3092811831168,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831792,
+      "target": 3092811831600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831552,
+      "target": 3092811831792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832128,
+      "target": 3092811831792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832128,
+      "target": 3092811831264,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832272,
+      "target": 3092811831600,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811831552,
+      "target": 3092811832272,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832320,
+      "target": 3092811832272,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832320,
+      "target": 3092811831504,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831552,
+      "target": 3092811832368,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811831600,
+      "target": 3092811832416,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832416,
+      "target": 3092811832368,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832464,
+      "target": 3092811832416,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832464,
+      "target": 3092811831648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832512,
+      "target": 3092811832416,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832368,
+      "target": 3092811832512,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832560,
+      "target": 3092811832512,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832560,
+      "target": 3092811831744,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832608,
+      "target": 3092811832416,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832368,
+      "target": 3092811832608,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832656,
+      "target": 3092811832608,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832656,
+      "target": 3092811832128,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832704,
+      "target": 3092811832416,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832368,
+      "target": 3092811832704,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832752,
+      "target": 3092811832704,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832752,
+      "target": 3092811832320,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832368,
+      "target": 3092811832800,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832416,
+      "target": 3092811832848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832848,
+      "target": 3092811832800,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832896,
+      "target": 3092811832848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832896,
+      "target": 3092811832464,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832944,
+      "target": 3092811832848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832800,
+      "target": 3092811832944,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832992,
+      "target": 3092811832944,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832992,
+      "target": 3092811832560,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833040,
+      "target": 3092811832848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832800,
+      "target": 3092811833040,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833088,
+      "target": 3092811833040,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833088,
+      "target": 3092811832656,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833136,
+      "target": 3092811832848,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811832800,
+      "target": 3092811833136,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833184,
+      "target": 3092811833136,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833184,
+      "target": 3092811832752,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832800,
+      "target": 3092811833232,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811832848,
+      "target": 3092811833280,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833280,
+      "target": 3092811833232,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833328,
+      "target": 3092811833280,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833328,
+      "target": 3092811832896,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833376,
+      "target": 3092811833280,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833232,
+      "target": 3092811833376,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833424,
+      "target": 3092811833376,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833424,
+      "target": 3092811832992,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833472,
+      "target": 3092811833280,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833232,
+      "target": 3092811833472,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833520,
+      "target": 3092811833472,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833520,
+      "target": 3092811833088,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833568,
+      "target": 3092811833280,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833232,
+      "target": 3092811833568,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833616,
+      "target": 3092811833568,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833616,
+      "target": 3092811833184,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833232,
+      "target": 3092811833664,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833280,
+      "target": 3092811833712,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833712,
+      "target": 3092811833664,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833760,
+      "target": 3092811833712,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833760,
+      "target": 3092811833328,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833808,
+      "target": 3092811833712,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833664,
+      "target": 3092811833808,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833856,
+      "target": 3092811833808,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833856,
+      "target": 3092811833424,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833904,
+      "target": 3092811833712,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833664,
+      "target": 3092811833904,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833952,
+      "target": 3092811833904,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833952,
+      "target": 3092811833520,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834000,
+      "target": 3092811833712,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811833664,
+      "target": 3092811834000,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834048,
+      "target": 3092811834000,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834048,
+      "target": 3092811833616,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833664,
+      "target": 3092811834096,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811833712,
+      "target": 3092811834144,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834144,
+      "target": 3092811834096,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834192,
+      "target": 3092811834144,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834192,
+      "target": 3092811833760,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834240,
+      "target": 3092811834144,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834096,
+      "target": 3092811834240,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834288,
+      "target": 3092811834240,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834288,
+      "target": 3092811833856,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834336,
+      "target": 3092811834144,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834096,
+      "target": 3092811834336,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834384,
+      "target": 3092811834336,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834384,
+      "target": 3092811833952,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834432,
+      "target": 3092811834144,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834096,
+      "target": 3092811834432,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834480,
+      "target": 3092811834432,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834480,
+      "target": 3092811834048,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834096,
+      "target": 3092811834528,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834144,
+      "target": 3092811834576,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834576,
+      "target": 3092811834528,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834624,
+      "target": 3092811834576,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834624,
+      "target": 3092811834192,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834672,
+      "target": 3092811834576,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834528,
+      "target": 3092811834672,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834720,
+      "target": 3092811834672,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834720,
+      "target": 3092811834288,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834768,
+      "target": 3092811834576,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834528,
+      "target": 3092811834768,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834816,
+      "target": 3092811834768,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834816,
+      "target": 3092811834384,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834864,
+      "target": 3092811834576,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834528,
+      "target": 3092811834864,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834912,
+      "target": 3092811834864,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834912,
+      "target": 3092811834480,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834528,
+      "target": 3092811834960,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834576,
+      "target": 3092811835008,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835008,
+      "target": 3092811834960,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835056,
+      "target": 3092811835008,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835056,
+      "target": 3092811834624,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835104,
+      "target": 3092811835008,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834960,
+      "target": 3092811835104,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835152,
+      "target": 3092811835104,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835152,
+      "target": 3092811834720,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835200,
+      "target": 3092811835008,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834960,
+      "target": 3092811835200,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835248,
+      "target": 3092811835200,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835248,
+      "target": 3092811834816,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835296,
+      "target": 3092811835008,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811834960,
+      "target": 3092811835296,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835344,
+      "target": 3092811835296,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835344,
+      "target": 3092811834912,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811834960,
+      "target": 3092811835392,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835008,
+      "target": 3092811835440,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835440,
+      "target": 3092811835392,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835488,
+      "target": 3092811835440,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835488,
+      "target": 3092811835056,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835536,
+      "target": 3092811835440,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835392,
+      "target": 3092811835536,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835584,
+      "target": 3092811835536,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835584,
+      "target": 3092811835152,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835632,
+      "target": 3092811835440,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835392,
+      "target": 3092811835632,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835728,
+      "target": 3092811835632,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835728,
+      "target": 3092811835248,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835776,
+      "target": 3092811835440,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835392,
+      "target": 3092811835776,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835824,
+      "target": 3092811835776,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835824,
+      "target": 3092811835344,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835392,
+      "target": 3092811835872,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835440,
+      "target": 3092811835920,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835920,
+      "target": 3092811835872,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835968,
+      "target": 3092811835920,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835968,
+      "target": 3092811835488,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836016,
+      "target": 3092811835920,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835872,
+      "target": 3092811836016,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836064,
+      "target": 3092811836016,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836064,
+      "target": 3092811835584,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836112,
+      "target": 3092811835920,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835872,
+      "target": 3092811836112,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836160,
+      "target": 3092811836112,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836160,
+      "target": 3092811835728,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836208,
+      "target": 3092811835920,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811835872,
+      "target": 3092811836208,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836256,
+      "target": 3092811836208,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836256,
+      "target": 3092811835824,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835872,
+      "target": 3092811836304,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811835920,
+      "target": 3092811836352,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836352,
+      "target": 3092811836304,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836400,
+      "target": 3092811836352,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836400,
+      "target": 3092811835968,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836448,
+      "target": 3092811836352,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836304,
+      "target": 3092811836448,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836496,
+      "target": 3092811836448,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836496,
+      "target": 3092811836064,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836544,
+      "target": 3092811836352,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836304,
+      "target": 3092811836544,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836592,
+      "target": 3092811836544,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836592,
+      "target": 3092811836160,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836640,
+      "target": 3092811836352,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836304,
+      "target": 3092811836640,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836688,
+      "target": 3092811836640,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836688,
+      "target": 3092811836256,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836304,
+      "target": 3092811836736,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836352,
+      "target": 3092811836784,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836784,
+      "target": 3092811836736,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836832,
+      "target": 3092811836784,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836832,
+      "target": 3092811836400,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836880,
+      "target": 3092811836784,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836736,
+      "target": 3092811836880,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836928,
+      "target": 3092811836880,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836928,
+      "target": 3092811836496,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836976,
+      "target": 3092811836784,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836736,
+      "target": 3092811836976,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837024,
+      "target": 3092811836976,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837024,
+      "target": 3092811836592,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837072,
+      "target": 3092811836784,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811836736,
+      "target": 3092811837072,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837120,
+      "target": 3092811837072,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837120,
+      "target": 3092811836688,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836736,
+      "target": 3092811837168,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811836784,
+      "target": 3092811837216,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837216,
+      "target": 3092811837168,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837264,
+      "target": 3092811837216,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837264,
+      "target": 3092811836832,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837312,
+      "target": 3092811837216,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837168,
+      "target": 3092811837312,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837360,
+      "target": 3092811837312,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837360,
+      "target": 3092811836928,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837408,
+      "target": 3092811837216,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837168,
+      "target": 3092811837408,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837456,
+      "target": 3092811837408,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837456,
+      "target": 3092811837024,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837552,
+      "target": 3092811837216,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837168,
+      "target": 3092811837552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837600,
+      "target": 3092811837552,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837600,
+      "target": 3092811837120,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837168,
+      "target": 3092811837648,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837216,
+      "target": 3092811837696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837696,
+      "target": 3092811837648,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837744,
+      "target": 3092811837696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837744,
+      "target": 3092811837264,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837792,
+      "target": 3092811837696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837648,
+      "target": 3092811837792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838128,
+      "target": 3092811837792,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838128,
+      "target": 3092811837360,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811838080,
+      "target": 3092811837696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837648,
+      "target": 3092811838080,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838608,
+      "target": 3092811838080,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811838608,
+      "target": 3092811837456,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    },
+    {
+      "source": 3092811837984,
+      "target": 3092811837696,
+      "type": "PathEdge",
+      "oriented": false,
+      "features": {
+        "oriented": 0.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837648,
+      "target": 3092811837984,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837936,
+      "target": 3092811837984,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 0.0,
+        "horizontal": 1.0
+      }
+    },
+    {
+      "source": 3092811837936,
+      "target": 3092811837600,
+      "type": "FlowEdge",
+      "oriented": true,
+      "features": {
+        "oriented": 1.0,
+        "vertical": 1.0,
+        "horizontal": 0.0
+      }
+    }
+  ]
+}
