@@ -91,7 +91,7 @@ dependencies = [
     { name = "typing-inspection" },
     { name = "urllib3" },
     { name = "uvicorn" },
-    { name = "uvloop" },
+    { name = "uvloop", marker = "sys_platform != 'win32'" },
     { name = "watchfiles" },
     { name = "websockets" },
 ]
@@ -146,7 +146,7 @@ requires-dist = [
     { name = "typing-inspection", specifier = "==0.4.2" },
     { name = "urllib3", specifier = "==2.6.3" },
     { name = "uvicorn", specifier = "==0.42.0" },
-    { name = "uvloop", specifier = "==0.22.1" },
+    { name = "uvloop", marker = "sys_platform != 'win32'", specifier = "==0.22.1" },
     { name = "watchfiles", specifier = "==1.1.1" },
     { name = "websockets", specifier = "==16.0" },
 ]
