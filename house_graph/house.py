@@ -79,7 +79,7 @@ class House:
             incidence=incidence,
         )
 
-    def to_json(self, indent: int = 2) -> HouseGraphDTO :
+    def to_json(self) -> HouseGraphDTO:
         """Serialize the house graph into a JSON string for visualization.
 
         Output format:

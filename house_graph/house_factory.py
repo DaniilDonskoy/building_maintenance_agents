@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from .edges import FlowEdge, PathEdge
+from .edges import PathEdge, ElecEdge, HotWaterEdge, ColdWaterEdge
 from .house import House
 from .nodes import ElecNode, ElevNode, FlatNode, MopNode, RiserNode, TechNode
 
@@ -24,7 +24,7 @@ class HouseFactory:
             for floor in range(1, cls.floors + 1):
                 elec_node = ElecNode(section=section, floor=floor)
                 house.add_node(elec_node)
-                house.add_edge(FlowEdge(last_elec_node, elec_node, vertical=True))
+                house.add_edge(ElecEdge(last_elec_node, elec_node, vertical=True))
                 last_elec_node = elec_node
                 mop_node = MopNode(section=section, floor=floor)
                 house.add_node(mop_node)
@@ -42,11 +42,12 @@ class HouseFactory:
                     flat_node = FlatNode(section=section, floor=floor, flat_index=flat_idx, flats_per_section=cls.flats_per_section)
                     house.add_node(flat_node)
                     house.add_edge(PathEdge(flat_node, mop_node, horizontal=True))
-                    house.add_edge(FlowEdge(elec_node, flat_node, horizontal=True))
+                    house.add_edge(ElecEdge(elec_node, flat_node, horizontal=True))
                     riser_node = RiserNode(section=section, floor=floor, flat_index=flat_idx, flats_per_section=cls.flats_per_section)
                     house.add_node(riser_node)
-                    house.add_edge(FlowEdge(riser_node, flat_node, horizontal=True))
-                    house.add_edge(FlowEdge(riser_node, last_riser_nodes[flat_idx - 1], vertical=True))
+                    for edge_type in (HotWaterEdge, ColdWaterEdge):
+                        house.add_edge(edge_type(riser_node, flat_node, horizontal=True))
+                        house.add_edge(edge_type(last_riser_nodes[flat_idx - 1], riser_node, vertical=True))
                     last_riser_nodes[flat_idx - 1] = riser_node
 
         for edge in house.edges:
