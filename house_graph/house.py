@@ -79,7 +79,7 @@ class House:
             incidence=incidence,
         )
 
-    def to_json(self, indent: int = 2) -> str:
+    def to_json(self, indent: int = 2) -> HouseGraphDTO :
         """Serialize the house graph into a JSON string for visualization.
 
         Output format:
@@ -108,6 +108,4 @@ class House:
             }
             for edge in self.edges
         ]
-
-        graph = HouseGraphDTO(nodes=nodes, edges=edges)
-        return graph.model_dump_json(indent=indent)
+        return HouseGraphDTO(nodes=nodes, edges=edges)
