@@ -82,7 +82,20 @@ class IncidentRequestsPreprocessor:
             self.dataframe = self.preprocess()
 
         incidents = []
+        gvs_incidents = 0
+        hvs_incidents = 0
+        lift_incidents = 0
+
         for _, row in self.dataframe.iterrows():
+            description = str(row.get(DEFAULT_DESCRIPTION_COLUMN) or "").lower()
+
+            if "гвс" in description:
+                gvs_incidents += 1
+            if "хвс" in description:
+                hvs_incidents += 1
+            if "лифт" in description:
+                lift_incidents += 1
+
             incidents.append(
                 {
                     "date_start": self._json_value(row.get("Дата")),
@@ -101,6 +114,9 @@ class IncidentRequestsPreprocessor:
         return {
             "metadata": {
                 "total_incidents": len(incidents),
+                "gvs_incidents": gvs_incidents,
+                "hvs_incidents": hvs_incidents,
+                "lift_incidents": lift_incidents,
             },
             "incidents": incidents,
         }
