@@ -1,23 +1,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from .base_node import BaseNode, FLOOR_HEIGHT, SECTION_SPACING
+from .base_node import BaseNode, FLOOR_HEIGHT
 
 
 @dataclass(slots=True)
 class ElecNode(BaseNode):
-    def __init__(self, section: int, floor: int):
+    def __init__(self, section: int, floor: int, section_spacing: float):
+        section = float(section)
+        floor = float(floor)
         self.features = {
-            "section": float(section),
-            "floor": float(floor),
+            "section": section,
+            "floor": floor,
         }
-        self.__post_init__()
-
-    def __post_init__(self) -> None:
-        if any(key not in self.features for key in ("section", "floor")):
-            raise ValueError("ElecNode requires 'section' and 'floor' in features")
-        section = self.features['section']
-        floor = self.features['floor']
-        self.features['x'] = (section - 1) * SECTION_SPACING - 3.0
+        self.features['x'] = (section - 1) * section_spacing
         self.features['y'] = -2.0
         self.features['z'] = (floor - 1) * FLOOR_HEIGHT

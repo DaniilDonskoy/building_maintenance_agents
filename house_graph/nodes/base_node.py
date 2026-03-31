@@ -5,7 +5,6 @@ from typing import Dict
 
 
 FLOOR_HEIGHT = 3.0
-SECTION_SPACING = 30.0
 FLAT_SPACING = 6.0
 
 

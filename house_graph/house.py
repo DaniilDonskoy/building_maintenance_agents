@@ -11,6 +11,8 @@ from .edges import BaseEdge
 
 @dataclass
 class House:
+    x: int
+    y: int
     nodes: List[BaseNode] = field(default_factory=list)
     edges: List[BaseEdge] = field(default_factory=list)
 
@@ -108,4 +110,4 @@ class House:
             }
             for edge in self.edges
         ]
-        return HouseGraphDTO(nodes=nodes, edges=edges)
+        return HouseGraphDTO(x=self.x, y=self.y, nodes=nodes, edges=edges)

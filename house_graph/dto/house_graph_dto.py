@@ -8,5 +8,7 @@ from .edge_dto import EdgeDTO
 
 
 class HouseGraphDTO(BaseModel):
+    x: int
+    y: int
     nodes: List[NodeDTO]
     edges: List[EdgeDTO]

@@ -1,22 +1,18 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from .base_node import BaseNode, SECTION_SPACING
+from .base_node import BaseNode, FLOOR_HEIGHT
 
 
 @dataclass(slots=True)
 class TechNode(BaseNode):
-    def __init__(self, sections: int):
+    def __init__(self, sections: int, section_spacing: float):
+        sections = float(sections)
         self.features = {
-            "sections": float(sections),
+            "sections": sections,
         }
-        self.__post_init__()
-
-    def __post_init__(self) -> None:
-        if "sections" not in self.features:
-            raise ValueError("TechNode requires 'sections' in features")
         sections = self.features['sections']
-        center_x = (sections - 1) * SECTION_SPACING / 2
-        self.features['x'] = center_x + 4.0
+        center_x = (sections - 1) * section_spacing / 2
+        self.features['x'] = center_x
         self.features['y'] = -6.0
-        self.features['z'] = -3.0
+        self.features['z'] = -FLOOR_HEIGHT
