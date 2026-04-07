@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_COLUMNS_TO_DROP = ("Источник", "Категория")
 DEFAULT_DESCRIPTION_COLUMN = "Описание"
 INCIDENT_TYPE_COLUMN = "Тип инцидента"
+ENGINEERING_SYSTEM_COLUMN = "Инж. система"
 
 INCIDENT_PATTERNS = {
     "Замена ХВС на уровне техэтажа": (
@@ -30,13 +31,20 @@ INCIDENT_PATTERNS = {
     "Утечка стояка": r"(теч|протеч|утеч).*(стояк)|(стояк).*(теч|протеч|утеч)",
 }
 
+ENGINEERING_SYSTEM_PATTERNS = {
+    "гвс": (r"гвс"),
+    "хвс": (r"хвс"),
+    "лифт": (r"лифт"),
+}
+
 
 class IncidentRequestsPreprocessor:
     def __init__(self, dataframe: pd.DataFrame) -> None:
         self.dataframe = dataframe.copy()
         self._natasha_components = self._build_natasha_components()
 
-    def preprocess(self) -> pd.DataFrame:
+    # TODO: add tqdm
+    def preprocess(self, drop_columns: tuple = DEFAULT_COLUMNS_TO_DROP) -> pd.DataFrame:
         dataframe = self.dataframe.copy()
         dataframe.columns = [str(column).strip() for column in dataframe.columns]
 
@@ -46,7 +54,7 @@ class IncidentRequestsPreprocessor:
         first_column = dataframe.columns[0]
         dataframe = dataframe.rename(columns={first_column: "Дата"})
 
-        cols2drop = [column for column in DEFAULT_COLUMNS_TO_DROP if column in dataframe.columns]
+        cols2drop = [column for column in drop_columns if column in dataframe.columns]
         if cols2drop:
             dataframe = dataframe.drop(columns=cols2drop, errors="ignore")
 
@@ -58,6 +66,10 @@ class IncidentRequestsPreprocessor:
 
         dataframe[INCIDENT_TYPE_COLUMN] = dataframe[DEFAULT_DESCRIPTION_COLUMN].apply(
             self._detect_incident_type
+        )
+
+        dataframe[ENGINEERING_SYSTEM_COLUMN] = dataframe[DEFAULT_DESCRIPTION_COLUMN].apply(
+            self._detect_system_type
         )
 
         self.dataframe = dataframe
@@ -89,6 +101,7 @@ class IncidentRequestsPreprocessor:
         for _, row in self.dataframe.iterrows():
             description = str(row.get(DEFAULT_DESCRIPTION_COLUMN) or "").lower()
 
+            # TODO: i already define engineering system type and add this as feature, so may delete block below
             if "гвс" in description:
                 gvs_incidents += 1
             if "хвс" in description:
@@ -130,6 +143,18 @@ class IncidentRequestsPreprocessor:
         for incident_type, pattern in INCIDENT_PATTERNS.items():
             if re.search(pattern, normalized_description, flags=re.IGNORECASE):
                 return incident_type
+
+        return "Прочее"
+    
+    def _detect_system_type(self, description: Any) -> str:
+        normalized_description = self._lemmatize_natasha(description)
+
+        if not normalized_description:
+            return "Не определен"
+
+        for engineering_system_type, pattern in ENGINEERING_SYSTEM_PATTERNS.items():
+            if re.search(pattern, normalized_description, flags=re.IGNORECASE):
+                return engineering_system_type
 
         return "Прочее"
 
