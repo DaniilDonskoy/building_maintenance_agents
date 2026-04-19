@@ -7,5 +7,5 @@ class Complex:
 
     def to_json(self):
         return {
-            "houses": [house.to_json() for house in self.houses]
+            "houses": [house.to_json().model_dump() for house in self.houses]
         }
