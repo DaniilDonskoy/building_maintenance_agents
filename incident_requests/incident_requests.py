@@ -36,7 +36,7 @@ class IncidentRequestsPreprocessor:
         self.dataframe = dataframe.copy()
         self._natasha_components = self._build_natasha_components()
 
-    def preprocess(self) -> pd.DataFrame:
+    def preprocess(self, cols2drop: list = DEFAULT_COLUMNS_TO_DROP, incident_patterns: dict = INCIDENT_PATTERNS) -> pd.DataFrame:
         dataframe = self.dataframe.copy()
         dataframe.columns = [str(column).strip() for column in dataframe.columns]
 
@@ -57,7 +57,7 @@ class IncidentRequestsPreprocessor:
             )
 
         dataframe[INCIDENT_TYPE_COLUMN] = dataframe[DEFAULT_DESCRIPTION_COLUMN].apply(
-            self._detect_incident_type
+            lambda desc: self._detect_incident_type(desc, incident_patterns)
         )
 
         self.dataframe = dataframe
@@ -121,13 +121,13 @@ class IncidentRequestsPreprocessor:
             "incidents": incidents,
         }
 
-    def _detect_incident_type(self, description: Any) -> str:
+    def _detect_incident_type(self, description: Any, incident_patterns: dict = INCIDENT_PATTERNS) -> str:
         normalized_description = self._lemmatize_natasha(description)
 
         if not normalized_description:
             return "Не определен"
 
-        for incident_type, pattern in INCIDENT_PATTERNS.items():
+        for incident_type, pattern in incident_patterns.items():
             if re.search(pattern, normalized_description, flags=re.IGNORECASE):
                 return incident_type
 
