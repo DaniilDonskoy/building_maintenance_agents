@@ -2,10 +2,14 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import Any
+from typing import Any, Iterable
 
 import pandas as pd
-from natasha import Doc, MorphVocab, NewsEmbedding, NewsMorphTagger, Segmenter
+
+try:
+    from natasha import Doc, MorphVocab, NewsEmbedding, NewsMorphTagger, Segmenter
+except ImportError:
+    Doc = MorphVocab = NewsEmbedding = NewsMorphTagger = Segmenter = None
 
 
 logger = logging.getLogger(__name__)
@@ -32,8 +36,17 @@ INCIDENT_PATTERNS = {
 
 
 class IncidentRequestsPreprocessor:
-    def __init__(self, dataframe: pd.DataFrame) -> None:
+    def __init__(
+        self,
+        dataframe: pd.DataFrame,
+        columns_to_drop: Iterable[str] | None = None,
+        detect_incident_type: bool = True,
+        use_natasha: bool = True,
+    ) -> None:
         self.dataframe = dataframe.copy()
+        self.columns_to_drop = tuple(columns_to_drop) if columns_to_drop is not None else DEFAULT_COLUMNS_TO_DROP
+        self.detect_incident_type = detect_incident_type
+        self.use_natasha = use_natasha
         self._natasha_components = self._build_natasha_components()
 
     def preprocess(self, cols2drop: list = DEFAULT_COLUMNS_TO_DROP, incident_patterns: dict = INCIDENT_PATTERNS) -> pd.DataFrame:
@@ -46,37 +59,26 @@ class IncidentRequestsPreprocessor:
         first_column = dataframe.columns[0]
         dataframe = dataframe.rename(columns={first_column: "Дата"})
 
-        cols2drop = [column for column in DEFAULT_COLUMNS_TO_DROP if column in dataframe.columns]
+        cols2drop = [column for column in self.columns_to_drop if column in dataframe.columns]
         if cols2drop:
             dataframe = dataframe.drop(columns=cols2drop, errors="ignore")
 
-        if DEFAULT_DESCRIPTION_COLUMN not in dataframe.columns:
-            raise ValueError(
-                f"Колонка '{DEFAULT_DESCRIPTION_COLUMN}' не найдена. "
-                f"Доступные колонки: {list(dataframe.columns)}"
-            )
+        dataframe = self._convert_date_columns(dataframe)
 
-        dataframe[INCIDENT_TYPE_COLUMN] = dataframe[DEFAULT_DESCRIPTION_COLUMN].apply(
-            lambda desc: self._detect_incident_type(desc, incident_patterns)
-        )
+        if self.detect_incident_type:
+            if DEFAULT_DESCRIPTION_COLUMN not in dataframe.columns:
+                raise ValueError(
+                    f"Колонка '{DEFAULT_DESCRIPTION_COLUMN}' не найдена. "
+                    f"Доступные колонки: {list(dataframe.columns)}"
+                )
+
+            dataframe[INCIDENT_TYPE_COLUMN] = dataframe[DEFAULT_DESCRIPTION_COLUMN].apply(
+                self._detect_incident_type
+            )
 
         self.dataframe = dataframe
         return dataframe
-    
-    def getOverview(self) -> pd.DataFrame:
-            dataframe = self.dataframe
 
-            if INCIDENT_TYPE_COLUMN not in dataframe.columns:
-                dataframe = self.preprocess()
-
-            incidents = list(INCIDENT_PATTERNS.keys()) + ["Прочее", "Не определен"]
-            incident_counts = dataframe[INCIDENT_TYPE_COLUMN].value_counts()
-
-            return pd.DataFrame(
-                [(incident, int(incident_counts.get(incident, 0))) for incident in incidents],
-                columns=["incident", "count"],
-            )
-    
     def getIncidentsData(self):
         if INCIDENT_TYPE_COLUMN not in self.dataframe.columns:
             self.dataframe = self.preprocess()
@@ -156,6 +158,18 @@ class IncidentRequestsPreprocessor:
 
         return value
 
+    def _convert_date_columns(self, dataframe: pd.DataFrame) -> pd.DataFrame:
+        for column in ("Дата", "Дата исполнения"):
+            if column not in dataframe.columns:
+                continue
+
+            dataframe[column] = pd.to_datetime(
+                dataframe[column],
+                errors="coerce",
+                dayfirst=True,
+            )
+
+        return dataframe
 
     def _lemmatize_natasha(self, text: Any) -> str:
         if pd.isna(text):
@@ -185,6 +199,9 @@ class IncidentRequestsPreprocessor:
         return " ".join(lemmas)
 
     def _build_natasha_components(self) -> tuple[Any, Any, Any] | None:
+        if not self.use_natasha:
+            return None
+
         if None in (Doc, MorphVocab, NewsEmbedding, NewsMorphTagger, Segmenter):
             logger.warning(
                 "Natasha не установлена. Тип инцидента будет определяться без лемматизации."
