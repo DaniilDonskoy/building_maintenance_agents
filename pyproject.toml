@@ -16,5 +16,6 @@ dependencies = [
     "pydantic>=2.12.5",
     "setuptools<82",
     "torch>=2.10.0",
+    "loguru>=0.7.3",
     "transformers>=5.5.0",
 ]
