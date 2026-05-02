@@ -17,14 +17,10 @@ class Incident:
     
     def __post_init__(self):
         base_duration = {
-            IncidentType.FIRE: 20,
-            IncidentType.FLOOD: 15,
-            IncidentType.POWER_OUTAGE: 10,
-            IncidentType.ELEVATOR_FAILURE: 30,
-            IncidentType.BLOCKAGE: 12,
-            IncidentType.GAS_LEAK: 8,
-            IncidentType.SMOKE: 5,
-            IncidentType.STRUCTURAL_DAMAGE: 40
+            IncidentType.GVS_RISER_FAILURE: 18,
+            IncidentType.GVS_PIPE_FAILURE: 12,
+            IncidentType.HVS_RISER_FAILURE: 18,
+            IncidentType.HVS_PIPE_FAILURE: 12,
         }.get(self.incident_type, 15)
         
         self.duration = int(base_duration * (1 + self.severity))

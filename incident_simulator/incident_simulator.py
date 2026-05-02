@@ -21,7 +21,7 @@ class IncidentSimulator:
     def __init__(
         self,
         house: House,
-        base_incident_probability: float = 0.01,
+        base_incident_probability: float = 1.0,
         random_seed: Optional[int] = None,
         enable_spread: bool = True
     ):
