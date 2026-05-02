@@ -1,4 +1,4 @@
-from .base_node import BaseNode
+from .base_node import BaseNode, FLOOR_HEIGHT, FLAT_SPACING
 from .flat_node import FlatNode
 from .mop_node import MopNode
 from .tech_node import TechNode
@@ -15,4 +15,6 @@ __all__ = [
     "RiserNode",
     "ElevNode",
     "ElecNode",
+    "FLOOR_HEIGHT",
+    "FLAT_SPACING",
 ]

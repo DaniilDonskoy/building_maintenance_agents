@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict
 from .base_edge import BaseEdge
 from ..nodes import BaseNode
@@ -14,7 +14,7 @@ class FlowEdge(BaseEdge):
             node_b: BaseNode,
             vertical: bool = False,
             horizontal: bool = False,
-            features: Dict[str, float] = {}
+            features: Dict[str, float] = field(default_factory=dict)
         ) -> None:
         self.node_a = node_a
         self.node_b = node_b
