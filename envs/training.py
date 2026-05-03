@@ -8,12 +8,12 @@ from stable_baselines3.common.vec_env import SubprocVecEnv
 from stable_baselines3.common.callbacks import EvalCallback
 import os
 
-from .building_incident_env import HouseIncidentEnv
+from .building_incident_env import BuildingIncidentEnv
 
 
 def make_env(env_config: Dict, rank: int, seed: int = 0):
     def _init():
-        env = HouseIncidentEnv(**env_config)
+        env = BuildingIncidentEnv(**env_config)
         env.reset(seed=seed + rank)
         return env
     return _init
@@ -32,7 +32,7 @@ def train_agent(
         make_env(env_config, i) for i in range(n_envs)
     ])
     
-    eval_env = HouseIncidentEnv(**env_config)
+    eval_env = BuildingIncidentEnv(**env_config)
     eval_callback = EvalCallback(
         eval_env,
         best_model_save_path=save_path,
@@ -91,7 +91,7 @@ def evaluate_agent(model_path: str, n_episodes: int = 10):
     else:
         model = A2C.load(model_path)
     
-    env = HouseIncidentEnv(
+    env = BuildingIncidentEnv(
         house_type="16",
         max_steps=100,
         render_mode="human",
@@ -160,7 +160,7 @@ def compare_strategies():
         
         return action
     
-    env = HouseIncidentEnv(house_type="16", max_steps=100, render_mode=None)
+    env = BuildingIncidentEnv(house_type="16", max_steps=100, render_mode=None)
     
     results = {
         "heuristic": {"rewards": [], "incidents": []},
