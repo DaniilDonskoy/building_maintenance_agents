@@ -10,7 +10,13 @@
 
 ![building_graph](./docs/images/building_graph_example.jpg)
 
-## Running with Docker
+## Running
+
+To install dependencies:
+
+```bash
+uv sync
+```
 
 The FastAPI server can be launched using Docker and Docker Compose. This method ensures a consistent environment and automatically handles dependencies.
 
