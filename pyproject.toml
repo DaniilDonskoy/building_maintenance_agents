@@ -67,3 +67,8 @@ dependencies = [
     "stable-baselines3==2.8.0",
     "gymnasium==1.2.3",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+]
