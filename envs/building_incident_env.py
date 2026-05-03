@@ -138,25 +138,23 @@ class BuildingIncidentEnv(gym.Env):
         if action.action_type == AgentActionType.MONITOR:
             reward = self._monitor_action()
         
-        elif action.action_type in [AgentActionType.DEPLOY_FIREFIGHTERS,
-                                     AgentActionType.DEPLOY_PLUMBERS,
-                                     AgentActionType.DEPLOY_ELECTRICIANS,
-                                     AgentActionType.DEPLOY_ELEVATOR_TECH,
-                                     AgentActionType.DEPLOY_GENERAL_TEAM,
-                                     AgentActionType.DEPLOY_HAZMAT,
-                                     AgentActionType.STRUCTURAL_SUPPORT]:
+        elif action.action_type == AgentActionType.DEPLOY_TEAM:
             reward = self._deploy_team_action(action)
+            
+        elif action.action_type == AgentActionType.WITHDRAW_TEAM:
+            # reward = self._withdraw_team_action(action)
+            reward = self._withdraw_team_action()
         
-        elif action.action_type == AgentActionType.REPAIR_ELEMENT:
+        elif action.action_type == AgentActionType.REPAIR:
             reward = self._repair_action(action)
         
-        elif action.action_type == AgentActionType.EVACUATE_ZONE:
-            reward = self._evacuate_action(action)
+        # elif action.action_type == AgentActionType.EVACUATE_ZONE:
+        #     reward = self._evacuate_action(action)
         
-        elif action.action_type == AgentActionType.ISOLATE_ZONE:
+        elif action.action_type == AgentActionType.SHUT_OFF_WATER:
             reward = self._isolate_action(action)
         
-        elif action.action_type == AgentActionType.INSPECT_ELEMENT:
+        elif action.action_type == AgentActionType.INSPECT:
             reward = self._inspect_action(action)
         
         elif action.action_type == AgentActionType.CALL_BACKUP:
@@ -168,6 +166,12 @@ class BuildingIncidentEnv(gym.Env):
         if len(self.simulator.active_incidents) == 0:
             return 0.5
         return -0.1
+    
+    def _withdraw_team_action(self) -> float:
+        # TODO
+        if len(self.simulator.active_incidents) == 0:
+            return 0.0
+        return -0.2
     
     def _deploy_team_action(self, action: AgentAction) -> float:
         if not action.target_id:
@@ -217,9 +221,10 @@ class BuildingIncidentEnv(gym.Env):
         
         reward = 0.0
         for incident in incidents:
-            if incident.incident_type in [IncidentType.BLOCKAGE, 
-                                           IncidentType.STRUCTURAL_DAMAGE,
-                                           IncidentType.FLOOD]:
+            if incident.incident_type in [IncidentType.GVS_RISER_FAILURE,
+                                          IncidentType.GVS_PIPE_FAILURE,
+                                          IncidentType.HVS_RISER_FAILURE,
+                                          IncidentType.HVS_PIPE_FAILURE]:
                 reduction = action.get_effectiveness() * 0.5
                 incident.severity = max(0, incident.severity - reduction)
                 reward += reduction * 8.0

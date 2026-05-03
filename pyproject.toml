@@ -66,6 +66,7 @@ dependencies = [
     "transformers==5.5.0",
     "stable-baselines3==2.8.0",
     "gymnasium==1.2.3",
+    "tensorboard==2.20.0",
 ]
 
 [dependency-groups]
