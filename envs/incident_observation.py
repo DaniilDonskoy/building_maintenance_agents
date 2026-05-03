@@ -5,7 +5,7 @@ from typing import Dict, List
 from collections import defaultdict
 
 from ..incident_simulator import (
-    IncidentSimulator, IncidentType, IndependentIncident
+    IncidentSimulator, IncidentType, Incident
 )
 from ..house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
 from ..house_graph.edges import PathEdge
@@ -105,7 +105,7 @@ class IncidentObservation:
         }
         return type_mapping.get(type(node), 0.5)
     
-    def _get_incident_type_vector(self, incidents: List[IndependentIncident]) -> List[float]:
+    def _get_incident_type_vector(self, incidents: List[Incident]) -> List[float]:
         vector = [0.0] * len(IncidentType)
         for inc in incidents:
             idx = list(IncidentType).index(inc.incident_type)
