@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from .base_node import BaseNode, FLOOR_HEIGHT
+from ..states import IncidentState
 
 
 @dataclass(slots=True)
@@ -16,3 +17,4 @@ class MopNode(BaseNode):
         self.features['x'] = (section - 1) * section_spacing
         self.features['y'] = 0.0
         self.features['z'] = (floor - 1) * FLOOR_HEIGHT
+        self.incident_state = IncidentState(has_incident=False, message="")

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from .base_node import BaseNode, FLOOR_HEIGHT, FLAT_SPACING
+from ..states import IncidentState
 
 
 @dataclass(slots=True)
@@ -19,3 +20,4 @@ class RiserNode(BaseNode):
         self.features['x'] = section_x + FLAT_SPACING * (riser_index - 1)
         self.features['y'] = 3.0
         self.features['z'] = (floor - 1) * FLOOR_HEIGHT
+        self.incident_state = IncidentState(has_incident=False, message="")

@@ -4,12 +4,11 @@ import random
 from typing import List, Tuple
 
 from .incident import Incident
-from .incident_simulator import IncidentSimulator
 
 
 class IncidentPropagation:
     
-    def __init__(self, simulator: 'IncidentSimulator'):
+    def __init__(self, simulator):
         self.simulator = simulator
     
     def propagate(self, incident: Incident) -> List[int]:

@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Dict
 from .base_edge import BaseEdge
 from ..nodes import BaseNode
+from ..states import IncidentState
 
 
 @dataclass(slots=True)
@@ -24,3 +25,4 @@ class PathEdge(BaseEdge):
             "horizontal": float(horizontal),
             **features
         }
+        self.incident_state = IncidentState(has_incident=False, message="")

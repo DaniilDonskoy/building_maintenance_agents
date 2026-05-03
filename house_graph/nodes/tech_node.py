@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from .base_node import BaseNode, FLOOR_HEIGHT
+from ..states import IncidentState
 
 
 @dataclass(slots=True)
@@ -16,3 +17,4 @@ class TechNode(BaseNode):
         self.features['x'] = center_x
         self.features['y'] = -6.0
         self.features['z'] = -FLOOR_HEIGHT
+        self.incident_state = IncidentState(has_incident=False, message="")
