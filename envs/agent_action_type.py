@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Set
 from enum import Enum
 
-from ..incident_simulator import IncidentType
+from incident_simulator import IncidentType
 
 
 class AgentActionType(Enum):

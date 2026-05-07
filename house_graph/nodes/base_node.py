@@ -14,3 +14,4 @@ FLAT_SPACING = 6.0
 class BaseNode:
     features: Dict[str, float] = field(default_factory=dict)
     incident_state: IncidentState = field(default_factory=IncidentState)
+    house: None = field(default=None)

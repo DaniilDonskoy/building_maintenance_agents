@@ -4,11 +4,11 @@ import numpy as np
 from typing import Dict, List
 from collections import defaultdict
 
-from ..incident_simulator import (
+from incident_simulator import (
     IncidentSimulator, IncidentType, Incident
 )
-from ..house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
-from ..house_graph.edges import PathEdge
+from house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
+from house_graph.edges import PathEdge
 
 
 class IncidentObservation:
