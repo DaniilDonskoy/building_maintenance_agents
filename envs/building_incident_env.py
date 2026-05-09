@@ -14,6 +14,7 @@ from ..house_graph.samples import House15Factory, House16Factory, House27Factory
 from .incident_observation import IncidentObservation
 from .agent_action_type import AgentActionType
 from .agent_action import AgentAction
+from .reward import CurrentReward
 
 
 class BuildingIncidentEnv(gym.Env):
@@ -60,6 +61,7 @@ class BuildingIncidentEnv(gym.Env):
         self.resources_used = 0.0
         self.reward_total = 0.0
         self.episode_rewards = []
+        self.reward_strategy = CurrentReward()
         
         self.node_ids = [id(node) for node in self.house.nodes]
         self.edge_ids = [id(edge) for edge in self.house.edges]
@@ -125,197 +127,13 @@ class BuildingIncidentEnv(gym.Env):
             resource_multiplier=resource_multiplier
         )
     
-    def _execute_action(self, action: AgentAction) -> float:
-        cost = action.get_cost()
-        if cost > self.resources:
-            return -5.0  # penalty for insufficient resources
-        
-        self.resources -= cost
-        self.resources_used += cost
-        
-        reward = 0.0
-        
-        if action.action_type == AgentActionType.MONITOR:
-            reward = self._monitor_action()
-        
-        elif action.action_type == AgentActionType.DEPLOY_TEAM:
-            reward = self._deploy_team_action(action)
-            
-        elif action.action_type == AgentActionType.WITHDRAW_TEAM:
-            # reward = self._withdraw_team_action(action)
-            reward = self._withdraw_team_action()
-        
-        elif action.action_type == AgentActionType.REPAIR:
-            reward = self._repair_action(action)
-        
-        # elif action.action_type == AgentActionType.EVACUATE_ZONE:
-        #     reward = self._evacuate_action(action)
-        
-        elif action.action_type == AgentActionType.SHUT_OFF_WATER:
-            reward = self._isolate_action(action)
-        
-        elif action.action_type == AgentActionType.INSPECT:
-            reward = self._inspect_action(action)
-        
-        elif action.action_type == AgentActionType.CALL_BACKUP:
-            reward = self._call_backup_action(action)
-        
-        return reward
-    
-    def _monitor_action(self) -> float:
-        if len(self.simulator.active_incidents) == 0:
-            return 0.5
-        return -0.1
-    
-    def _withdraw_team_action(self) -> float:
-        # TODO
-        if len(self.simulator.active_incidents) == 0:
-            return 0.0
-        return -0.2
-    
-    def _deploy_team_action(self, action: AgentAction) -> float:
-        if not action.target_id:
-            return -1.0
-        
-        element = self._get_element(action.target_id, action.target_type)
-        if not element:
-            return -1.0
-        
-        # get incidents in elements
-        incidents = self.simulator.get_incidents_on_element(element)
-        if not incidents:
-            return -0.5  # penalty for unnecessary action
-        
-        reward = 0.0
-        applicable_types = action.action_type.applicable_incident_types
-        
-        for incident in incidents:
-            if incident.incident_type in applicable_types:
-                reduction = action.get_effectiveness()
-                old_severity = incident.severity
-                incident.severity = max(0, incident.severity - reduction)
-                incident.duration = max(0, incident.duration - int(reduction * 10))
-                
-                severity_reduction = old_severity - incident.severity
-                reward += severity_reduction * 10.0
-                
-                # bonus
-                if incident.severity < 0.05:
-                    self.simulator.resolve_incident(incident.incident_id)
-                    reward += 20.0
-                    logger.info(f"Incident {incident.incident_id} resolved by {action.action_type.name}")
-        
-        return reward
-    
-    def _repair_action(self, action: AgentAction) -> float:
-        if not action.target_id:
-            return -1.0
-        
-        element = self._get_element(action.target_id, action.target_type)
-        if not element:
-            return -1.0
-        
-        incidents = self.simulator.get_incidents_on_element(element)
-        if not incidents:
-            return -0.3
-        
-        reward = 0.0
-        for incident in incidents:
-            if incident.incident_type in [IncidentType.GVS_RISER_FAILURE,
-                                          IncidentType.GVS_PIPE_FAILURE,
-                                          IncidentType.HVS_RISER_FAILURE,
-                                          IncidentType.HVS_PIPE_FAILURE]:
-                reduction = action.get_effectiveness() * 0.5
-                incident.severity = max(0, incident.severity - reduction)
-                reward += reduction * 8.0
-                
-                if incident.severity < 0.05:
-                    self.simulator.resolve_incident(incident.incident_id)
-                    reward += 15.0
-        
-        return reward
-    
-    def _evacuate_action(self, action: AgentAction) -> float:
-        if not action.target_id:
-            return -1.0
-        
-        element = self._get_element(action.target_id, action.target_type)
-        if not element:
-            return -1.0
-        
-        incidents = self.simulator.get_incidents_on_element(element)
-        if incidents:
-            total_severity = sum(inc.severity for inc in incidents)
-            return total_severity * 5.0  # evacuation reduces potential damage
-        return -2.0
-    
-    def _isolate_action(self, action: AgentAction) -> float:
-        if not action.target_id:
-            return -1.0
-        
-        element = self._get_element(action.target_id, action.target_type)
-        if not element:
-            return -1.0
-        
-        incidents = self.simulator.get_incidents_on_element(element)
-        if incidents:
-            for incident in incidents:
-                old_spread_count = incident.spread_count
-                incident.spread_count = min(incident.spread_count + 2, incident.incident_type.spread_radius)
-                if incident.spread_count > old_spread_count:
-                    return 3.0
-        return -0.5
-    
-    def _inspect_action(self, action: AgentAction) -> float:
-        if not action.target_id:
-            return -0.5
-        
-        element = self._get_element(action.target_id, action.target_type)
-        if element:
-            return 0.2  # bonus
-        return -0.5
-    
-    def _call_backup_action(self, action: AgentAction) -> float:
-        backup_amount = 20.0 * action.resource_multiplier
-        self.resource_budget += backup_amount
-        self.resources += backup_amount
-        return 5.0
-    
-    def _get_element(self, element_id: int, element_type: str):
-        if element_type == "node":
-            return self.node_by_id.get(element_id)
-        elif element_type == "edge":
-            return self.edge_by_id.get(element_id)
-        return None
-    
-    def _compute_step_reward(self, action_reward: float) -> float:
-        reward = action_reward
-        
-        # resource generation
-        self.resources += self.resource_regen_rate
-        self.resources = min(self.resources, self.resource_budget)
-        
-        if self.resources > self.resource_budget * 0.5:
-            reward += 0.1  # resource efficiency award
-        
-        total_severity = sum(inc.severity for inc in self.simulator.active_incidents)
-        reward -= total_severity * 0.2  # fine for active incidents
-        
-        if len(self.simulator.active_incidents) == 0:
-            reward += 1.0  # bonus for no incidents
-        
-        if len(self.simulator.active_incidents) > self.max_active_incidents:
-            reward -= 2.0  # fine for exceeding the incident limit
-        
-        return reward
-    
     def step(self, action: np.ndarray) -> Tuple[np.ndarray, float, bool, bool, Dict]:
         parsed_action = self._parse_action(action)
-        action_reward = self._execute_action(parsed_action)
+        action_reward = self.reward_strategy.calculate_action_reward(self, parsed_action)
         
         sim_results = self.simulator.step()  # update simulator
         
-        reward = self._compute_step_reward(action_reward)
+        reward = self.reward_strategy.calculate_step_reward(self, action_reward)
         self.reward_total += reward
         self.episode_rewards.append(reward)
         
