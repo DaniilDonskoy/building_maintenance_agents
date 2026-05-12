@@ -191,7 +191,8 @@ class IncidentSimulator:
         self.active_incidents.append(incident)
         
         element.incident_state.set_incident(
-            f"{inc_type.value} started with severity {severity:.2f}"
+            f"{inc_type.value} started with severity {severity:.2f}",
+            current_step=self.time_step
         )
         
         self.stats["total_incidents"] += 1
