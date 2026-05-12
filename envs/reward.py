@@ -20,16 +20,16 @@ class RewardConfig:
     withdraw_no_incidents_reward: float = 0.0
     withdraw_active_incidents_penalty: float = -0.2
 
-    deploy_no_incidents_penalty: float = -0.5
+    deploy_no_incidents_penalty: float = -2.0
     deploy_severity_multiplier: float = 10.0
-    deploy_resolved_bonus: float = 20.0
+    deploy_resolved_bonus: float = 2.0
 
-    repair_no_incidents_penalty: float = -0.3
+    repair_no_incidents_penalty: float = -2.0
     repair_effectiveness_multiplier: float = 0.5
     repair_severity_multiplier: float = 8.0
-    repair_resolved_bonus: float = 15.0
+    repair_resolved_bonus: float = 25.0
 
-    shut_off_water_reward: float = 3.0
+    shut_off_water_reward: float = 0.0
     shut_off_water_penalty: float = -0.5
 
     inspect_valid_target_reward: float = 0.2
@@ -45,6 +45,9 @@ class RewardConfig:
     too_many_incidents_penalty: float = -2.0
 
     resolve_severity_threshold: float = 0.05
+
+    max_incident_age: int = 72
+    min_resolve_bonus_factor: float = 0.0
 
 
 class CurrentReward:
@@ -136,8 +139,9 @@ class CurrentReward:
 
                 if incident.severity < self.config.resolve_severity_threshold:
                     env.simulator.resolve_incident(incident.incident_id)
-                    reward += self.config.deploy_resolved_bonus
-                    logger.info(f"Incident {incident.incident_id} resolved by {action.action_type.name}")
+                    factor = self._resolve_bonus_factor(incident, env.current_step)
+                    reward += self.config.deploy_resolved_bonus * factor
+                    logger.info(f"Incident {incident.incident_id} resolved by {action.action_type.name}, age={env.current_step - incident.start_time}, factor={factor:.2f}")
 
         return reward
 
@@ -159,7 +163,8 @@ class CurrentReward:
 
                 if incident.severity < self.config.resolve_severity_threshold:
                     env.simulator.resolve_incident(incident.incident_id)
-                    reward += self.config.repair_resolved_bonus
+                    factor = self._resolve_bonus_factor(incident, env.current_step)
+                    reward += self.config.repair_resolved_bonus * factor
 
         return reward
 
@@ -189,6 +194,11 @@ class CurrentReward:
         env.resource_budget += backup_amount
         env.resources += backup_amount
         return self.config.call_backup_reward
+
+    def _resolve_bonus_factor(self, incident, current_step: int) -> float:
+        age = current_step - incident.start_time
+        factor = 1.0 - age / self.config.max_incident_age
+        return max(self.config.min_resolve_bonus_factor, factor)
 
     def _get_element(self, env, action: AgentAction):
         if not action.target_id:
