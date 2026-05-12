@@ -164,3 +164,7 @@ yarn-error.log*
 
 # Logs
 logs/*
+
+# Trained models
+notebooks/models/
+models/
