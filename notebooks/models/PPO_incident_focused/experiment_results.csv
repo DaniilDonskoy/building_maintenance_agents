@@ -1,0 +1,3 @@
+timestamp,algorithm,reward_variant,experiment_name,total_timesteps,n_envs,house_type,max_steps,incident_probability,resource_budget,enable_spread,mean_reward,std_reward,min_reward,max_reward,mean_steps,std_steps,model_path
+2026-05-10T12:00:29,PPO,incident_focused,PPO_incident_focused,100000,4,16,100,0.03,100.0,True,76.60000000000004,0.0,76.60000000000004,76.60000000000004,100.0,0.0,./models/PPO_incident_focused/PPO_incident_model.zip
+2026-05-10T12:54:36,PPO,incident_focused,PPO_incident_focused,100000,4,16,100,0.03,100.0,True,73.3000000000001,0.0,73.3000000000001,73.3000000000001,100.0,0.0,./models/PPO_incident_focused/PPO_incident_model.zip

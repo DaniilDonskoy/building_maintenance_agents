@@ -1,0 +1,6 @@
+episode,reward,steps,initial_incidents,step_new_incidents,total_incidents,max_active_incidents,active_incidents_at_end,resources_used,resources_left
+1,76.60000000000004,100,0,0,0,0,0,125.0,25.0
+2,76.60000000000004,100,0,0,0,0,0,125.0,25.0
+3,76.60000000000004,100,0,0,0,0,0,125.0,25.0
+4,76.60000000000004,100,0,0,0,0,0,125.0,25.0
+5,76.60000000000004,100,0,0,0,0,0,125.0,25.0

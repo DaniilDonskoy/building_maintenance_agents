@@ -1,0 +1,14 @@
+episode,step,event,count,action,reward,total_reward,active_incidents,new_incidents,resolved_incidents,resources
+1,0,initial_incidents,1,RESET,0.0,0.0,1,1,0,100.0
+1,23,resolved_incidents,2,REPAIR,-1.5,-43.443089632314184,1,0,2,82.75
+1,25,resolved_incidents,1,REPAIR,-1.5,-46.443089632314184,0,0,1,81.25
+1,67,new_incidents,1,REPAIR,-7.016709621189829,-114.95979925350402,4,1,0,49.75
+1,90,resolved_incidents,2,REPAIR,-2.090253436139223,-230.5079215680384,8,0,2,32.5
+1,92,resolved_incidents,4,REPAIR,-1.970253436139223,-234.50842844031683,4,0,4,31.0
+1,95,resolved_incidents,3,REPAIR,-1.790253436139223,-240.05918874873447,1,0,3,28.75
+3,0,initial_incidents,1,RESET,0.0,0.0,1,1,0,100.0
+3,16,resolved_incidents,2,REPAIR,-1.5,-33.76713680146976,1,0,2,88.0
+3,17,resolved_incidents,1,REPAIR,-1.5,-35.26713680146976,0,0,1,87.25
+5,0,initial_incidents,1,RESET,0.0,0.0,1,1,0,100.0
+5,25,resolved_incidents,1,REPAIR,-1.5,-43.23687831648469,0,0,1,81.25
+5,82,new_incidents,1,REPAIR,-2.5670410590263275,-129.80391937551101,2,1,0,38.5

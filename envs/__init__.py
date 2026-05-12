@@ -2,6 +2,7 @@ from .building_incident_env import BuildingIncidentEnv
 from .agent_action import AgentAction
 from .agent_action_type import AgentActionType
 from .incident_observation import IncidentObservation
+from .reward import CurrentReward, RewardConfig
 from . import training
 
 __all__ = [
@@ -9,5 +10,7 @@ __all__ = [
 	"AgentAction",
 	"AgentActionType",
 	"IncidentObservation",
+	"CurrentReward",
+	"RewardConfig",
 	"training",
 ]

@@ -4,15 +4,49 @@ from typing import Dict
 
 import numpy as np
 from stable_baselines3 import PPO, A2C
+from stable_baselines3.common.callbacks import BaseCallback, CallbackList, EvalCallback
 from stable_baselines3.common.vec_env import SubprocVecEnv
-from stable_baselines3.common.callbacks import EvalCallback
 import os
 
 from .building_incident_env import BuildingIncidentEnv
 
 
+class NotebookProgressCallback(BaseCallback):
+    def __init__(self):
+        super().__init__()
+        self.progress = None
+        self.last_percent = -1
+
+    def _on_training_start(self) -> None:
+        try:
+            from tqdm.auto import tqdm
+
+            self.progress = tqdm(total=self.locals["total_timesteps"], desc="Training")
+        except Exception:
+            self.progress = None
+            print("Training progress: 0%")
+
+    def _on_step(self) -> bool:
+        if self.progress is not None:
+            current = min(self.num_timesteps, self.locals["total_timesteps"])
+            self.progress.update(current - self.progress.n)
+        else:
+            percent = int(100 * self.num_timesteps / self.locals["total_timesteps"])
+            if percent >= self.last_percent + 5:
+                self.last_percent = percent
+                print(f"Training progress: {percent}%")
+        return True
+
+    def _on_training_end(self) -> None:
+        if self.progress is not None:
+            self.progress.close()
+
+
 def make_env(env_config: Dict, rank: int, seed: int = 0):
     def _init():
+        from loguru import logger
+
+        logger.disable("building_maintenance_agents")
         env = BuildingIncidentEnv(**env_config)
         env.reset(seed=seed + rank)
         return env
@@ -24,8 +58,12 @@ def train_agent(
     total_timesteps: int = 200000,
     algorithm: str = "PPO",
     n_envs: int = 4,
-    save_path: str = "./models/"
+    save_path: str = "./models/",
+    progress_bar: bool = False
 ):
+    from loguru import logger
+
+    logger.disable("building_maintenance_agents")
     os.makedirs(save_path, exist_ok=True)
     
     envs = SubprocVecEnv([
@@ -33,14 +71,19 @@ def train_agent(
     ])
     
     eval_env = BuildingIncidentEnv(**env_config)
-    eval_callback = EvalCallback(
-        eval_env,
-        best_model_save_path=save_path,
-        log_path=save_path,
-        eval_freq=10000,
-        deterministic=True,
-        render=False
-    )
+    callbacks = [
+        EvalCallback(
+            eval_env,
+            best_model_save_path=save_path,
+            log_path=save_path,
+            eval_freq=10000,
+            deterministic=True,
+            render=False
+        )
+    ]
+
+    if progress_bar:
+        callbacks.append(NotebookProgressCallback())
     
     if algorithm == "PPO":
         model = PPO(
@@ -74,8 +117,9 @@ def train_agent(
     
     model.learn(
         total_timesteps=total_timesteps,
-        callback=eval_callback,
-        tb_log_name=f"{algorithm}_incident_control"
+        callback=CallbackList(callbacks),
+        tb_log_name=f"{algorithm}_incident_control",
+        progress_bar=False
     )
     
     model.save(f"{save_path}/{algorithm}_incident_model")

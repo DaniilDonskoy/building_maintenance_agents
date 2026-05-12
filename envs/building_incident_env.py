@@ -14,7 +14,7 @@ from ..house_graph.samples import House15Factory, House16Factory, House27Factory
 from .incident_observation import IncidentObservation
 from .agent_action_type import AgentActionType
 from .agent_action import AgentAction
-from .reward import CurrentReward
+from .reward import CurrentReward, RewardConfig
 
 
 class BuildingIncidentEnv(gym.Env):
@@ -31,7 +31,9 @@ class BuildingIncidentEnv(gym.Env):
         resource_budget: float = 100.0,
         resource_regen_rate: float = 0.5,
         enable_spread: bool = True,
-        random_seed: Optional[int] = None
+        random_seed: Optional[int] = None,
+        reward_strategy: CurrentReward | None = None,
+        reward_config: RewardConfig | None = None
     ):
         super().__init__()
         
@@ -61,7 +63,10 @@ class BuildingIncidentEnv(gym.Env):
         self.resources_used = 0.0
         self.reward_total = 0.0
         self.episode_rewards = []
-        self.reward_strategy = CurrentReward()
+        if reward_strategy is not None:
+            self.reward_strategy = reward_strategy
+        else:
+            self.reward_strategy = CurrentReward(reward_config)
         
         self.node_ids = [id(node) for node in self.house.nodes]
         self.edge_ids = [id(edge) for edge in self.house.edges]
