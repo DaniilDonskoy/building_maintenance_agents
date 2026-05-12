@@ -6,8 +6,8 @@ from collections import defaultdict
 import torch
 from loguru import logger
 
-from ..house_graph.house import House
-from ..house_graph.nodes import BaseNode
+from house_graph.house import House
+from house_graph.nodes import BaseNode
 from .incident import Incident
 from .incident_type import IncidentType
 

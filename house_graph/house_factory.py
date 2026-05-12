@@ -55,8 +55,10 @@ class HouseFactory:
         for node in house.nodes:
             node.features["x"] += x
             node.features["y"] += y
+            node.incident_state.obj = node
 
         for edge in house.edges:
+            edge.incident_state.obj = edge
             node_a = edge.node_a
             node_b = edge.node_b
             node_a.features["degree"] = node_a.features.get("degree", 0) + 1

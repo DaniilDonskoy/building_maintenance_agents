@@ -6,11 +6,11 @@ import numpy as np
 from typing import Dict, Optional, Tuple, Any
 from loguru import logger
 
-from ..incident_simulator import (
+from incident_simulator import (
     IncidentSimulator, IncidentType
 )
-from ..house_graph import House
-from ..house_graph.samples import House15Factory, House16Factory, House27Factory
+from house_graph import House
+from house_graph.samples import House15Factory, House16Factory, House27Factory
 from .incident_observation import IncidentObservation
 from .agent_action_type import AgentActionType
 from .agent_action import AgentAction

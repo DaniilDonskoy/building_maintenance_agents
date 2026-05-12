@@ -4,11 +4,11 @@ import numpy as np
 from typing import Dict, List
 from collections import defaultdict
 
-from ..incident_simulator import (
+from incident_simulator import (
     IncidentSimulator, IncidentType, Incident
 )
-from ..house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
-from ..house_graph.edges import PathEdge
+from house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
+from house_graph.edges import PathEdge
 
 
 class IncidentObservation:
@@ -165,11 +165,10 @@ class IncidentObservation:
         
         time_normalized = self.simulator.time_step / 100.0
         
-        affected_nodes = sum(1 for node in self.simulator.house.nodes if node.incident_state.has_incident)
-        affected_edges = sum(1 for edge in self.simulator.house.edges if edge.incident_state.has_incident)
+        affected_elements = self.simulator.house.incident_count
         
         total_elements = len(self.simulator.house.nodes) + len(self.simulator.house.edges)
-        affected_ratio = (affected_nodes + affected_edges) / max(1, total_elements)
+        affected_ratio = affected_elements / max(1, total_elements)
         
         global_vector = [
             active_incidents / 10.0,

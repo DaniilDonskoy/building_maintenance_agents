@@ -7,6 +7,7 @@ from typing import List
 from .dto import HouseGraphDTO, HouseTensorDTO
 from .nodes import BaseNode
 from .edges import BaseEdge
+from .states import IncidentState
 
 
 @dataclass
@@ -15,12 +16,22 @@ class House:
     y: int
     nodes: List[BaseNode] = field(default_factory=list)
     edges: List[BaseEdge] = field(default_factory=list)
+    incident_count: int = 0
+
+    @property
+    def incident_state(self) -> IncidentState:
+        return IncidentState(
+            has_incident=self.incident_count > 0,
+            message=f"{self.incident_count} active incidents in house"
+        )
 
     def add_node(self, node: BaseNode) -> None:
         self.nodes.append(node)
+        node.house = self
 
     def add_edge(self, edge: BaseEdge) -> None:
         self.edges.append(edge)
+        edge.house = self
 
     def to_tensors(self) -> HouseTensorDTO:
         """Convert the house graph into a tensor-based DTO.
