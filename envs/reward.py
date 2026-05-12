@@ -46,6 +46,9 @@ class RewardConfig:
 
     resolve_severity_threshold: float = 0.05
 
+    max_incident_age: int = 72
+    min_resolve_bonus_factor: float = 0.0
+
 
 class CurrentReward:
     ACTION_HANDLERS = {
@@ -136,8 +139,9 @@ class CurrentReward:
 
                 if incident.severity < self.config.resolve_severity_threshold:
                     env.simulator.resolve_incident(incident.incident_id)
-                    reward += self.config.deploy_resolved_bonus
-                    logger.info(f"Incident {incident.incident_id} resolved by {action.action_type.name}")
+                    factor = self._resolve_bonus_factor(incident, env.current_step)
+                    reward += self.config.deploy_resolved_bonus * factor
+                    logger.info(f"Incident {incident.incident_id} resolved by {action.action_type.name}, age={env.current_step - incident.start_time}, factor={factor:.2f}")
 
         return reward
 
@@ -159,7 +163,8 @@ class CurrentReward:
 
                 if incident.severity < self.config.resolve_severity_threshold:
                     env.simulator.resolve_incident(incident.incident_id)
-                    reward += self.config.repair_resolved_bonus
+                    factor = self._resolve_bonus_factor(incident, env.current_step)
+                    reward += self.config.repair_resolved_bonus * factor
 
         return reward
 
@@ -189,6 +194,11 @@ class CurrentReward:
         env.resource_budget += backup_amount
         env.resources += backup_amount
         return self.config.call_backup_reward
+
+    def _resolve_bonus_factor(self, incident, current_step: int) -> float:
+        age = current_step - incident.start_time
+        factor = 1.0 - age / self.config.max_incident_age
+        return max(self.config.min_resolve_bonus_factor, factor)
 
     def _get_element(self, env, action: AgentAction):
         if not action.target_id:
