@@ -43,6 +43,7 @@ class RewardConfig:
     active_incident_penalty_multiplier: float = 0.2
     no_incidents_bonus: float = 1.0
     too_many_incidents_penalty: float = -2.0
+    overdue_incident_penalty: float = -100.0
 
     resolve_severity_threshold: float = 0.05
 
@@ -102,6 +103,17 @@ class CurrentReward:
 
         if len(env.simulator.active_incidents) > env.max_active_incidents:
             reward += self.config.too_many_incidents_penalty
+
+        new_overdue_ids = {
+            inc.incident_id
+            for inc in env.simulator.active_incidents
+            if inc.is_overdue
+            and inc.incident_id not in env.penalized_overdue_incident_ids
+        }
+        env.last_new_overdue_incidents = len(new_overdue_ids)
+        if new_overdue_ids:
+            env.penalized_overdue_incident_ids.update(new_overdue_ids)
+            reward += self.config.overdue_incident_penalty * len(new_overdue_ids)
 
         return reward
 
@@ -184,6 +196,11 @@ class CurrentReward:
         return self.config.shut_off_water_penalty
 
     def _inspect_action(self, env, action: AgentAction) -> float:
+        if hasattr(env, "handle_inspect_action"):
+            search_reward = env.handle_inspect_action(action)
+            if search_reward is not None:
+                return search_reward
+
         element = self._get_element(env, action)
         if element:
             return self.config.inspect_valid_target_reward

@@ -14,6 +14,7 @@ class Incident:
     start_time: int
     duration: int = 0  # incident duration
     spread_count: int = 0
+    resolved: bool = False
     
     def __post_init__(self):
         base_duration = {
@@ -27,10 +28,21 @@ class Incident:
     
     @property
     def is_active(self) -> bool:
-        return self.duration > 0
+        return not self.resolved
+
+    @property
+    def is_overdue(self) -> bool:
+        return self.is_active and self.duration <= 0
     
-    def update(self) -> None:
+    def update(
+        self,
+        passive_decay: bool = True,
+        auto_resolve_on_timeout: bool = True
+    ) -> None:
         if self.is_active:
-            decay = self.incident_type.decay_rate
-            self.severity = max(0, self.severity - decay)
+            if passive_decay:
+                decay = self.incident_type.decay_rate
+                self.severity = max(0, self.severity - decay)
             self.duration -= 1
+            if auto_resolve_on_timeout and self.duration <= 0:
+                self.resolved = True
