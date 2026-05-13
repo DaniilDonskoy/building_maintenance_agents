@@ -23,12 +23,15 @@ class IncidentSimulator:
         house: House,
         base_incident_probability: float = 1.0,
         random_seed: Optional[int] = None,
-        enable_spread: bool = True
+        enable_spread: bool = True,
+        passive_incident_decay: bool = True,
+        auto_resolve_incidents: bool = True
     ):
         self.house = house
         self.enable_spread = enable_spread
+        self.passive_incident_decay = passive_incident_decay
+        self.auto_resolve_incidents = auto_resolve_incidents
         self.time_step = 0
-        
         self.node_by_id = {id(node): node for node in house.nodes}
         self.edge_by_id = {id(edge): edge for edge in house.edges}
         
@@ -92,7 +95,10 @@ class IncidentSimulator:
         incidents_to_remove = []
         
         for incident in self.active_incidents:
-            incident.update()
+            incident.update(
+                passive_decay=self.passive_incident_decay,
+                auto_resolve_on_timeout=self.auto_resolve_incidents
+            )
             
             element = self._get_element(incident.location_id, incident.location_type)
             if element and incident.is_active:
@@ -231,6 +237,7 @@ class IncidentSimulator:
     def resolve_incident(self, incident_id: int) -> bool:
         for incident in self.active_incidents:
             if incident.incident_id == incident_id:
+                incident.resolved = True
                 incident.duration = 0
                 return True
         return False
@@ -307,6 +314,7 @@ class IncidentSimulator:
             **self.stats,
             "current_time": self.time_step,
             "active_incidents": len(self.active_incidents),
+            "overdue_incidents": sum(1 for inc in self.active_incidents if inc.is_overdue),
             "average_severity": sum(i.severity for i in self.active_incidents) / max(1, len(self.active_incidents))
         }
     
@@ -326,6 +334,4 @@ class IncidentSimulator:
             "max_active_incidents": 0,
             "total_damage": 0.0
         }
-        
         logger.info("IncidentSimulator reset")
-        

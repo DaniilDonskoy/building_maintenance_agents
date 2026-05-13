@@ -66,9 +66,10 @@ def train_agent(
     logger.disable("building_maintenance_agents")
     os.makedirs(save_path, exist_ok=True)
     
-    envs = SubprocVecEnv([
-        make_env(env_config, i) for i in range(n_envs)
-    ])
+    envs = SubprocVecEnv(
+        [make_env(env_config, i) for i in range(n_envs)],
+        start_method="fork"
+    )
     
     eval_env = BuildingIncidentEnv(**env_config)
     callbacks = [
@@ -91,13 +92,13 @@ def train_agent(
             envs,
             verbose=1,
             learning_rate=0.0003,
-            n_steps=2048,
+            n_steps=512,
             batch_size=64,
-            n_epochs=10,
+            n_epochs=5,
             gamma=0.99,
             gae_lambda=0.95,
             clip_range=0.2,
-            ent_coef=0.01,
+            ent_coef=0.03,
             tensorboard_log=f"{save_path}/tensorboard/"
         )
     elif algorithm == "A2C":
