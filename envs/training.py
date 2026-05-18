@@ -4,8 +4,10 @@ from typing import Dict
 
 import numpy as np
 from stable_baselines3 import PPO, A2C
-from stable_baselines3.common.vec_env import SubprocVecEnv
+from stable_baselines3.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines3.common.callbacks import EvalCallback
+from sb3_contrib import MaskablePPO
+from sb3_contrib.common.wrappers import ActionMasker
 import os
 
 from .building_incident_env import BuildingIncidentEnv
@@ -14,6 +16,15 @@ from .building_incident_env import BuildingIncidentEnv
 def make_env(env_config: Dict, rank: int, seed: int = 0):
     def _init():
         env = BuildingIncidentEnv(**env_config)
+        env.reset(seed=seed + rank)
+        return env
+    return _init
+
+
+def make_masked_env(env_config: Dict, rank: int, seed: int = 0):
+    def _init():
+        env = BuildingIncidentEnv(**env_config)
+        env = ActionMasker(env, lambda e: e.action_masks())
         env.reset(seed=seed + rank)
         return env
     return _init
@@ -80,6 +91,61 @@ def train_agent(
     
     model.save(f"{save_path}/{algorithm}_incident_model")
     
+    return model
+
+
+def train_masked_agent(
+    env_config: Dict,
+    total_timesteps: int = 200_000,
+    n_envs: int = 4,
+    save_path: str = "./models/",
+    learning_rate: float = 3e-4,
+    net_arch: list | None = None,
+) -> MaskablePPO:
+    """Обучение MaskablePPO — REPAIR и WITHDRAW недоступны пока нет команды на поле."""
+    os.makedirs(save_path, exist_ok=True)
+
+    if net_arch is None:
+        net_arch = [256, 256]
+
+    envs = DummyVecEnv([make_masked_env(env_config, i, seed=42) for i in range(n_envs)])
+
+    eval_env_raw = BuildingIncidentEnv(**env_config)
+    eval_env = ActionMasker(eval_env_raw, lambda e: e.action_masks())
+    eval_callback = EvalCallback(
+        eval_env,
+        best_model_save_path=save_path,
+        log_path=save_path,
+        eval_freq=max(10_000 // n_envs, 1),
+        deterministic=True,
+        render=False,
+    )
+
+    model = MaskablePPO(
+        "MlpPolicy",
+        envs,
+        verbose=0,
+        learning_rate=learning_rate,
+        n_steps=512,
+        batch_size=128,
+        n_epochs=10,
+        gamma=0.99,
+        gae_lambda=0.95,
+        clip_range=0.2,
+        ent_coef=0.01,
+        policy_kwargs=dict(net_arch=net_arch),
+        seed=42,
+        tensorboard_log=f"{save_path}/tensorboard/",
+    )
+
+    model.learn(
+        total_timesteps=total_timesteps,
+        callback=eval_callback,
+        tb_log_name="MaskablePPO",
+        progress_bar=True,
+    )
+
+    model.save(f"{save_path}/masked_ppo_model")
     return model
 
 
