@@ -7,14 +7,28 @@ from typing import Any
 import pandas as pd
 from natasha import Doc, MorphVocab, NewsEmbedding, NewsMorphTagger, Segmenter
 
+from house_graph.edges import ColdWaterEdge, HotWaterEdge
+from house_graph.nodes import RiserNode
+from house_graph.samples import House16Factory
+from incident_simulator.incident_type import IncidentType
+
 
 logger = logging.getLogger(__name__)
 
 
 DEFAULT_COLUMNS_TO_DROP = ("Источник", "Категория")
 DEFAULT_DESCRIPTION_COLUMN = "Описание"
+ADDRESS_COLUMN = "Адрес"
 INCIDENT_TYPE_COLUMN = "Тип инцидента"
 ENGINEERING_SYSTEM_COLUMN = "Инж. система"
+HOURS_PER_DAY = 24
+
+SIMULATOR_INCIDENT_TYPES = (
+    IncidentType.GVS_RISER_FAILURE.value,
+    IncidentType.GVS_PIPE_FAILURE.value,
+    IncidentType.HVS_RISER_FAILURE.value,
+    IncidentType.HVS_PIPE_FAILURE.value,
+)
 
 INCIDENT_PATTERNS = {
     "Замена ХВС на уровне техэтажа": (
@@ -36,6 +50,132 @@ ENGINEERING_SYSTEM_PATTERNS = {
     "хвс": (r"хвс"),
     "лифт": (r"лифт"),
 }
+
+
+def estimate_incident_probabilities_from_dataframe(
+    dataframe: pd.DataFrame,
+    days: int,
+    top_houses_limit: int = 30,
+    house_factory: Any = House16Factory,
+) -> dict[str, Any]:
+    preprocessor = IncidentRequestsPreprocessor(dataframe)
+    processed_dataframe = preprocessor.preprocess()
+
+    top_addresses = (
+        processed_dataframe[ADDRESS_COLUMN]
+        .value_counts()
+        .head(top_houses_limit)
+        .index
+    )
+    selected_dataframe = processed_dataframe[
+        processed_dataframe[ADDRESS_COLUMN].isin(top_addresses)
+    ]
+    selected_houses_count = len(top_addresses)
+
+    counts = {incident_type: 0 for incident_type in SIMULATOR_INCIDENT_TYPES}
+    for _, row in selected_dataframe.iterrows():
+        simulator_incident_type = _map_request_to_simulator_incident_type(
+            row.get(INCIDENT_TYPE_COLUMN),
+            row.get(ENGINEERING_SYSTEM_COLUMN),
+        )
+        if simulator_incident_type is not None:
+            counts[simulator_incident_type] += 1
+
+    house = house_factory.build()
+    per_house_exposure = _count_house_exposure(house)
+    exposure = {
+        incident_type: selected_houses_count * per_house_exposure[incident_type]
+        for incident_type in SIMULATOR_INCIDENT_TYPES
+    }
+
+    probabilities = {}
+    for incident_type in SIMULATOR_INCIDENT_TYPES:
+        denominator = days * HOURS_PER_DAY * exposure[incident_type]
+        probabilities[incident_type] = (
+            counts[incident_type] / denominator if denominator else 0.0
+        )
+
+    return {
+        "probabilities": probabilities,
+        "counts": counts,
+        "exposure": exposure,
+        "selected_houses_count": selected_houses_count,
+    }
+
+
+def update_incident_probabilities(
+    old_probabilities: dict[Any, float],
+    new_probabilities: dict[Any, float],
+    alpha: float = 0.8,
+) -> dict[str, float]:
+    normalized_old_probabilities = {
+        _incident_type_key(incident_type): probability
+        for incident_type, probability in old_probabilities.items()
+    }
+    normalized_new_probabilities = {
+        _incident_type_key(incident_type): probability
+        for incident_type, probability in new_probabilities.items()
+    }
+
+    beta = 1 - alpha
+    incident_types = dict.fromkeys(
+        [*normalized_old_probabilities.keys(), *normalized_new_probabilities.keys()]
+    )
+
+    return {
+        incident_type: (
+            normalized_old_probabilities.get(incident_type, 0.0) * alpha
+            + normalized_new_probabilities.get(incident_type, 0.0) * beta
+        )
+        for incident_type in incident_types
+    }
+
+
+def _incident_type_key(incident_type: Any) -> str:
+    if isinstance(incident_type, IncidentType):
+        return incident_type.value
+    return str(incident_type)
+
+
+def _count_house_exposure(house: Any) -> dict[str, int]:
+    riser_nodes_count = sum(isinstance(node, RiserNode) for node in house.nodes)
+    return {
+        IncidentType.GVS_RISER_FAILURE.value: riser_nodes_count,
+        IncidentType.HVS_RISER_FAILURE.value: riser_nodes_count,
+        IncidentType.GVS_PIPE_FAILURE.value: sum(
+            isinstance(edge, HotWaterEdge) for edge in house.edges
+        ),
+        IncidentType.HVS_PIPE_FAILURE.value: sum(
+            isinstance(edge, ColdWaterEdge) for edge in house.edges
+        ),
+    }
+
+
+def _map_request_to_simulator_incident_type(
+    incident_type: Any,
+    engineering_system: Any,
+) -> str | None:
+    incident_type = str(incident_type or "").strip()
+    engineering_system = str(engineering_system or "").strip().lower()
+
+    if incident_type == "Замена главных стояков ГВС":
+        return IncidentType.GVS_RISER_FAILURE.value
+    if incident_type == "Замена трубы ГВС":
+        return IncidentType.GVS_PIPE_FAILURE.value
+    if incident_type in {"Замена трубы ХВС", "Замена ХВС на уровне техэтажа"}:
+        return IncidentType.HVS_PIPE_FAILURE.value
+    if incident_type == "Утечка стояка":
+        if engineering_system == "гвс":
+            return IncidentType.GVS_RISER_FAILURE.value
+        if engineering_system == "хвс":
+            return IncidentType.HVS_RISER_FAILURE.value
+    if incident_type == "Замена розлива":
+        if engineering_system == "гвс":
+            return IncidentType.GVS_PIPE_FAILURE.value
+        if engineering_system == "хвс":
+            return IncidentType.HVS_PIPE_FAILURE.value
+
+    return None
 
 
 class IncidentRequestsPreprocessor:

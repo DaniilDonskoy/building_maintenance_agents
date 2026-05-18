@@ -23,10 +23,12 @@ class IncidentSimulator:
         house: House,
         base_incident_probability: float = 1.0,
         random_seed: Optional[int] = None,
-        enable_spread: bool = True
+        enable_spread: bool = True,
+        incident_probabilities: dict[str | IncidentType, float] | None = None,
     ):
         self.house = house
         self.enable_spread = enable_spread
+        self.incident_probabilities = incident_probabilities
         self.time_step = 0
         
         self.node_by_id = {id(node): node for node in house.nodes}
@@ -42,7 +44,8 @@ class IncidentSimulator:
         
         self.spawner = IncidentSpawner(
             base_probability=base_incident_probability,
-            random_seed=random_seed
+            random_seed=random_seed,
+            incident_probabilities=incident_probabilities,
         )
         
         if enable_spread:

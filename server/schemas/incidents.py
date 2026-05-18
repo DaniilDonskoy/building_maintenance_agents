@@ -42,6 +42,19 @@ class IncidentDTO(BaseModel):
         }
 
 
+class IncidentProbabilityUpdateDTO(BaseModel):
+    old_probability: float = Field(description="Previous incident probability")
+    new_probability: float = Field(description="Estimated probability from uploaded file")
+    updated_probability: float = Field(description="Weighted updated probability")
+    count: int = Field(description="Number of matching incidents in selected top houses")
+    exposure: int = Field(description="Number of applicable elements in selected top houses")
+    selected_houses_count: int = Field(description="Number of houses selected for estimation")
+
+
 class IncidentsResponse(BaseModel):
     total_count: int = Field(description="Total number of incidents")
     incidents: list[IncidentDTO] = Field(description="List of incidents")
+    probability_update: Optional[dict[str, IncidentProbabilityUpdateDTO]] = Field(
+        None,
+        description="Updated incident probabilities by simulator incident type",
+    )

@@ -31,7 +31,8 @@ class BuildingIncidentEnv(gym.Env):
         resource_budget: float = 100.0,
         resource_regen_rate: float = 0.5,
         enable_spread: bool = True,
-        random_seed: Optional[int] = None
+        random_seed: Optional[int] = None,
+        incident_probabilities: dict[str | IncidentType, float] | None = None,
     ):
         super().__init__()
         
@@ -45,13 +46,15 @@ class BuildingIncidentEnv(gym.Env):
         self.resource_regen_rate = resource_regen_rate
         self.enable_spread = enable_spread
         self.random_seed = random_seed
+        self.incident_probabilities = incident_probabilities
         
         self.house = self._create_house()
         self.simulator = IncidentSimulator(
             self.house,
             base_incident_probability=incident_probability,
             random_seed=random_seed,
-            enable_spread=enable_spread
+            enable_spread=enable_spread,
+            incident_probabilities=incident_probabilities,
         )
         
         self.observer = IncidentObservation(self.simulator)
@@ -186,7 +189,8 @@ class BuildingIncidentEnv(gym.Env):
             self.house,
             base_incident_probability=self.incident_probability,
             random_seed=seed if seed is not None else self.random_seed,
-            enable_spread=self.enable_spread
+            enable_spread=self.enable_spread,
+            incident_probabilities=self.incident_probabilities,
         )
         
         self.observer = IncidentObservation(self.simulator)  # update observations

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import random
 import numpy as np
-from typing import List, Optional, Tuple
+from typing import Any, List, Optional, Tuple
 
 from .incident_type import IncidentType
 from .incident import Incident
@@ -15,11 +15,16 @@ class IncidentSpawner:
         base_probability: float = 1.0,
         severity_mean: float = 0.5,
         severity_std: float = 0.2,
-        random_seed: Optional[int] = None
+        random_seed: Optional[int] = None,
+        incident_probabilities: dict[str | IncidentType, float] | None = None,
     ):
         self.base_probability = base_probability
         self.severity_mean = severity_mean
         self.severity_std = severity_std
+        self.incident_probabilities = {
+            self._incident_type_key(incident_type): probability
+            for incident_type, probability in (incident_probabilities or {}).items()
+        }
         
         if random_seed is not None:
             random.seed(random_seed)
@@ -40,7 +45,11 @@ class IncidentSpawner:
         if incident_type is None:
             return False, None, 0.0
         
-        probability = incident_type.base_probability * self.base_probability
+        type_probability = self.incident_probabilities.get(
+            incident_type.value,
+            incident_type.base_probability,
+        )
+        probability = type_probability * self.base_probability
         
         if random.random() > probability:
             return False, None, 0.0
@@ -51,6 +60,11 @@ class IncidentSpawner:
         )
         
         return True, incident_type, severity
+
+    def _incident_type_key(self, incident_type: Any) -> str:
+        if isinstance(incident_type, IncidentType):
+            return incident_type.value
+        return str(incident_type)
     
     def _select_incident_type(self, element, element_type: str) -> Optional[IncidentType]:
         water_system = self._get_water_system(element)
