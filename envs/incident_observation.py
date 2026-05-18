@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
-from typing import Dict, List
+from typing import Dict, List, Optional
 from collections import defaultdict
 
 from incident_simulator import (
@@ -9,12 +9,14 @@ from incident_simulator import (
 )
 from house_graph.nodes import TechNode, ElecNode, FlatNode, RiserNode, ElevNode, MopNode
 from house_graph.edges import PathEdge
+from .element_state import AgentStateMachine
 
 
 class IncidentObservation:
-    
-    def __init__(self, simulator: IncidentSimulator):
+
+    def __init__(self, simulator: IncidentSimulator, state_machine: Optional[AgentStateMachine] = None):
         self.simulator = simulator
+        self.state_machine = state_machine
         self._normalization_stats = self._compute_normalization_stats()
     
     def _compute_normalization_stats(self) -> Dict[str, Dict[str, float]]:
@@ -81,12 +83,15 @@ class IncidentObservation:
             y = node.features.get('y', 0) / 100.0
             z = node.features.get('z', 0) / 100.0
             
+            has_team = 1.0 if (self.state_machine and self.state_machine.has_team(node_id)) else 0.0
+
             node_vector = [
                 node_type_id,
                 normalized_degree,
                 normalized_criticality,
                 has_incident,
                 max_severity,
+                has_team,
                 x, y, z
             ] + incident_types
             
@@ -128,13 +133,15 @@ class IncidentObservation:
             incident_types = self._get_incident_type_vector(incidents)
             
             oriented = 1.0 if edge.oriented else 0.0
-            
+            has_team = 1.0 if (self.state_machine and self.state_machine.has_team(edge_id)) else 0.0
+
             edge_vector = [
                 edge_type_id,
                 length,
                 has_incident,
                 max_severity,
-                oriented
+                oriented,
+                has_team,
             ] + incident_types
             
             features.extend(edge_vector)

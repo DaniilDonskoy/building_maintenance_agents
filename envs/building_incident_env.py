@@ -15,6 +15,7 @@ from .incident_observation import IncidentObservation
 from .agent_action_type import AgentActionType
 from .agent_action import AgentAction
 from .reward import CurrentReward
+from .element_state import AgentStateMachine
 
 
 class BuildingIncidentEnv(gym.Env):
@@ -31,7 +32,8 @@ class BuildingIncidentEnv(gym.Env):
         resource_budget: float = 100.0,
         resource_regen_rate: float = 0.5,
         enable_spread: bool = True,
-        random_seed: Optional[int] = None
+        random_seed: Optional[int] = None,
+        max_teams: int = 5,
     ):
         super().__init__()
         
@@ -45,7 +47,8 @@ class BuildingIncidentEnv(gym.Env):
         self.resource_regen_rate = resource_regen_rate
         self.enable_spread = enable_spread
         self.random_seed = random_seed
-        
+        self.max_teams = max_teams
+
         self.house = self._create_house()
         self.simulator = IncidentSimulator(
             self.house,
@@ -54,8 +57,9 @@ class BuildingIncidentEnv(gym.Env):
             enable_spread=enable_spread
         )
         
-        self.observer = IncidentObservation(self.simulator)
-        
+        self.state_machine = AgentStateMachine(max_teams=max_teams)
+        self.observer = IncidentObservation(self.simulator, self.state_machine)
+
         self.current_step = 0
         self.resources = resource_budget
         self.resources_used = 0.0
@@ -82,22 +86,17 @@ class BuildingIncidentEnv(gym.Env):
         return factory.build()
     
     def _setup_spaces(self):
-        # actions: [action_type, target_index, target_type, resource_multiplier]
-        # action_type: 0-12
-        # target_index: 0 to max(nodes, edges)
-        # target_type: 0=node, 1=edge
-        # resource_multiplier: 0-2
-        self.action_space = spaces.Box(
-            low=np.array([0, 0, 0, 0.5], dtype=np.float32),
-            high=np.array([
-                len(AgentActionType) - 1,
-                max(len(self.node_ids), len(self.edge_ids)) - 1,
-                1,
-                2.0
-            ], dtype=np.float32),
-            dtype=np.float32
-        )
-        
+        # MultiDiscrete: [action_type, target_index, target_type]
+        # action_type : 0..n_actions-1
+        # target_index: 0..max(n_nodes, n_edges)-1
+        # target_type : 0=node, 1=edge
+        self._max_targets = max(len(self.node_ids), len(self.edge_ids))
+        self.action_space = spaces.MultiDiscrete([
+            len(AgentActionType),
+            self._max_targets,
+            2,
+        ])
+
         sample_obs = self.observer.get_observation()
         self.observation_space = spaces.Box(
             low=-np.inf,
@@ -105,26 +104,55 @@ class BuildingIncidentEnv(gym.Env):
             shape=sample_obs.shape,
             dtype=np.float32
         )
-    
+
+    def action_masks(self) -> np.ndarray:
+        """Маска для MaskablePPO.
+
+        Формат: плоский bool-массив длиной sum(nvec),
+        разбитый по измерениям MultiDiscrete.
+        """
+        sm = self.state_machine
+
+        # --- action_type (7 бит) ---
+        act_mask = [True] * len(AgentActionType)
+        act_mask[AgentActionType.REPAIR.value]       = sm.active_teams > 0
+        act_mask[AgentActionType.WITHDRAW_TEAM.value] = sm.active_teams > 0
+        act_mask[AgentActionType.DEPLOY_TEAM.value]  = sm.active_teams < sm.max_teams
+
+        # --- target_index (max_targets бит) ---
+        # Для REPAIR/WITHDRAW разрешаем только ноды/рёбра с командой;
+        # для остальных — все.  Т.к. MaskablePPO выбирает измерения
+        # независимо, берём объединение допустимых целей.
+        has_teams = sm.active_teams > 0
+        target_mask = np.ones(self._max_targets, dtype=bool)
+        if has_teams:
+            # Если REPAIR/WITHDRAW возможны — разрешаем только позиции с командой;
+            # остальные действия не ограничены по цели, поэтому оставляем всё True.
+            pass  # будет улучшено в следующей итерации
+
+        # --- target_type (2 бита) ---
+        type_mask = np.array([True, True])
+
+        return np.concatenate([act_mask, target_mask, type_mask]).astype(bool)
+
     def _parse_action(self, action: np.ndarray) -> AgentAction:
-        action_type_idx = int(np.clip(action[0], 0, len(AgentActionType) - 1))
-        target_idx = int(np.clip(action[1], 0, max(len(self.node_ids), len(self.edge_ids)) - 1))
-        target_type = int(np.clip(action[2], 0, 1))
-        resource_multiplier = float(np.clip(action[3], 0.5, 2.0))
-        
+        action_type_idx = int(action[0])
+        target_idx      = int(action[1])
+        target_type     = int(action[2])
+
         action_type = list(AgentActionType)[action_type_idx]
-        
+
         target_id = None
         if target_type == 0 and target_idx < len(self.node_ids):
             target_id = self.node_ids[target_idx]
         elif target_type == 1 and target_idx < len(self.edge_ids):
             target_id = self.edge_ids[target_idx]
-        
+
         return AgentAction(
             action_type=action_type,
             target_id=target_id,
             target_type="node" if target_type == 0 else "edge",
-            resource_multiplier=resource_multiplier
+            resource_multiplier=1.0,
         )
     
     def step(self, action: np.ndarray) -> Tuple[np.ndarray, float, bool, bool, Dict]:
@@ -162,7 +190,8 @@ class BuildingIncidentEnv(gym.Env):
             "new_incidents": len(sim_results.get("new_incidents", [])),
             "resolved_incidents": len(sim_results.get("resolved_incidents", [])),
             "total_reward": self.reward_total,
-            "action": parsed_action.action_type.name
+            "action": parsed_action.action_type.name,
+            "active_teams": self.state_machine.active_teams,
         }
         
         self.history.append({
@@ -189,8 +218,9 @@ class BuildingIncidentEnv(gym.Env):
             enable_spread=self.enable_spread
         )
         
-        self.observer = IncidentObservation(self.simulator)  # update observations
-        
+        self.state_machine.reset()
+        self.observer = IncidentObservation(self.simulator, self.state_machine)
+
         # reset states
         self.current_step = 0
         self.resources = self.resource_budget
