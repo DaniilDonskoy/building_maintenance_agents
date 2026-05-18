@@ -30,14 +30,12 @@ class AgentActionType(Enum):
     def cost(self) -> float:
         mapping = {
             "REPAIR": 2.5,
-            # "IGNORE": 0.01,
             "DEPLOY_TEAM": 0.6,
-            "WITHDRAW_TEAM": -0.2,
-            # "TEMPORARY_FIX": 1.2,
+            "WITHDRAW_TEAM": 0.0,
             "SHUT_OFF_WATER": 0.4,
             "INSPECT": 0.2,
             "MONITOR": 0.0,
-            "CALL_BACKUP": -0.5,
+            "CALL_BACKUP": 5.0,  # дорогое действие — не должно быть доминирующим
         }
         return mapping[self.name]
 
