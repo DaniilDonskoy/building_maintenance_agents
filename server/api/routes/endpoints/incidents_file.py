@@ -15,6 +15,16 @@ from ....schemas import IncidentDTO, IncidentsResponse
 router = APIRouter()
 
 
+def _dto_value(value):
+    if pd.isna(value):
+        return None
+
+    if isinstance(value, pd.Timestamp):
+        return value.isoformat()
+
+    return value
+
+
 @router.post('/')
 async def upload_incidents_file(
     file: UploadFile = File(...),
@@ -87,7 +97,9 @@ async def upload_incidents_file(
         
         incidents = []
         for _, row in df.iterrows():
-            incident = IncidentDTO(**row.to_dict())
+            incident = IncidentDTO(
+                **{key: _dto_value(value) for key, value in row.to_dict().items()}
+            )
             incidents.append(incident)
         
         return IncidentsResponse(
