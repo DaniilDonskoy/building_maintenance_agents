@@ -116,6 +116,7 @@ class IncidentObservation:
         return np.array(features)
 
     def _compute_edge_length(self, edge) -> float:
+        # TODO: переделать на манхеттенское расстояние
         node_a = edge.node_a
         node_b = edge.node_b
         dx = node_a.features.get('x', 0) - node_b.features.get('x', 0)

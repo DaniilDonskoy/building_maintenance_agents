@@ -36,12 +36,9 @@ class RewardConfig:
 
 class CurrentReward:
     ACTION_HANDLERS = {
-        AgentActionType.MONITOR: "_monitor_action",
         AgentActionType.DEPLOY_TEAM: "_deploy_team_action",
         AgentActionType.WITHDRAW_TEAM: "_withdraw_team_action",
         AgentActionType.REPAIR: "_repair_action",
-        AgentActionType.SHUT_OFF_WATER: "_shut_off_water_action",
-        AgentActionType.INSPECT: "_inspect_action",
     }
 
     repair_incident_types = {
@@ -76,11 +73,6 @@ class CurrentReward:
         if action.target_type == "edge":
             return env.edge_by_id.get(action.target_id)
         return None
-
-    def _monitor_action(self, env, _action: AgentAction) -> float:
-        if len(env.simulator.active_incidents) == 0:
-            return self.config.monitor_no_incidents_reward
-        return self.config.monitor_active_incidents_penalty
 
     def _deploy_team_action(self, env, action: AgentAction) -> float:
         element = self._get_element(env, action)
@@ -126,19 +118,3 @@ class CurrentReward:
                     reward += self.config.repair_resolved_bonus
                     logger.info(f"Incident {inc.incident_id} resolved")
         return reward
-
-    def _shut_off_water_action(self, env, action: AgentAction) -> float:
-        element = self._get_element(env, action)
-        if not element:
-            return self.config.invalid_target_penalty
-        incidents = env.simulator.get_incidents_on_element(element)
-        if incidents:
-            for inc in incidents:
-                if inc.spread_count < inc.incident_type.spread_radius:
-                    inc.spread_count = inc.incident_type.spread_radius
-                    return self.config.shut_off_water_reward
-        return self.config.shut_off_water_penalty
-
-    def _inspect_action(self, env, action: AgentAction) -> float:
-        element = self._get_element(env, action)
-        return self.config.inspect_valid_target_reward if element else self.config.inspect_invalid_target_penalty
