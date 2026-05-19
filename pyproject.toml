@@ -69,6 +69,7 @@ dependencies = [
     "tensorboard==2.20.0",
     "seaborn>=0.13.0",
     "sb3-contrib>=2.8.0",
+    "pettingzoo>=1.26.1",
 ]
 
 [dependency-groups]
