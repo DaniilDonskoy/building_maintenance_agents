@@ -53,6 +53,8 @@ class CurrentReward:
         handler_name = self.ACTION_HANDLERS.get(action.action_type)
         if handler_name is None:
             return 0.0
+
+        # TODO: добавить здесь функцию из теории перспектив Канемана-Тверски
         return getattr(self, handler_name)(env, action)
 
     def calculate_step_reward(self, env) -> float:
