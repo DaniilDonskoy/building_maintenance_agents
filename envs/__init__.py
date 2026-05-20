@@ -5,6 +5,7 @@ from .agent_action_type import AgentActionType
 from .incident_observation import IncidentObservation
 from .element_state import AgentStateMachine, ElementState
 from .building_incident_core import BuildingIncidentCore
+from .reward import RewardConfig, CurrentReward
 from . import training
 
 __all__ = [
@@ -16,5 +17,7 @@ __all__ = [
     "AgentStateMachine",
     "ElementState",
     "BuildingIncidentCore",
+    "RewardConfig",
+    "CurrentReward",
     "training",
 ]
