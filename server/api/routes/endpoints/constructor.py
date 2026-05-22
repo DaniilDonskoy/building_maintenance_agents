@@ -1,57 +1,71 @@
 from fastapi import APIRouter
 from loguru import logger
-from typing import Dict
-from random import choice as random_choice, uniform
+from random import uniform
 
 from house_graph import HouseFactory, HouseGraphDTO
-from house_graph.samples import House15Factory, House16Factory, House27Factory
-from housing_complex import ComplexFactory
 
 from ....schemas import HouseConstructorParams, ComplexConstructorParams, ComplexResponse
 
 
 router = APIRouter()
 
-HOUSE_TYPE_FACTORIES: Dict[str, type] = {
-    "House15": House15Factory,
-    "House16": House16Factory,
-    "House27": House27Factory,
-}
+HOUSE_WIDTH = 10.0
+
+
+def _houses_collide(h1, h2):
+    return not (h1.x + h1.length <= h2.x or
+                h2.x + h2.length <= h1.x or
+                h1.y + HOUSE_WIDTH <= h2.y or
+                h2.y + HOUSE_WIDTH <= h1.y)
 
 
 @router.post('/house/', response_model=HouseGraphDTO)
 async def create_house(params: HouseConstructorParams) -> HouseGraphDTO:
-    if params.house_type is not None:
-        factory_cls = HOUSE_TYPE_FACTORIES.get(params.house_type)
-        if factory_cls is None:
-            raise ValueError(f"Invalid house type: {params.house_type}")
-        return factory_cls.build(x=params.x, y=params.y).to_json()
-    
     class DynamicHouseFactory(HouseFactory):
         floors = params.floors
         sections = params.sections
         flats_per_section = params.flats_per_section
         elevs_per_section = params.elevs_per_section
-    house = DynamicHouseFactory.build(x=params.x, y=params.y)
+    house = DynamicHouseFactory.build(x=params.x or 0, y=params.y or 0)
     return house.to_json()
 
 
 @router.post('/complex/', response_model=ComplexResponse)
 async def create_complex(params: ComplexConstructorParams) -> ComplexResponse:
-        
+    if not params.houses:
+        raise ValueError("Houses parameters must be provided")
+    
     complex_houses = []
-    HOUSE_WIDTH = 10.0
     max_attempts = 100
     
-    if params.houses:
-        complex_houses = [
-            await create_house(house_params) for house_params in params.houses
-        ]
-    else:
-        complex_houses = ComplexFactory.build(total_houses=params.total_houses).houses
+    for house_params in params.houses:
+        attempts = 0
+        placed = False
+        
+        while attempts < max_attempts and not placed:
+            x = int(uniform(0, 1000))
+            y = int(uniform(0, 1000))
+            
+            class DynamicHouseFactory(HouseFactory):
+                floors = house_params.floors
+                sections = house_params.sections
+                flats_per_section = house_params.flats_per_section
+                elevs_per_section = house_params.elevs_per_section
+            
+            house = DynamicHouseFactory.build(x=x, y=y)
+            
+            collides = False
+            for existing in complex_houses:
+                if _houses_collide(house, existing):
+                    collides = True
+                    break
+            
+            if not collides:
+                complex_houses.append(house)
+                placed = True
+            
+            attempts += 1
     
-    houses_json = [house.to_json() for house in complex_houses]        
     return ComplexResponse(
-        houses=houses_json,
-        total_houses_count=len(complex_houses),
+        houses=[house.to_json() for house in complex_houses],
     )

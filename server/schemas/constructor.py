@@ -5,47 +5,58 @@ from house_graph import HouseGraphDTO
 
 
 class HouseConstructorParams(BaseModel):
-    house_type: Optional[Literal['House15', 'House16', 'House27']] = Field(None, description="House type")
-    floors: Optional[int] = Field(description="Number of floors")
-    sections: Optional[int] = Field(description="Number of sections")
-    flats_per_section: Optional[int] = Field(description="Number of apartments per section")
-    elevs_per_section: Optional[int] = Field(description="Number of elevators per section")
-    x: Optional[int] = Field(description="X coordinate")
-    y: Optional[int] = Field(description="Y coordinate")
+    floors: int = Field(description="Number of floors")
+    sections: int = Field(description="Number of sections")
+    flats_per_section: int = Field(description="Number of apartments per section")
+    elevs_per_section: int = Field(description="Number of elevators per section")
+    street: Optional[str] = Field(None, description="Street name (optional)")
+    number: Optional[str] = Field(None, description="House number (optional)")
+    x: Optional[int] = Field(0, description="X coordinate")
+    y: Optional[int] = Field(0, description="Y coordinate")
 
     class Config:
         json_schema_extra = {
-            "examples": [
-                {
-                    "floors": 15,
-                    "sections": 2,
-                    "flats_per_section": 3,
-                    "elevs_per_section": 1,
-                    "x": 0,
-                    "y": 0,
-                },
-                {
-                    "house_type": "House16",
-                },
-            ]
+            "example": {
+                "floors": 15,
+                "sections": 2,
+                "flats_per_section": 3,
+                "elevs_per_section": 1,
+                "street": "ул. Пушкина",
+                "number": "12с1",
+            }
         }
 
 
 class ComplexConstructorParams(BaseModel):
-    total_houses: Optional[int] = Field(ge=1, le=100, description="Number of houses in the complex")
     houses: Optional[List[HouseConstructorParams]] = Field(None, description="Optional parameters for each house")
 
     class Config:
         json_schema_extra = {
             "example": {
-                "total_houses": 5,
+                "houses": [
+                    {
+                        "floors": 15,
+                        "sections": 2,
+                        "flats_per_section": 3,
+                        "elevs_per_section": 1,
+                        "street": "ул. Пушкина",
+                        "number": "12с1",
+                    },
+                    {
+                        "floors": 10,
+                        "sections": 1,
+                        "flats_per_section": 4,
+                        "elevs_per_section": 2,
+                        "street": "ул. Ленина",
+                        "number": "5",
+                    },
+                ]
             }
         }
 
 
 class ComplexResponse(BaseModel):
     houses: List[HouseGraphDTO] = Field(..., description="List of houses in the complex")
-    total_houses_count: int = Field(..., description="Total number of houses in the complex")
 
     class Config:
         json_schema_extra = {
@@ -58,6 +69,5 @@ class ComplexResponse(BaseModel):
                         "edges": [],
                     }
                 ],
-                "total_houses_count": 5,
             }
         }
