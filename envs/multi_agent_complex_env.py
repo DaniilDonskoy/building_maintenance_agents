@@ -41,8 +41,8 @@ class MultiAgentComplexEnv(ParallelEnv):
                 base_incident_probability=incident_probability,
                 random_seed=random_seed,
                 enable_spread=enable_spread,
-                passive_incident_decay=True,  # Включаем пассивное ухудшение
-                auto_resolve_incidents=False   # Отключаем авто-решение
+                passive_incident_decay=True,
+                auto_resolve_incidents=False
             )
             core = BuildingIncidentCore(sim, max_active_incidents_per_building)
             self.cores.append(core)
@@ -55,7 +55,7 @@ class MultiAgentComplexEnv(ParallelEnv):
 
         self.current_step = 0
         self.total_reward = 0.0
-        self.penalized_overdue_incident_ids = set()  # Отслеживаем наказанные просрочки
+        self.penalized_overdue_incident_ids = set()
         self.history = []
 
         sample_obs = self._get_observation()
@@ -119,7 +119,6 @@ class MultiAgentComplexEnv(ParallelEnv):
     ]:
         agent_rewards = []
 
-        # Применяем действия всех агентов
         for agent_name, act in actions.items():
             building_idx, agent_action = self._parse_action(act)
             core = self.cores[building_idx]
@@ -142,14 +141,11 @@ class MultiAgentComplexEnv(ParallelEnv):
                 shim, agent_action)
             agent_rewards.append(reward)
 
-        # Шагаем симуляторами всех зданий
         for core in self.cores:
             core.simulator.step()
 
-        # Вычисляем глобальную шаговую награду (с учётом дисконтирования и просрочек)
         global_step_reward = self._global_step_reward()
 
-        # Общая награда = сумма действий + глобальная
         total_reward = sum(agent_rewards) + global_step_reward
         per_agent = [r + global_step_reward /
                      len(self.agents) for r in agent_rewards]
@@ -178,18 +174,13 @@ class MultiAgentComplexEnv(ParallelEnv):
         return obs_dict, reward_dict, terminated_dict, truncated_dict, info_dict
 
     def _global_step_reward(self) -> float:
-        """
-        Глобальная шаговая награда с дисконтированием инцидентов и штрафом за просрочку.
-        """
         reward = 0.0
         new_overdue_ids = set()
 
-        # Обработка всех инцидентов во всех зданиях
         for core in self.cores:
             for inc in core.simulator.active_incidents:
                 age = self.current_step - inc.start_time
 
-                # Применяем дисконтирование severity для просроченных инцидентов
                 if inc.is_overdue and age > self.reward_strategy.config.max_incident_age:
                     hours_overdue = age - self.reward_strategy.config.max_incident_age
                     decay = 1.0 - \
@@ -197,11 +188,9 @@ class MultiAgentComplexEnv(ParallelEnv):
                          hours_overdue / 24.0)
                     inc.severity = max(0.01, inc.severity * max(decay, 0.1))
 
-                # Отслеживаем новые просрочки
                 if inc.is_overdue and inc.incident_id not in self.penalized_overdue_incident_ids:
                     new_overdue_ids.add(inc.incident_id)
 
-        # Штраф за новые просрочки
         if new_overdue_ids:
             penalty = self.reward_strategy.config.overdue_penalty * \
                 len(new_overdue_ids)
@@ -210,12 +199,11 @@ class MultiAgentComplexEnv(ParallelEnv):
             print(
                 f"⚠️ New overdue incidents: {len(new_overdue_ids)}, penalty: {penalty}")
 
-        # Штраф за активные инциденты (с дисконтированием)
         total_discounted_severity = 0.0
         for core in self.cores:
             for inc in core.simulator.active_incidents:
                 if inc.is_overdue:
-                    discount_factor = 0.3  # Меньший штраф для просроченных
+                    discount_factor = 0.3
                 else:
                     discount_factor = 1.0
                 total_discounted_severity += inc.severity * discount_factor
@@ -223,13 +211,11 @@ class MultiAgentComplexEnv(ParallelEnv):
         reward -= total_discounted_severity * \
             self.reward_strategy.config.active_incident_penalty_multiplier
 
-        # Бонус за полное отсутствие инцидентов
         total_incidents = sum(len(c.simulator.active_incidents)
                               for c in self.cores)
         if total_incidents == 0:
             reward += self.reward_strategy.config.no_incidents_bonus
 
-        # Штраф за слишком много инцидентов
         if total_incidents > len(self.cores) * self.max_active_incidents_per_building:
             reward += self.reward_strategy.config.too_many_incidents_penalty
 
@@ -253,7 +239,6 @@ class MultiAgentComplexEnv(ParallelEnv):
             core = BuildingIncidentCore(
                 sim, self.max_active_incidents_per_building)
 
-            # Создаём начальные инциденты с большей вероятностью
             if np.random.random() < 0.3:
                 sim.create_incident(
                     np.random.choice(list(IncidentType)),
@@ -291,7 +276,7 @@ class MultiAgentComplexEnv(ParallelEnv):
                 print(
                     f"\n🏢 Building {i}: {len(incidents)} incidents (overdue: {overdue}, avg severity: {avg_severity:.2f})")
 
-                for inc in incidents[:3]:  # Показываем первые 3
+                for inc in incidents[:3]:
                     age = self.current_step - inc.start_time
                     status = "⚠️ OVERDUE" if inc.is_overdue else "✓ active"
                     print(
