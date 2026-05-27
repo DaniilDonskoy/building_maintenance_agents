@@ -54,3 +54,7 @@ To stop running container:
 ```bash
 docker-compose down
 ```
+
+### Acknowledgments
+
+The project was supported by a grant from the Intellect Non-Commercial Foundation for the Development of Science and Education.
